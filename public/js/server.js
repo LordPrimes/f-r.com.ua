@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 69);
+/******/ 	return __webpack_require__(__webpack_require__.s = 76);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -38631,39 +38631,31 @@ exports.push([module.i, "/*!\n* Vuetify v1.3.0\n* Forged by John Leider\n* Relea
 
 
 /***/ }),
-/* 69 */
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(15);
-__webpack_require__(70);
-__webpack_require__(71);
-__webpack_require__(72);
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(77);
 
 
 /***/ }),
-/* 70 */
-/***/ (function(module, exports) {
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app__ = __webpack_require__(15);
 
-/***/ }),
-/* 71 */
-/***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 72 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+renderVueComponentToString(__WEBPACK_IMPORTED_MODULE_0__app__["default"], function (err, res) {
+    print(res);
+});
 
 /***/ })
 /******/ ]);

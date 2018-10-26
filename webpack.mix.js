@@ -20,7 +20,9 @@ if (mix.inProduction()) {
 }
 /* Sass componet/vue page Processing */
 mix.sass('resources/assets/sass/SearchPages.scss', 'public/css/StyleVue')
-.sass('resources/assets/sass/footerComponet.scss', 'public/css/StyleVue')
+.sass('resources/assets/sass/vuecomponents/headers.scss', 'public/css/StyleVue')
+.sass('resources/assets/sass/vuecomponents/footers.scss', 'public/css/StyleVue')
+.sass('resources/assets/sass/vuecomponents/result.scss', 'public/css/StyleVue')
 .options({
     processCssUrls:true,
       postCss: [
@@ -37,7 +39,10 @@ mix.sass('resources/assets/sass/SearchPages.scss', 'public/css/StyleVue')
 /* Global combine componet CSS */
 mix.combine(['public/css/StyleVue/*'], 'public/css/styleComponet.css');
 /*front end bunlde js */
-mix.js('resources/assets/js/app.js', 'public/js');
+mix.js('resources/assets/js/app.js', 'public/js')
+.js('resources/assets/js/client.js', 'public/js')
+.js('resources/assets/js/server.js', 'public/js');
+
 
    
 mix.webpackConfig({
@@ -55,7 +60,12 @@ mix.webpackConfig({
               })
           ]
       })
-  ]
+  ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.runtime.common.js'
+    }
+  }
   });
 
 

@@ -3,19 +3,19 @@
   <div  id='app'>
 <headers></headers>
 <router-view></router-view>
-<footer-componet> </footer-componet>
+<footers></footers>
   </div>
 </v-app> 
 </template>
 <script>
-import footerComponet from '../components/footerComponet.vue';
+import footers from '../components/footers.vue';
 import Headers from '../components/Headers.vue';
 
 export default {
 
   name: 'App',
   components: { 
-      footerComponet,
+      footers,
       Headers
     }
 };

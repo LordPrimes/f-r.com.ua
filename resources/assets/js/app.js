@@ -18,11 +18,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
 
-new Vue({
+export default new Vue({
     el: "#app",
     router,
     store:store,
-    components: { App },
-    template: "<App/>"
-  });
+    render: h => h(App),
+  })
   

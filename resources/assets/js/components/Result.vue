@@ -22,7 +22,7 @@
     <v-layout  > 
     <v-flex  class="result-filter"    >
       <div class='result-filter-price'><label>Цена 1-100000 ГРН</label>  <v-range-slider
-          v-model="slider"
+         
            thumb-color="green lighten-1"
            track-color='green lighten-1'
          
@@ -41,15 +41,22 @@
            <div class="result-items-info-title">
     <router-link v-bind:to="'/search/'+ products.seotitle">{{products.title}} </router-link></div>
         <p>{{ products.description}} </p>
-        <div class="result-items-basket">
+        <div class="result-items-price">
+
           <span class="result-items-basket-old-price">{{ products.price }}</span>
+          <span class='result-items-basket-price'>{{ products.price }}</span>
+         
+      
         </div>
+        <div class="result-items-basket"> <a href="#" >Купить</a> </div>
          </div>
      
       </v-flex>
      </v-layout>
      
     </v-layout>
+
+    
   </v-container>
   
     
