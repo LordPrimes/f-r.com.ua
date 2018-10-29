@@ -19,10 +19,13 @@ if (mix.inProduction()) {
     mix.disableNotifications();
 }
 /* Sass componet/vue page Processing */
-mix.sass('resources/assets/sass/SearchPages.scss', 'public/css/StyleVue')
+mix
 .sass('resources/assets/sass/vuecomponents/headers.scss', 'public/css/StyleVue')
 .sass('resources/assets/sass/vuecomponents/footers.scss', 'public/css/StyleVue')
 .sass('resources/assets/sass/vuecomponents/result.scss', 'public/css/StyleVue')
+.sass('resources/assets/sass/bootstrap_variables.scss', 'public/css/StyleCore' )
+.sass('resources/assets/sass/StyleCore/header.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/viewprod.scss', 'public/css/StyleCore')
 .options({
     processCssUrls:true,
       postCss: [
@@ -38,11 +41,14 @@ mix.sass('resources/assets/sass/SearchPages.scss', 'public/css/StyleVue')
 
 /* Global combine componet CSS */
 mix.combine(['public/css/StyleVue/*'], 'public/css/styleComponet.css');
-/*front end bunlde js */
-mix.js('resources/assets/js/app.js', 'public/js')
-.js('resources/assets/js/client.js', 'public/js')
-.js('resources/assets/js/server.js', 'public/js');
 
+/* Global combine core styles CSS */
+mix.combine(['public/css/StyleCore/*'], 'public/css/styleCore.css');
+/*front end bunlde vue js */
+mix.js('resources/assets/js/app.js', 'public/js');
+
+/*front end bunlde  js */
+mix.js('resources/assets/js/core.js', 'public/js');
 
    
 mix.webpackConfig({
@@ -60,15 +66,5 @@ mix.webpackConfig({
               })
           ]
       })
-  ],
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.runtime.common.js'
-    }
-  }
+  ]
   });
-
-
-
-
- 

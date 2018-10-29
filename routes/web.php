@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::name('search')->group(function () {
+   Route::resource('/search', 'SearchController');
+});
 
-Route::get('/', 'ManController@main');
-Route::get('/search', 'ViewController@Search')->name('search');
-Route::get('/search/{title}', 'ViewController@Search');
+
+
+Route::get('/', 'MainController@main');
+
+

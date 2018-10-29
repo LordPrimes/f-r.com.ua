@@ -11,10 +11,8 @@ import 'vuetify/dist/vuetify.min.css';
 Vue.use(Vuetify);
 Vue.use(VueFuse);
 
-
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
 
 
 
@@ -23,5 +21,5 @@ export default new Vue({
     router,
     store:store,
     render: h => h(App),
-  })
+  }).$mount('#app');
   

@@ -1,0 +1,97 @@
+.view-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 15px;
+}
+
+.view-main .view-main-images {
+  position: relative;
+  z-index: 1;
+  width: 250px;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.view-main .view-main-info {
+  margin-left: 10px;
+}
+
+.view-main .view-main-info .view-main-title {
+  padding-bottom: 8px;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #000;
+}
+
+.view-main .view-main-info .view-main-mini-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.view-main .view-main-info .view-main-mini-info-star {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.view-main .view-main-info .view-main-mini-info-star a {
+  color: #797878;
+}
+
+.view-main .view-main-info .view-main-mini-info-attr {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.view-main .view-main-info .view-main-mini-info-brand {
+  font-size: 20px;
+}
+
+.view-main .view-main-backet {
+  margin-top: 15px;
+  padding: 10px 10px 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  border-width: 2px;
+  background: #2F2F2E;
+}
+
+.view-main .view-main-backet .view-main-backet-old-price {
+  text-decoration: line-through;
+  font-size: 20px;
+  font-weight: inherit;
+}
+
+.view-main .view-main-backet .view-main-backet-new-price {
+  font-size: 20px;
+  margin-left: 15px;
+  font-weight: 700;
+}
+

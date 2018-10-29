@@ -15,13 +15,13 @@ use Illuminate\Http\Request;
 
 Route::prefix('product')->group(function () {
 
-Route::get('search/', 'SearchController@allproduct');
-Route::get('search/{title}', 'SearchController@foundproduct');
+Route::get('search/', 'SearchApi@allproduct');
+Route::get('search/{title}', 'SearchApi@foundproduct');
 
 
 
 });
-Route::get('search/{id}', 'SearchController@show');
+Route::get('search/{id}', 'SearchApi@show');
 
 
 

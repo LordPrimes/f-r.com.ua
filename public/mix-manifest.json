@@ -1,8 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/StyleVue/SearchPages.css": "/css/StyleVue/SearchPages.css",
     "/css/StyleVue/headers.css": "/css/StyleVue/headers.css",
     "/css/StyleVue/footers.css": "/css/StyleVue/footers.css",
     "/css/StyleVue/result.css": "/css/StyleVue/result.css",
-    "/css/styleComponet.css": "/css/styleComponet.css"
+    "/css/StyleCore/bootstrap_variables.css": "/css/StyleCore/bootstrap_variables.css",
+    "/css/StyleCore/header.css": "/css/StyleCore/header.css",
+    "/css/StyleCore/viewprod.css": "/css/StyleCore/viewprod.css",
+    "/js/core.js": "/js/core.js",
+    "/css/styleComponet.css": "/css/styleComponet.css",
+    "/css/styleCore.css": "/css/styleCore.css"
 }

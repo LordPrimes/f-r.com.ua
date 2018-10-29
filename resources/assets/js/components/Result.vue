@@ -39,7 +39,7 @@
         </figure>
          <div class="result-items-info">
            <div class="result-items-info-title">
-    <router-link v-bind:to="'/search/'+ products.seotitle">{{products.title}} </router-link></div>
+    <a :href="'/search/'+ products.seotitle  ">{{products.title}} </a></div>
         <p>{{ products.description}} </p>
         <div class="result-items-price">
 
