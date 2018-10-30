@@ -14,15 +14,15 @@
 <div class="view-main-backet">
   
 <div class='view-main-backet-old-price'>{{ $viewprod->old_price }} Грн. </div>
-<div class='view-main-backet-new-price'> {{ $viewprod->price }} Грн.</div>
+<div class='view-main-backet-new-price'> {{ $viewprod->new_price }} Грн.</div>
 <div class="view-main-backet-all-count"> 
+    <button class="view-main-backet-numbers-count"   v-on:click="counterdown()">-</button>
+    <input min="0" class="view-main-backet-numbers" type="number" v-bind:value="counter"   > 
+    <button class="view-main-backet-numbers-count"   v-on:click="counterup()">+</button>
+  
 
-{{ $viewprod->Comments->name}}
-    <!-- <input class="view-main-backet-numbers" type='text'> 
-    <input class="view-main-backet-numbers-count" type='button'>
-    <span class="view-main-backet-result-numbers" ></span> -->
     </div> 
-
+   
 </div>
 </div>
 

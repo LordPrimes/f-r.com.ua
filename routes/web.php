@@ -10,9 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::name('search')->group(function () {
-   Route::resource('/search', 'SearchPagesController\SearchController');
-});
+
+
+Route::resource('/search', 'SearchPagesController\SearchController');
+Route::resource('/backet', 'BacketPagesController\BacketController');
 
 
 

@@ -11534,6 +11534,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 __webpack_require__(75);
 
 
+var numbers = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+    el: '.view-main-backet-all-count',
+
+    data: function data() {
+        return {
+            counter: 5,
+            price: []
+
+        };
+    },
+    mounted: function mounted() {
+        this.allnumber();
+        this.counterup();
+        this.counterdown();
+    },
+
+    methods: {
+        allnumber: function allnumber() {
+            this.price = this.price * this.counter;
+        },
+        counterup: function counterup() {
+            this.counter++;
+        },
+        counterdown: function counterdown() {
+            this.counter--;
+            if (this.counter <= 0) {
+                this.counter = 1;
+            }
+        }
+    }
+});
+
 /***/ }),
 
 /***/ 75:
