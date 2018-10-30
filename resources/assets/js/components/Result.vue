@@ -40,7 +40,7 @@
          <div class="result-items-info">
            <div class="result-items-info-title">
     <a :href="'/search/'+ products.seotitle  ">{{products.title}} </a></div>
-        <p>{{ products.description}} </p>
+        <p>{{ products.description }} </p>
         <div class="result-items-price">
 
           <span class="result-items-basket-old-price">{{ products.price }}</span>

@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\SearchPagesController;
 
 use Illuminate\Http\Request;
 use App\Model\Products;
+use App\Http\Controllers\Controller;
+
 class SearchApi extends Controller
 {
     public function foundproduct ($seotitle){
@@ -15,7 +17,8 @@ class SearchApi extends Controller
 
 
     public function allproduct (){
-        return Products::all();
+        $products = Products::all();
+        return json_encode($products);
     
         
 }

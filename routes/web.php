@@ -11,7 +11,7 @@
 |
 */
 Route::name('search')->group(function () {
-   Route::resource('/search', 'SearchController');
+   Route::resource('/search', 'SearchPagesController\SearchController');
 });
 
 

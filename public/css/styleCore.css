@@ -10766,7 +10766,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 15px;
+  margin-top: 14px;
+  padding-top: 5px;
+  border-top: 1px solid #eaebec;
+  border-left: 1px solid #eaebec;
+  border-right: 1px solid #eaebec;
 }
 
 .view-main .view-main-images {
@@ -10837,9 +10841,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #cccccc;
   border-radius: 5px;
-  border-width: 2px;
   background: #2F2F2E;
 }
 

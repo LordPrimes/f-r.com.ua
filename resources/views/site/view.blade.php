@@ -16,9 +16,11 @@
 <div class='view-main-backet-old-price'>{{ $viewprod->old_price }} Грн. </div>
 <div class='view-main-backet-new-price'> {{ $viewprod->price }} Грн.</div>
 <div class="view-main-backet-all-count"> 
-    <input class="view-main-backet-numbers" type='text'> 
+
+{{ $viewprod->Comments->name}}
+    <!-- <input class="view-main-backet-numbers" type='text'> 
     <input class="view-main-backet-numbers-count" type='button'>
-    <span class="view-main-backet-result-numbers" ></span>
+    <span class="view-main-backet-result-numbers" ></span> -->
     </div> 
 
 </div>

@@ -3,6 +3,7 @@
     <head>
           @include('site.includes.head')  
     </head>
+    <body>
  <section class='headers-nav'>
             <li><a href="">Каталог</a></li>
             <li><a href="">О нас</a></li>
@@ -65,7 +66,7 @@
     </div>
 
 
-    <body>
+    
     @yield('content')
         <footer class="footers"> @include('site.includes.footer')  </footer>
     </body>
