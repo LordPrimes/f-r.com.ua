@@ -26,6 +26,7 @@
         "imagemin-mozjpeg": "^7.0.0",
         "imagemin-webpack-plugin": "^2.3.0",
         "material-design-icons-iconfont": "^3.0.3",
+        "normalize.css": "^8.0.0",
         "postcss-minify-font-values": "^4.0.2",
         "vue": "^2.5.17",
         "vue-fuse": "^2.0.2",
