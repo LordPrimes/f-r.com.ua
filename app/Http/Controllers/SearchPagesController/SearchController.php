@@ -18,7 +18,7 @@ class SearchController extends Controller
      */
     public function index()
     {
-        return view('site.search');
+        return view('site.pages.search');
     }
 
     /**
@@ -54,7 +54,7 @@ class SearchController extends Controller
         $viewprod = Products::where('seotitle',$seotitle)->firstOrFail();
       
 
-        return view('site.view')->withViewprod($viewprod);   
+        return view('site.pages.view')->withViewprod($viewprod);   
     }
 
     /**

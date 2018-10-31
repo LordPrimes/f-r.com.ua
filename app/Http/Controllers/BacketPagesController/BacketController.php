@@ -14,7 +14,7 @@ class BacketController extends Controller
      */
     public function index()
     {
-        return view('site.backet');
+        return view('site.pages.backet');
         
     }
 

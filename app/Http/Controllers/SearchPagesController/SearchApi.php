@@ -8,12 +8,7 @@ use App\Http\Controllers\Controller;
 
 class SearchApi extends Controller
 {
-    public function foundproduct ($seotitle){
-        
-        $products = Products::where('seotitle', 'LIKE', '%'.$seotitle.'%')->get();      
-                    return response()->json($products);
-            
-    }
+    
 
 
     public function allproduct (){

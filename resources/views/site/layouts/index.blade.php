@@ -18,21 +18,14 @@
             </div>
                 <div  id='headers-search'>
                 <div class='headers-search-input'>
-                <input   event-name="results" v-model="value"
-                :list="prod"
-                :keys="['title']" class="search-input" :defaultAll="false"   :distance="200"  placeholder="Поиск товара" required >  
+                <input   v-model="value" class="search-input"  placeholder="Поиск товара" required >  
             </div>    
               </div>
              <div class="headers-phone">+3 <i>(095)</i> 096-85-11 
                  <div class="card">
       <div  class="numbers-cards">
-      <span slot="badge" >12</span>
-      <v-icon
-        large
-        color="grey lighten-1"
-      >
-         shopping_cart
-      </v-icon>
+      <span  >12</span>
+    
     </div>
   </div>  
                 </div>

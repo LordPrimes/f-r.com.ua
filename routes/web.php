@@ -17,6 +17,6 @@ Route::resource('/backet', 'BacketPagesController\BacketController');
 
 
 
-Route::get('/', 'MainController@main');
+Route::get('/', 'MainPagesController\MainController@index');
 
 
