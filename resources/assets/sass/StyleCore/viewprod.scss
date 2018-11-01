@@ -133,11 +133,20 @@ border:$border-viewpages;
    
 }
 }
+.view-main-delivery{
+    display: flex;
+    margin-top: 10px;
+    p {
+        font-family:$font-roboto;
+    }
+}
 }
 .view-main-description-info {
     margin-top: 30px;
     background: #FFF;
     padding: $padding-10;
     border: $border-viewpages;
-
+    p{
+        font-family:$font-roboto;
+    }
 }

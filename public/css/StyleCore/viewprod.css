@@ -167,10 +167,25 @@ body {
   background: #e6e0e0;
 }
 
+.view-main .view-main-delivery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.view-main .view-main-delivery p {
+  font-family: "Roboto", sans-serif;
+}
+
 .view-main-description-info {
   margin-top: 30px;
   background: #FFF;
   padding: 10px 10px 10px 10px;
   border: 1px solid #e1e2e3;
+}
+
+.view-main-description-info p {
+  font-family: "Roboto", sans-serif;
 }
 

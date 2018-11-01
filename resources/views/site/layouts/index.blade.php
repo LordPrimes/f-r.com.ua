@@ -28,29 +28,24 @@
                     <a href="" class="sign">Регистрация</a>
                 </div>
         </header>
-   <div row class="navbar-main"  >
-      <div  >
-        <div class="ggg"  >
-          <div text class="navbar">3</div>
-        </div>
-        
-      </div>
-      <div  >
-        <div class="ggg"  >
-          <div class="navbar" >3</div>
-        </div>
-      </div>
-      <div  >
-        <div class="ggg"  >
-          <div class="navbar" >3</div>
-        </div>
-</div>
-      <div >
-        <v-card class="gggg"  >
-          <div class="navbar" >3</div>
-        </div>
-      </div>  
-    </div>
+        <nav class="navbar-main">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a>
+      <ul>
+        <li><a href="">Our team</a></li>
+        <li><a href="">Histor1111111111111111111y</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</nav>  
+ 
+
+ 
+  
+
 
 
     
