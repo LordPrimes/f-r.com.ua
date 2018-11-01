@@ -1,3 +1,7 @@
+body {
+  background-color: #f1f1f1;
+}
+
 .view-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,10 +11,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 14px;
-  padding-top: 5px;
-  border-top: 1px solid #eaebec;
-  border-left: 1px solid #eaebec;
-  border-right: 1px solid #eaebec;
+  background: #fff;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #e1e2e3;
 }
 
 .view-main .view-main-images {
@@ -162,5 +165,12 @@
 
 .view-main .view-main-backet-all-count .view-main-backet-numbers-count:hover {
   background: #e6e0e0;
+}
+
+.view-main-description-info {
+  margin-top: 30px;
+  background: #FFF;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #e1e2e3;
 }
 

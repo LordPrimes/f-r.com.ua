@@ -21,13 +21,7 @@
                 <input   v-model="value" class="search-input"  placeholder="Поиск товара" required >  
             </div>    
               </div>
-             <div class="headers-phone">+3 <i>(095)</i> 096-85-11 
-                 <div class="card">
-      <div  class="numbers-cards">
-      <span  >12</span>
-    
-    </div>
-  </div>  
+             <div class="headers-phone">+3 <i>(095)</i> 096-85-11  
                 </div>
                 <div class="headers-login-sign">
                     <a href="" class="login">Вход</a>

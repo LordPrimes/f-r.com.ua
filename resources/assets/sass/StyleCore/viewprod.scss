@@ -1,11 +1,14 @@
+@import '../variables.scss';
+body{
+    background-color: #f1f1f1;}
 .view-main {
 display: flex;
 flex-direction: row;
 margin-top: 14px;
-padding-top: 5px;
-border-top: 1px solid #eaebec;
-border-left: 1px solid #eaebec;
-border-right: 1px solid #eaebec;
+background: #fff;
+padding: $padding-10;
+border:$border-viewpages;
+
 .view-main-images {
     position: relative;
     z-index:1;
@@ -100,7 +103,7 @@ border-right: 1px solid #eaebec;
     margin: 0; 
     }
  .view-main-backet-numbers {
-    border: 1px solid #e1e2e3;
+    border: $border-viewpages;
     border-left: medium none;
     border-right: medium none;
     display: inline;
@@ -118,7 +121,7 @@ border-right: 1px solid #eaebec;
     width: 37px;
     margin: 0;
     vertical-align: middle;
-    border: 1px solid #e1e2e3;
+    border: $border-viewpages;
     box-shadow: none;
     font-weight: 400;
     cursor: pointer;
@@ -130,5 +133,11 @@ border-right: 1px solid #eaebec;
    
 }
 }
+}
+.view-main-description-info {
+    margin-top: 30px;
+    background: #FFF;
+    padding: $padding-10;
+    border: $border-viewpages;
 
 }
