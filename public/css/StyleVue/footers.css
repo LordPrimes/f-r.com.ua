@@ -8,7 +8,11 @@
 
 .footer-f-r {
   color: #52ad3a;
-  font-size: 20px;
+  font-size: 24px;
+  -webkit-font-kerning: none;
+          font-kerning: none;
+  font-weight: unset;
+  font-variant: all-petite-caps;
 }
 
 .footer-info {

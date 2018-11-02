@@ -1,38 +1,83 @@
+@import '../variables.scss';
 .footer--style { 
-    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
     background: #272727;
     color: #efefef;
-    font-size: 12px;
+    font-size: 12px;   
     border-top: 4px solid #52ad3a;
+    .footer-link {
+        display: flex;
+        justify-content: center;
+    div {
+        padding: 0 16px;
+        align-items: center;
+        border-radius: 28px;
+        display: inline-flex;
+        flex: 0 0 auto;
+        font-size: 14px;
+        font-weight: 500;
+        height: 36px;
+        justify-content: center;
+        margin: 6px 8px;
+        min-width: 88px;
+        outline: 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
+        user-select: none;
+        vertical-align: middle;
+     &:hover {
+        border-radius: inherit;
+        transition: .3s cubic-bezier(.25,.8,.5,1);
+        border-radius: 28px;
+        background: #404040;
+     }
     }
-.footer-f-r {
-    color:#52ad3a;
-    font-size: 20px;
+     a {
+        z-index: 1;
+        caret-color: #fff;
+        color: #fff;
+        text-decoration: none;
+     }
     }
+    .footer-f-r {
+        display: flex;
+        justify-content: center;
+        color:#52ad3a;
+        font-size: 24px;
+        font-kerning: none;
+        font-weight: unset;
+        font-variant: all-petite-caps;
+        padding-top:15px;
+        padding-bottom: 15px;
+        }
+    }
+
 .footer-info {
     display: flex;
     justify-content: space-evenly;
     background: #fff;
-    padding: 1.7rem 0;
-    border-top: 1px solid #f2f2f2;
     text-transform: uppercase;
     line-height: 1.7;
     font-weight: 700;
     letter-spacing: .1rem;
-span { 
+    padding:$padding-20;
+    div {
+        text-align: center;
+        margin-top: 5px;
+    }
+    img {
+        float: left;
+    }
+span {
     position: relative;
-    bottom: 12px;
+    top: 10px; 
+    font-size: 14px;
     margin-left: 10px;
 }
  }
-.footer-mini-info{
-    padding: 3.5rem 0;
-    position: relative;
-    overflow: hidden;
-    border-top: 2px solid #f2f2f2;
-p {
-    font-size: 15px;
-    line-height: 1.65;
-    padding: 0 9rem 0 9rem;
-}
-}
+

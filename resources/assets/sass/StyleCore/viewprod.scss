@@ -50,7 +50,7 @@ border:$border-viewpages;
 }
 .view-main-backet{
     margin-top: 15px;
-    padding: 10px 10px 10px 10px;
+    padding: $padding-10;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
@@ -140,7 +140,14 @@ border:$border-viewpages;
     background: #FFF;
     padding: $padding-10;
     border: $border-viewpages;
+    margin-bottom: 30px;
     p{
         font-family:$font-roboto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dotted #d5d5d5;
+        font-weight: normal; 
+        color: #666;
+        font-size: 18px;
     }
 }

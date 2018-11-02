@@ -18338,7 +18338,9 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _c("p", [_vm._v(_vm._s(products.description) + " ")]),
+                        _c("p", [
+                          _vm._v(_vm._s(products.mini_description) + " ")
+                        ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "result-items-price" }, [
                           _c(

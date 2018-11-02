@@ -28,12 +28,9 @@
         <a href="" class="view-main-backet-card">Купить </a>
         </div>
         <div class="view-main-delivery">
-            
-            <p>По Киеву доставка под парадное </p>
-            <p> По Киеву самовывоз с нашего склада</p>
-            <p> По Украине доставка курьерской службой </p>
-           
-           
+            <p>По Киеву доставка под парадное</p>
+            <p>По Киеву самовывоз с нашего склада</p>
+            <p>По Украине доставка курьерской службой</p>
         </div>
     </div>
  
@@ -41,5 +38,6 @@
 <div class="view-main-description-info">
     {!! $viewprod->description !!}
         </div>
-       
+        </div>
+    
 @endsection

@@ -28,7 +28,7 @@
                     <a href="" class="sign">Регистрация</a>
                 </div>
         </header>
-         <nav class="row justify-content-around navbar-main">
+         <nav class="navbar-main">
   <ul class="navbar-main-link">
     <li class="navbar-main-link-list"><a href="#">Home</a></li>
     <li class="navbar-main-link-list"><a href="#">About</a>
@@ -50,39 +50,30 @@
 
     
     @yield('content')
-        <footer class="footers">
-
-
-   
- 
-  <div> 
-     
+        <footer class="footer">     
     <div class="footer-info">
       <div><img src='/img/cartgreen.png' /><span>Доставка по всей Украине</span> </div>
       <div><img src='/img/cartgreen.png' /><span>Поддержка 7 дней в неделю</span> </div>
       <div><img src='/img/cartgreen.png' /><span>Оптала наличными при получении</span> </div>
       <div><img src='/img/cartgreen.png' /><span>Гарантия качества</span> </div>
 </div>
-</div>
- 
- 
-  
-  
-    <div class="footer--style">
-    <a href="" ></a>
-      <v-flex
-       
-        lighten-2
-        py-3
-        text-xs-center
-        white--text
-        xs12
-      >
-        <strong class="footer-f-r">f-r.com.ua</strong>
-      </v-flex>
-    </v-layout>
 
+    <div class="footer--style">
+    <div class="footer-link ">
+    <div> <a href="" >Ламинат1</a> </div>
+    <div> <a href="" >Ламинат2</a> </div>
+    <div> <a href="" >Ламинат3</a> </div>
+    <div> <a href="" >Ламинат4</a> </div>
+    <div> <a href="" >Ламинат5</a> </div>
+    <div> <a href="" >Ламинат6</a> </div>
+      </div>
+        <strong class=" footer-f-r">f-r.com.ua</strong>
+      
+      
+    </div>
+  
  
-         @include('site.includes.footer')  </footer>
+         @include('site.includes.footer') 
+          </footer>
     </body>
 </html>

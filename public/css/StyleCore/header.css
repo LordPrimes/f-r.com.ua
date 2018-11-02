@@ -231,6 +231,11 @@ a {
 }
 
 .navbar-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 0 20px 0 20px;
   background: #2F2F2F;
   min-height: 30px;
