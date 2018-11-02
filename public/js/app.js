@@ -13702,7 +13702,8 @@ __webpack_require__(68);
 __webpack_require__(69);
 __webpack_require__(70);
 __webpack_require__(71);
-module.exports = __webpack_require__(72);
+__webpack_require__(72);
+module.exports = __webpack_require__(73);
 
 
 /***/ }),
@@ -41433,6 +41434,12 @@ exports.push([module.i, "/*!\n* Vuetify v1.3.0\n* Forged by John Leider\n* Relea
 
 /***/ }),
 /* 72 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 73 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

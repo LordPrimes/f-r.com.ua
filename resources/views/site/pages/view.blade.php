@@ -8,7 +8,7 @@
         <h1 class="view-main-title ">{{ $viewprod->title }}</h1>
     <div class="view-main-mini-info">
         <div class="view-main-mini-info-star">
-            <a href>Отзывы:{{ $viewprod->Comments->id }}</a>
+            <a href>Отзывы:</a>
         </div> 
     <div class="view-main-mini-info-brand">Бренд: {{ $viewprod->brand }}   
         </div>
@@ -22,7 +22,7 @@
                 </div>
             <div class="view-main-backet-all-count"> 
                 <button class="view-main-backet-numbers-count"   v-on:click="counterdown()">-</button>
-                <input min="0" class="view-main-backet-numbers" type="number" v-bind:value="counter"   > 
+                <input  class="view-main-backet-numbers" type="text" v-bind:value="counter"   > 
                 <button class="view-main-backet-numbers-count"   v-on:click="counterup()">+</button>
             </div> 
         <a href="" class="view-main-backet-card">Купить </a>

@@ -1,7 +1,6 @@
 require('bootstrap');
 import Vue from 'vue';
 
-
 var numbers = new Vue({
  el:'.view-main-backet-all-count',
 

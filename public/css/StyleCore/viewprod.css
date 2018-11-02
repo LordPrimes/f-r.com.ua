@@ -127,18 +127,10 @@ body {
   background: linear-gradient(to bottom, #3EC761 0, #52ad3a 100%);
 }
 
-.view-main .view-main-backet-all-count input[type=number]::-webkit-inner-spin-button,
-.view-main .view-main-backet-all-count input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-          appearance: none;
-  margin: 0;
-}
-
 .view-main .view-main-backet-all-count .view-main-backet-numbers {
   border: 1px solid #e1e2e3;
   border-left: medium none;
   border-right: medium none;
-  display: inline;
   height: 38px;
   line-height: 38px;
   margin: 0 -5px;
@@ -149,7 +141,6 @@ body {
 
 .view-main .view-main-backet-all-count .view-main-backet-numbers-count {
   position: relative;
-  display: inline;
   height: 38px;
   width: 37px;
   margin: 0;

@@ -1,3 +1,3 @@
-<script  src="{{ mix('js/core.js') }}"></script>
+<script  src="{{ mix('/js/core.js') }}"></script>
 
 

@@ -97,16 +97,11 @@ border:$border-viewpages;
 
 }
 .view-main-backet-all-count {
-    input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button { 
-    appearance: none; 
-    margin: 0; 
-    }
+  
  .view-main-backet-numbers {
     border: $border-viewpages;
     border-left: medium none;
     border-right: medium none;
-    display: inline;
     height: 38px;
     line-height: 38px;
     margin: 0 -5px;
@@ -116,7 +111,6 @@ border:$border-viewpages;
  }
     .view-main-backet-numbers-count{
     position: relative;
-    display: inline;
     height: 38px;
     width: 37px;
     margin: 0;

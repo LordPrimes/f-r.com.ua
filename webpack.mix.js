@@ -25,6 +25,7 @@ mix
 .sass('resources/assets/sass/vuecomponents/result.scss', 'public/css/StyleVue')
 .sass('resources/assets/sass/bootstrap_variables.scss', 'public/css/StyleCore' )
 .sass('resources/assets/sass/StyleCore/header.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/footers.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/viewprod.scss', 'public/css/StyleCore')
 .options({
     processCssUrls:true,
