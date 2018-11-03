@@ -13,9 +13,10 @@
 
 //==== Main search site === //
 Route::get('/search', 'SearchPagesController\SearchdisplayController@index');
-Route::get('/search/{seotitle}', 'SearchPagesController\SearchdisplayController@show');
 //=== End pages  ==== //
 
+Route::get('/search/{seotitle}', 'ViewPagesController\ViewDisplayController@show');
+Route::get('/{seotitle}', 'ViewPagesController\ViewDisplayController@show');
 Route::get('/backet', 'BacketPagesController\BacketDisplayController@index');
 
 
