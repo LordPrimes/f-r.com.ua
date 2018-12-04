@@ -1,5 +1,6 @@
 @extends('site.layouts.index')
 @section('content')
+<article>
 <div class="container">
 <div class="view-main"> 
     <div class="col-3 view-main-images">
@@ -20,9 +21,9 @@
                 </div>
             <div class='view-main-backet-new-price'> {{ $viewprod->new_price }} Грн.
                 </div>
-            <div class="view-main-backet-all-count"> 
+            <div class="view-main-backet-all-count" id='app'> 
                 <button class="view-main-backet-numbers-count"   v-on:click="counterdown()">-</button>
-                <input  class="view-main-backet-numbers" type="text" v-bind:value="counter"   > 
+                <input  class="view-main-backet-numbers"  type="text" v-bind:value="counter" disabled  > 
                 <button class="view-main-backet-numbers-count"   v-on:click="counterup()">+</button>
             </div> 
         <a href="" class="view-main-backet-card">Купить </a>
@@ -38,6 +39,39 @@
 <div class="view-main-description-info">
     {!! $viewprod->description !!}
         </div>
-        </div>
-    
+ <div class="view-main-comments">
+ <div class="login-page">
+  <div class="form">
+
+    <form method="POST"  class="login-form">
+    {{ csrf_field() }}
+      <label>Ваше имя:</label>
+      <input type="text" name="login" />
+      <label>Достоинства:</label>
+      <input type="text" name="reach"/>
+      <label>Недостатки:</label>
+      <input type="text" name="limitations"/>
+      <label>Комментарий:</label>
+      <input type="text" name="comment"/>
+      <input name="id" type="hidden" value="{{$viewprod->id}}" >
+      <input type="submit" value="Оставить отзыв">
+      @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+      @if(session()->has('goods'))
+{{ session()->get('goods')}}
+  @endif
+    </form>
+  </div>
+</div>
+</div>
+
+</div>
+</article>
 @endsection

@@ -20,13 +20,13 @@ if (mix.inProduction()) {
 }
 /* Sass componet/vue page Processing */
 mix
-.sass('resources/assets/sass/vuecomponents/headers.scss', 'public/css/StyleVue')
-.sass('resources/assets/sass/vuecomponents/footers.scss', 'public/css/StyleVue')
-.sass('resources/assets/sass/vuecomponents/result.scss', 'public/css/StyleVue')
 .sass('resources/assets/sass/bootstrap_variables.scss', 'public/css/StyleCore' )
+.sass('resources/assets/sass/StyleCore/core.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/header.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/footers.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/viewprod.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/blogview.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/blog.scss', 'public/css/StyleCore')
 .options({
     processCssUrls:true,
       postCss: [
@@ -40,16 +40,18 @@ mix
 
 
 
-/* Global combine componet CSS */
-mix.combine(['public/css/StyleVue/*'], 'public/css/styleComponet.css');
+
 
 /* Global combine core styles CSS */
 mix.combine(['public/css/StyleCore/*'], 'public/css/styleCore.css');
-/*front end bunlde vue js */
-mix.js('resources/assets/js/app.js', 'public/js');
+
 
 /*front end bunlde  js */
-mix.js('resources/assets/js/core.js', 'public/js');
+mix.js('resources/assets/js/core.js', 'public/js')
+.autoload({
+    jquery: ['$', 'window.jQuery', 'jQuery']
+});
+
 
    
 mix.webpackConfig({

@@ -1,25 +1,35 @@
 require('bootstrap');
-import Vue from 'vue';
+import 'mdbootstrap/js/mdb.min.js';
 
+
+$(function(){
+    $(window).scroll(function(){
+       if($(this).scrollTop()!=0){
+           $('.scrolingtop').show();
+       } 
+       else {
+           $('.scrolingtop').hide();
+       }
+    });
+});
+
+$(".scrolingtop").click(function(){
+    $('body,html').animate({ scrollTop: 0 }, 600);
+   
+});
+
+
+import Vue from 'vue';  
 var numbers = new Vue({
- el:'.view-main-backet-all-count',
-
+ el:'#app',
  data:function(){
      return {
          counter: 5,
-         price:[],
-         
+         divscrolltop: 0
+            
      }
  },
- mounted(){
-    this.allnumber();
-    this.counterup();
-    this.counterdown();
- },
  methods:{
-    allnumber:function(){
-        this.price = this.price*this.counter
-    },
     counterup:function (){
         this.counter++; 
     },
@@ -30,5 +40,6 @@ var numbers = new Vue({
         }
     }
  }
+
 })
 

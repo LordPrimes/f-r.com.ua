@@ -10,14 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 //==== Main search site === //
 Route::get('/search', 'SearchPagesController\SearchdisplayController@index');
 //=== End pages  ==== //
 
 Route::get('/search/{seotitle}', 'ViewPagesController\ViewDisplayController@show');
-Route::get('/{seotitle}', 'ViewPagesController\ViewDisplayController@show');
-Route::get('/backet', 'BacketPagesController\BacketDisplayController@index');
+Route::post('/search/{seotitle}', 'ViewPagesController\ViewPostController@addcomments');
 
 
 //==== Main pages site === //
@@ -25,27 +23,23 @@ Route::get('/', 'MainPagesController\MainController@index');
 
 //=== End pages  ==== //
 
-//==== Pages Catalog site === //
-Route::get('/catalog','CatalogPagesController\CatalogController@index');
 
-//==== End Catalog  === //
-
-//==== Pages About site === //
-Route::get('/about','AboutPagesController\AboutController@index');
-//==== End About === //
-
-//==== Pages payment site === //
-Route::get('/payment','PaymentPagesController\PaymentController@index');
-//==== End payment === //
-
-//==== Pages exchangesite === //
-Route::get('/exchange','ExchangePagesController\ExchangeController@index');
-//==== End exchange === //
-
-//==== Pages contact === //
-Route::get('/contact','ContactPagesController\ContactController@index');
-//==== End contact === //
-
-//==== Pages blog === //
 Route::get('/blog','BlogPagesController\BlogController@index');
+Route::get('/blog/category/{Blog_Category}', 'BlogPagesController\BlogCategoryController@catagory');
+Route::get('/blog/{seo_url}','BlogPagesController\BlogsViewController@show');
+
+
+
+
+
+
 //==== End contact === //
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+ 
+
+
+
+});

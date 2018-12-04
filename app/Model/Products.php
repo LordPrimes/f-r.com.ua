@@ -6,10 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 
 class products extends Model
+
 {   
-    public function Comments()
+   
+
+    public function comments()
     {
         return $this->hasOne('App\Model\Comments');
     }
  
+
+   
 }

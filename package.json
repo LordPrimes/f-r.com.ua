@@ -12,13 +12,13 @@
     "devDependencies": {
         "axios": "^0.18",
         "bootstrap": "^4.1.3",
-        "copy-webpack-plugin": "^4.5.4",
+        "copy-webpack-plugin": "^4.6.0",
         "cross-env": "^5.1",
-        "css-loader": "^1.0.0",
+        "css-loader": "^1.0.1",
         "font-awesome": "^4.7.0",
         "jquery": "^3.3.1",
         "laravel-mix": "^2.1.14",
-        "popper.js": "^1.14.4"
+        "popper.js": "^1.14.6"
     },
     "dependencies": {
         "babel-preset-es2015": "^6.24.1",
@@ -26,13 +26,14 @@
         "imagemin-mozjpeg": "^7.0.0",
         "imagemin-webpack-plugin": "^2.3.0",
         "material-design-icons-iconfont": "^3.0.3",
-        "normalize.css": "^8.0.0",
+        "mdbootstrap": "^4.5.15",
+        "normalize.css": "^8.0.1",
         "postcss-minify-font-values": "^4.0.2",
         "vue": "^2.5.17",
         "vue-fuse": "^2.0.2",
-        "vue-router": "^3.0.1",
+        "vue-router": "^3.0.2",
         "vue-server-renderer": "^2.5.17",
-        "vuetify": "^1.3.0",
+        "vuetify": "^1.3.12",
         "vuex": "^3.0.1"
     }
 }

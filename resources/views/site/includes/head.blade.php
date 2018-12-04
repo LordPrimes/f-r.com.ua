@@ -4,4 +4,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="{{ mix('css/styleCore.css') }}">
- <title>«ФемилиРум» Киев — склад стройматериалов: ≡ напольные покрытия | строим комфортную жизнь вместе!</title>
+ <link href="https://family-room.com.ua/image/data/logo/ico-f-r.png" rel="icon" />
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title> @yield('pageTitle')</title>

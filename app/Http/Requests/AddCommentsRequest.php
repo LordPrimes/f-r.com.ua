@@ -13,7 +13,7 @@ class AddCommentsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,28 @@ class AddCommentsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'login' => 'max:15|filled|regex:/^[^A-z]+$/',
+            'reach' => 'min:15|filled|regex:/^(?![\%\/\\\&\?\,\'\;\:\!\-\+\!\@\#\$\^\*\)\(]+$).+/',
+            'limitations' => 'min:15|filled|regex:/^(?![\%\/\\\&\?\,\'\;\:\!\-\+\!\@\#\$\^\*\)\(]+$).+/',
+            'comment' => 'min:15|filled|regex:/^(?![\%\/\\\&\?\,\'\;\:\!\-\+\!\@\#\$\^\*\)\(]+$).+/'
         ];
     }
+
+    public function messages()
+{
+    return [
+        'login.filled' => 'Поле должно быть заполнено',
+        'login.max' => 'Имя не должно превышать 15 символов',
+        'login.regex' => 'Запрешенно писать свое имя английскими буквами',
+        'reach.min' => 'Поле "Доистоинства" должно иметь минимум 15 симовлов',
+        'reach.filled' => 'Поле должно быть заполнено',
+        'reach.regex' => 'Вы использовали запрещенные символы',
+        'limitations.min' => 'Поле "Доистоинства" должно иметь минимум 15 симовлов',
+        'limitations.filled' => 'Поле должно быть заполнено',
+        'limitations.regex' => 'Вы использовали запрещенные символы',
+        'comment.min' => 'Поле "Доистоинства" должно иметь минимум 15 симовлов',
+        'comment.filled' => 'Поле должно быть заполнено',
+        'comment.regex' => 'Вы использовали запрещенные символы'
+    ];
+}
 }
