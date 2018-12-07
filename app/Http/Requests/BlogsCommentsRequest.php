@@ -13,7 +13,7 @@ class BlogsCommentsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,19 @@ class BlogsCommentsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'max:15|filled|regex:/^[^A-z]+$/',
+            'body' => 'min:15|filled|regex:/^(?![\%\/\\\&\?\,\'\;\:\!\-\+\!\@\#\$\^\*\)\(]+$).+/'
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'name.filled' => 'Поле "Имя" должно быть заполнено',
+            'name.max' => 'Имя не должно превышать 15 символов',
+            'name.regex' => '*Запрешенно писать свое имя английскими буквами',
+            'body.min' => 'Поле "Ваше сообщение" должно иметь минимум 15 симовлов',
+            'body.filled' => 'Поле должно быть заполнено',
+            'body.regex' => 'Вы использовали запрещенные символы'
         ];
     }
 }

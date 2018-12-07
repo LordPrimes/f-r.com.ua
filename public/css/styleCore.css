@@ -159,8 +159,38 @@
   border: 1px solid #cccccc;
 }
 
-.blogview-main .blog-view-main-recommend {
+.blog-view-main-recommend {
   margin: 20px 0 20px 0;
+  background: #fff;
+}
+
+.blog-view-main-input {
+  background: #f2f2f2 !important;
+  height: 250px !important;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.blogview-breadcrumb {
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.commend-list {
+  position: fixed !important;
+  top: 30%;
+  right: -40px;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  z-index: 1;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.comment-name {
+  overflow-x: overlay;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 
@@ -22030,6 +22060,35 @@ ul.stepper li.completed a .label {
   right: 0;
 }
 
+.errors {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  color: #fff !important;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.errors:hover {
+  background: #de0101 !important;
+}
+
+.errors-form {
+  color: #fff !important;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.errors-form:hover {
+  background: #de0101 !important;
+}
+
+.sussec {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 
 .footer--style {
   display: -webkit-box;
@@ -22689,24 +22748,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 14px;
-}
-
-.view-main-comments .login-page .form button {
-  text-transform: uppercase;
-  outline: 0;
-  background: #4CAF50;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-
-.view-main-comments .login-page .form button:hover {
-  background: #43A047;
 }
 
 .view-main-comments .login-page .form label {

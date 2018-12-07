@@ -5,7 +5,12 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use App\Model\blog;
 use App\Model\Blog_Recommend;
+use App\Model\Blog_Comment as Comment;
 use Session;
+use DB;
+
+
+
 
 class BlogsViewController extends Controller
 {
@@ -17,10 +22,27 @@ class BlogsViewController extends Controller
                         ->firstorFail();
         $recommend = Blog_Recommend::Recommend($seo_url)->get();
         
+       
+     
+        
+      
+        
         $data = [
                 'blog' => $blog, 
-                'recommend' => $recommend,        
+                'recommend' => $recommend      
                 ];
         return view('site.pages.viewblog')->with($data);
     }
+
+    public function showcomment(Request $request)
+    {
+       if($request->get('commend'))
+     {
+        $name = $request->get('commend');
+        $result = Comment::where('blog_id', $name)->get();
+            return $result;
+       
+    }
+
+}
 }

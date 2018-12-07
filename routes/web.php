@@ -24,10 +24,11 @@ Route::get('/', 'MainPagesController\MainController@index');
 //=== End pages  ==== //
 
 
-Route::get('/blog','BlogPagesController\BlogController@index');
-Route::get('/blog/category/{Blog_Category}', 'BlogPagesController\BlogCategoryController@catagory');
-Route::get('/blog/{seo_url}','BlogPagesController\BlogsViewController@show');
-
+Route::get('blog','BlogPagesController\BlogController@index');
+Route::get('blog/category/{Blog_Category}', 'BlogPagesController\BlogCategoryControllers@catagory');
+Route::get('blog/{seo_url}','BlogPagesController\BlogsViewController@show');
+Route::post('blog/{seo_url}', 'BlogPagesController\BlogCommentController@addcomments');
+Route::post('blog/{seo_url}/comments', 'BlogPagesController\BlogsViewController@showcomment' );
 
 
 

@@ -4,7 +4,37 @@
   border: 1px solid #cccccc;
 }
 
-.blogview-main .blog-view-main-recommend {
+.blog-view-main-recommend {
   margin: 20px 0 20px 0;
+  background: #fff;
+}
+
+.blog-view-main-input {
+  background: #f2f2f2 !important;
+  height: 250px !important;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.blogview-breadcrumb {
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.commend-list {
+  position: fixed !important;
+  top: 30%;
+  right: -40px;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  z-index: 1;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.comment-name {
+  overflow-x: overlay;
+  font-size: 24px;
+  font-weight: 400;
 }
 

@@ -8,7 +8,7 @@ use App\Model\blog;
 use App\Model\Blog_Category;
 use Carbon\Carbon;
 
-class BlogCategoryController extends Controller
+class BlogCategoryControllers extends Controller
 {
     public function catagory (Request $request ,Blog_Category $Blog_Category){
      
