@@ -33,11 +33,16 @@ class blog extends Model
         return $query->whereIn('seo_url', $viewed)->inRandomOrder()->take(4);
     
     }
-    public function scopeLastArticle($query, string $lastarticle){
+    public function scopeLastArticle($query,  $lastarticle){
 
         return $query->where('created_at', '>', $lastarticle )->inRandomOrder()->take(4);
     }
     public function scopeSeoTitle($query,  $seotitle){
         return $query->where('seo_url', $seotitle);
     }
+    public function scopeViewed($query , $seo_url){
+
+        return $query->whereIn('seo_url', $seo_url)->take(4);
+    }
+ 
 }

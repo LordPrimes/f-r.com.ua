@@ -22,7 +22,7 @@
                                 <img  src="/storage/app/public/{{$item->images}}"  alt="{{$item->alt}}" title="{{$item->title }}">
                                 </figure >
                                 <h4 class="font-weight-bold mb-3"><strong> {{ $item->name }}</strong></h4>
-                                <p>{{ $item->created_at}}</p>
+                                <p><time>{{ $item->created_at}}</time></p>
                             <p class="text-justify dark-grey-text blog-popular-text ">{{ str_limit($item->description, 300) }}</p>
                                 <a href="{{url('blog/'.$item->url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
                             </div>
@@ -72,11 +72,7 @@
            Отзывы
        </div>
        <div class="modal fade" id="centralModallg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-
             <div class="modal-dialog modal-lg" role="document">
-        
-        
               <div class="modal-content">
                 <div class="modal-header">
                   <h4 class="modal-title w-100" id="myModalLabel">Отзывы:</h4>

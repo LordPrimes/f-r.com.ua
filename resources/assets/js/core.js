@@ -53,7 +53,7 @@ $.ajax({
     data: {commend :commend },
     success: function(data){
         $.each(data,function(i,values){
-           $('.comment-name').append('<p>'+values.name+'</p>','<p>'+values.body+'</p>');
+           $('.comment-name').append('<p>'+values.id+'</p>','<p>'+values.body+'</p>');
         })
         
        

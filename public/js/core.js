@@ -10466,13 +10466,14 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
+__webpack_require__(10);
+__webpack_require__(11);
+__webpack_require__(12);
+__webpack_require__(13);
 __webpack_require__(14);
 __webpack_require__(15);
 __webpack_require__(16);
-__webpack_require__(17);
-__webpack_require__(18);
-__webpack_require__(19);
-module.exports = __webpack_require__(20);
+module.exports = __webpack_require__(17);
 
 
 /***/ }),
@@ -10566,7 +10567,7 @@ var commend = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_
                         data: { commend: commend },
                         success: function success(data) {
                             $.each(data, function (i, values) {
-                                $('.comment-name').append('<p>' + values.name + '</p>', '<p>' + values.body + '</p>');
+                                $('.comment-name').append('<p>' + values.id + '</p>', '<p>' + values.body + '</p>');
                             });
                         }
 
@@ -17906,10 +17907,30 @@ Popper.Defaults = Defaults;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0), __webpack_require__(1), __webpack_require__(0)))
 
 /***/ }),
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
+/* 10 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 14 */
 /***/ (function(module, exports) {
 
@@ -17929,24 +17950,6 @@ Popper.Defaults = Defaults;
 
 /***/ }),
 /* 17 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 20 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

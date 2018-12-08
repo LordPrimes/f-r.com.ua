@@ -18,7 +18,10 @@
             </div>
                 <div  id='headers-search'>
                 <div class='headers-search-input'>
-                <input   v-model="value" class="search-input"  placeholder="Поиск товара" required >  
+                <form action="{{route ('search')}}" method="GET">
+                     <input name='query'    class="search-input"  placeholder="Поиск товара" required > </form>
+                 
+                 
             </div>    
               </div>
              <div class="headers-phone">+3 <i>(095)</i> 096-85-11  

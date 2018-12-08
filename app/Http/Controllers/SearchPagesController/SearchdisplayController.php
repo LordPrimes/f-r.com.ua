@@ -4,13 +4,18 @@ namespace App\Http\Controllers\SearchPagesController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Model\Products;
 
 class SearchdisplayController extends Controller
 {
-    public function index()
+    public function show($seo_title)
     {
-        return view('site.pages.search');
+        $viewprod = Products::ViewProduct($seo_title)->firstorfail();
+
+        $data = [
+                'viewprod' => $viewprod
+        ];
+        return view('site.pages.view')->with($data);
     }
 
    

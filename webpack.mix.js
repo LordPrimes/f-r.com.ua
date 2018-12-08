@@ -27,6 +27,7 @@ mix
 .sass('resources/assets/sass/StyleCore/viewprod.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/blogview.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/blog.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/search.scss', 'public/css/StyleCore')
 .options({
     processCssUrls:true,
       postCss: [

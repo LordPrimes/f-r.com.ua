@@ -14,5 +14,5 @@ class ViewDisplayController extends Controller
         return view('site.pages.view')->withViewprod($viewprod);   
     }
 
-    
+
 }

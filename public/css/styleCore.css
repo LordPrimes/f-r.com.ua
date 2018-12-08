@@ -22520,6 +22520,24 @@ a {
 }
 
 
+.card {
+  margin-bottom: 30px;
+}
+
+.card .card-title {
+  min-height: 130px;
+}
+
+.card .card-text {
+  height: 50px;
+}
+
+.card strong {
+  font-size: 14px;
+  width: 122px;
+}
+
+
 body {
   background-color: #f1f1f1;
 }

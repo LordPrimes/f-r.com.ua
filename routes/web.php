@@ -11,10 +11,10 @@
 |
 */
 //==== Main search site === //
-Route::get('/search', 'SearchPagesController\SearchdisplayController@index');
+Route::get('/search', 'SearchPagesController\SearchController@show')->name('search');
 //=== End pages  ==== //
 
-Route::get('/search/{seotitle}', 'ViewPagesController\ViewDisplayController@show');
+Route::get('/search/{seotitle}', 'SearchPagesController\SearchdisplayController@show');
 Route::post('/search/{seotitle}', 'ViewPagesController\ViewPostController@addcomments');
 
 

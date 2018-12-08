@@ -11,7 +11,7 @@
 <div class="blog-main d-flex">
 <figure class="d-flex flex-column justify-content-center">
 <img class="blog-main-images" src="/storage/app/public/{{$blogs->image}}" />
-<p class="blog-main-date">{{ $blogs->created_at}}</p>
+<p class="blog-main-date"><time>{{ $blogs->created_at}}</time></p>
 </figure>
 <div class="blog-main-info">
 <a class="d-flex justify-content-center blog-main-link" href="{{url('blog/'.$blogs->seo_url)}}">{{ $blogs->name }}</a>
@@ -36,7 +36,7 @@
                   <img  src="/storage/app/public/{{$item->image}}"  alt="Sample image">
                 </figure >
                 <h4 class="font-weight-bold mb-3"><strong> {{ $item->name }}</strong></h4>
-                <p>{{ $item->created_at}}</p>
+                <p><time>{{ $item->created_at}}</time></p>
             
             <p class="text-justify dark-grey-text blog-popular-text ">{{ str_limit($item->mini_body, 300) }}</p>
                 <a href="{{url('blog/'.$item->seo_url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
@@ -51,7 +51,7 @@
                       <img  src="/storage/app/public/{{$item->image}}"  alt="Sample image">
                     </figure >
                     <h4 class="font-weight-bold mb-3"><strong> {{ $item->name }}</strong></h4>
-                    <p>{{ $item->created_at}}</p>
+                    <p><time>{{ $item->created_at}}</time></p>
                 <p class="text-justify dark-grey-text blog-popular-text ">{{ str_limit($item->mini_body, 300) }}</p>
                     <a href="{{url('blog/'.$item->seo_url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
                 </div>
@@ -66,7 +66,7 @@
                               <img  src="/storage/app/public/{{$item->image}}"  alt="Sample image">
                             </figure >
                             <h4 class="font-weight-bold mb-3"><strong> {{ $item->name }}</strong></h4>
-                            <p>{{ $item->created_at}}</p>
+                            <p><time>{{ $item->created_at}}</time></p>
                         <p class="text-justify dark-grey-text blog-popular-text ">{{ str_limit($item->mini_body, 300) }}</p>
                             <a href="{{url('blog/'.$item->seo_url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
                         </div>
