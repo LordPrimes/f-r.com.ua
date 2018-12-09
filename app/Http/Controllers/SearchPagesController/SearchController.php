@@ -20,11 +20,13 @@ class SearchController extends Controller
        $data = Carbon::now()->subDays(7);
        $new = Products::NewWeeks($data)->get();
        $recommend = Products::Recommend()->get();
-        
+       $popular = Products::Popular()->get();
        $data = [
                 'product' => $product,
                 'search' => $search,
-                'recommend' => $recommend
+                'recommend' => $recommend,
+                'new' => $new,
+                'popular' => $popular
        ];
        return view('site.pages.search')->with($data);
    }

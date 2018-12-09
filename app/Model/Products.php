@@ -32,11 +32,15 @@ class Products extends Model
     
     public function scopeRecommend($query){
 
-        return $query->where('recommend', 1)->take(4);
+        return $query->where('recommend', 1)->orderBy('id', 'DESC');
     }
 
     public function scopeNewWeeks($query, $new){
 
         return $query->where('created_at', '>', $new )->inRandomOrder()->take(4);
+    }
+    public function scopePopular($query){
+
+        return $query->where('popular', 1)->orderBy('id', 'DESC');
     }
 }

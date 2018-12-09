@@ -33,15 +33,81 @@
   @else
   <h2 class="h1-responsive font-weight-bold text-center my-5">Поисковое поле пустое</h2>
   @endif
-      </section>
-      <h2 class="h1-responsive font-weight-bold  my-5">Рекомендуемый товар:</h2>
+      </section class='d-flex justify-content-center'>
+    <section>
+        <h2 class="d-flex justify-content-start h1-responsive  text-center my-5 font-weight-bold"> Рекоммендуемый товар:</h2>
+      <div class="owl-carousel">
+         @foreach ($recommend as $item) 
+    <div class="recommend-blog">
+      <div class="card card-cascade wider card-ecommerce">
+        <div class="view view-cascade overlay">
+          <figure>
+            <img src="/storage/app/public/{{$item->images}}" class="img-fluid"
+              alt="{{$item->alt_images}}" title="{{$item->title_images}}"> 
+              <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+            </figure>
+         
+        </div>
+        <div class="card-body card-body-cascade text-center">
+          <a href="{{url('/search/'.$item->seo_title)}}" class="text-muted">
+          <h5>{{$item->name}}</h5>
+          </a>
+        <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <strong>{{ $item->price }} ГРН </strong> 
+             <a class="btn  btn-rounded btn-light-green" href="">Купить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+         @endforeach   
+
+          </div>
+        </section>
+        <section>
+            <h2 class="d-flex justify-content-start h1-responsive  text-center my-5 font-weight-bold"> Популярный товар:</h2>
+          <div class="owl-carousel">
+             @foreach ($popular as $item) 
+        <div class="recommend-blog">
+          <div class="card card-cascade wider card-ecommerce">
+            <div class="view view-cascade overlay">
+              <figure>
+                <img src="/storage/app/public/{{$item->images}}" class="img-fluid"
+                  alt="{{$item->alt_images}}" title="{{$item->title_images}}"> 
+                  <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+                </figure>
+             
+            </div>
+            <div class="card-body card-body-cascade text-center">
+              <a href="{{url('/search/'.$item->seo_title)}}" class="text-muted">
+              <h5>{{$item->name}}</h5>
+              </a>
+            <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
+              <div class="d-flex justify-content-between align-items-center ">
+                <strong>{{ $item->price }} ГРН </strong> 
+                 <a class="btn  btn-rounded btn-light-green" href="">Купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+             @endforeach   
+    
+              </div>
+            </section>
+           
+      @if ($new->count() >= 4)
+      <h2 class="h1-responsive font-weight-bold  my-5">Новинки недели:</h2>
       <section class="d-flex flex-row justify-content-center">
-        @foreach ($recommend as $item)       
+        @foreach ($new as $item)       
     <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
             <div class="card card-cascade narrower card-ecommerce">
               <div class="view view-cascade overlay">
                 <img src="/storage/app/public/{{$item->images}}"  class="card-img-top"
-                  alt="sample photo">
+              alt="{{$item->title_images}}" title="{{$item->alt_images}}">
                 <a>
                   <div class="mask rgba-white-slight"></div>
                 </a>
@@ -62,5 +128,6 @@
           </div>
           @endforeach
      </section>
+     @endif
 </article>
 @endsection

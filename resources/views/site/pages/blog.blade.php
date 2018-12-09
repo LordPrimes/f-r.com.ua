@@ -1,12 +1,17 @@
 @extends('site.layouts.index')
 @section('content')
 <article class="container">
-    <div class="d-flex flex-column align-items-center blog-category">
-        <span class="blog-category-title">Категории:</span>
-        @foreach ($category as $categor)
-    <div ><a href="{{url('blog/category/'.$categor->name)}}">{{ $categor->name }}</a></div>
+    <nav class="category navbar navbar-expand-lg navbar-dark mdb-color light-green mt-3 mb-5">
+        <span class="navbar-brand">Категории:</span>
+        <div class="d-flex align-items-center collapse navbar-collapse">
+    @foreach ($category as $categor)
+    <li class="{{ Request::is('blog/category/'.$categor->name) ? 'active' : '' }}">
+    <a class="active nav-link waves-effect waves-light text-white"  href="{{url('blog/category/'.$categor->name)  }}" >{{ $categor->name }}</a>    
+       </li>
+   
     @endforeach
-</div>
+    </div>
+    </nav>
 @foreach ( $blog as $blogs)
 <div class="blog-main d-flex">
 <figure class="d-flex flex-column justify-content-center">
