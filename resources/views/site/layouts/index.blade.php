@@ -51,8 +51,11 @@
 
 
 
-    
-    @yield('content')
+<div  class="scrolingtop btn btn-rounded btn-light-green  " >
+    <i class="fa fa-arrow-up fa-2x" ></i>
+</div>
+<main> @yield('content')</main>
+   
         <footer class="footer">     
     <div class="footer-info">
       <div><img src='/img/cartgreen.png' /><span>Доставка по всей Украине</span> </div>

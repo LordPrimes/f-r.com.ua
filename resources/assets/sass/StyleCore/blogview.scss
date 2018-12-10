@@ -19,17 +19,9 @@
     opacity: 0.9;
  
 }
-.commend-list{
-    position: fixed!important;
-    top: 30%;
-    right: -40px;
-    font-size: 16px!important;
-    font-weight: 500!important;
-    z-index: 1;
-    transform: rotate(-90deg);
-}
-.comment-name{
-    overflow-x: overlay;
-    font-size: 24px;
-    font-weight: 400;
+.comments {
+    overflow-x: auto;
+    p {
+        margin-top: 10px;
+    }
 }

@@ -3,6 +3,36 @@
 «ФемилиРум» ☛Твой склад стройматериалов Поиск по запросу {{ $search }}
 @endsection
 @section('content')
+
+
+<aside class="blog-action d-flex  flex-column float-left">
+  <h2 class="action dark-grey-text light-green btn">Акции:</h2>
+  @foreach ($action as $item)
+      
+ 
+    <div class="col-lg-12">
+        <div class="card align-items-center">
+          <div class="view overlay">
+            <img src="/storage/app/public/{{$item->actions->images}}" class="img-fluid"
+            alt="{{$item->actions->alt_images}}" title="{{$item->actions->title_images}}">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <div class="card-body text-center">
+            <a href="{{url('/search/'.$item->actions->seo_title)}}" class="grey-text">
+            <h5>{{ $item->actions->name }}</h5>
+            </a>
+            <h4 class="font-weight-bold blue-text">
+            <strong class="price-new">Старая цена:{{$item->actions->price }}</strong>
+            <strong class=" text-danger">Новая цена:{{$item->new_price }}</strong>
+              <a class="btn  btn-rounded btn-light-green" href="">Купить</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+   @endforeach
+</aside>
 <article class="container">
 @if ($product !== null)
 <h2 class=" h1-responsive font-weight-bold text-center my-5">По вашему запросу:</h2>
@@ -33,6 +63,7 @@
   @else
   <h2 class="h1-responsive font-weight-bold text-center my-5">Поисковое поле пустое</h2>
   @endif
+  
       </section class='d-flex justify-content-center'>
     <section>
         <h2 class="d-flex justify-content-start h1-responsive  text-center my-5 font-weight-bold"> Рекоммендуемый товар:</h2>

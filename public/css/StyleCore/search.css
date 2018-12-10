@@ -19,3 +19,22 @@
   padding: 5px;
 }
 
+.blog-action {
+  margin-top: 15px;
+  position: relative;
+  left: 40px;
+  background: #fff;
+  width: 226px;
+  border: 1px solid #cccccc;
+}
+
+.blog-action .action {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.blog-action .price-new {
+  text-decoration: line-through;
+}
+

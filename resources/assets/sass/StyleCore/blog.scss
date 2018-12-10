@@ -1,5 +1,13 @@
 @import '../variables.scss';
-  .blog-main {
+.blog  {
+    background: #fff;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+
+}  
+.blog-main {
     text-align: justify;
     margin-top: 15px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.18);
@@ -37,9 +45,14 @@
 }
     } 
 .blog-popular{
+    margin-right: 10px;
     margin-left: 10px;
+    background: linear-gradient(to bottom, #fff 0, #eee 100%);
+    
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
     &:hover {
-        border:1px solid #cccccc;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
         border-radius: 10px;
     }
     .blog-popular-text {
@@ -51,9 +64,7 @@
     }
 }
 .category{
-    a {
-        margin-top: 8px;
-    }
+   
 .active {
 a{
    color:#4285f4!important;

@@ -16,6 +16,11 @@ class Products extends Model
         return $this->hasOne('App\Model\Comments');
     }
     
+    public function productaction(){
+        return $this->hasMany('App\Model\Action', 'action_id');
+    }
+
+    
     public function scopeSearch($query, $search){
 
         return $query->where('name', 'LIKE', "%$search%")

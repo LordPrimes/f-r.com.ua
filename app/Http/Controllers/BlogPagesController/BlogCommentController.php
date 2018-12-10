@@ -11,7 +11,6 @@ class BlogCommentController extends Controller
 {
     public function addcomments ( BlogsCommentsRequest $request  ){
         $validated = $request->validated();
-        $seo_url = $request->input('seo_url');
         $allcomments = Commments::create([
         'name' => $request->input('name'),
         'body' => $request->input('body'),

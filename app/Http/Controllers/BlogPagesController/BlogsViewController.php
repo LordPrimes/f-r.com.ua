@@ -19,7 +19,6 @@ class BlogsViewController extends Controller
         $blog = blog::SeoTitle($seo_url)
                         ->firstorFail();
         $recommend = Recommend::Recommend($seo_url)->get();
-        
         $data = [
                 'blog' => $blog, 
                 'recommend' => $recommend      
@@ -27,15 +26,6 @@ class BlogsViewController extends Controller
         return view('site.pages.viewblog')->with($data);
     }
 
-    public function showcomment(Request $request)
-    {
-       if($request->get('commend'))
-     {
-        $id = $request->get('commend');
-        $result = Comment::ViewBlogComment($id)->get();
-        return $result;
-       
-    }
+  
 
-}
 }
