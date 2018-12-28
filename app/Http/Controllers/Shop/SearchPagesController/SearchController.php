@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\SearchPagesController;
+namespace App\Http\Controllers\Shop\SearchPagesController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\Products;
-use App\Model\Action;
+use App\Model\shop\Products;
+use App\Model\shop\Action;
 use Carbon\Carbon;
 
 
@@ -23,10 +23,20 @@ class SearchController extends Controller
        $new = Products::NewWeeks($data)->get();
        $recommend = Products::Recommend()->get();
        $popular = Products::Popular()->get();
-
        $action = Action::all();
-     
 
+        if($search !== null){
+          
+            if (request()->sort == 'price_asc') {
+            $product = Products::orderBy('price', 'ASC')->get();
+            } 
+            elseif (request()->sort == 'high_low') {
+      
+            } else {
+       
+            }
+                            }
+                         
 
        $data = [
                 'product' => $product,

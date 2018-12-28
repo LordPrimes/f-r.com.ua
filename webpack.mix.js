@@ -28,6 +28,8 @@ mix
 .sass('resources/assets/sass/StyleCore/blogview.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/blog.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/search.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/cart.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/main.scss', 'public/css/StyleCore')
 .options({
     processCssUrls:true,
       postCss: [

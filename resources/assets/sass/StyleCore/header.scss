@@ -90,6 +90,11 @@ font-family:$font-roboto;
   a {
   color:#fff;
   }
+  span {
+    border-radius: 40px;
+    position: relative;
+    bottom: 10px;
+  }
 }
 .headers-cardnumbers {
 display:flex;

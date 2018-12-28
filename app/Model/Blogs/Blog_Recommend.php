@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Model\Blogs;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,11 +11,12 @@ class Blog_Recommend extends Model
 
     public function blogrecommends(){
         
-        return $this->hasMany('App\Model\Blog', 'blogrecommend_id');
+        return $this->belongsTo('App\Model\Blogs\Blog', 'recommend_id');
     }
     
+    
     public function scopeRecommend($query, $seo_url){
-        
-        return $query->where('url', $seo_url)->take(4)->inRandomOrder();
+
+        return $query->where('seo_url', $seo_url);
     }
 }

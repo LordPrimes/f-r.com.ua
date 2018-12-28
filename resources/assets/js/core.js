@@ -3,8 +3,33 @@ import 'mdbootstrap/js/mdb.min.js';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
+
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel();
+    $(".carousel-recommend, .carousel").addClass('owl-carousel').owlCarousel({
+        items:3,
+        nav:true,
+        mouseDrag:false,
+        navText:['<div class="btn  btn-rounded btn-light-green slide-action"><i class="fa fa-angle-left"></i></div>',
+        '<div class="btn btn-rounded btn-light-green slide-action"><i class="fa fa-angle-right"></i></div>'],
+        navContainerClass:['nav-action-container']
+      
+    });
+ 
+    $(".carousel-main").addClass('owl-carousel ').owlCarousel({
+        items:1,
+        nav:true,
+        autoplay:true,
+        rtl:true,
+        mouseDrag:false,
+        dots: false,
+        loop:true,
+        animateIn:'fadeIn',
+        autoplayHoverPause:true,
+        navClass:['slider-left-arrow', 'slider-right-arrow'],
+        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+      
+      
+    });
 
  $(function(){
     $(window).scroll(function(){
@@ -23,9 +48,6 @@ $(".scrolingtop").click(function(){
         
   });
 
-
-
-
 const  error = async function(){
 setTimeout(function(){
    $('.errors').remove();
@@ -38,14 +60,27 @@ $('body').click(function(){
 });
 }();
 
+$('.update').click(function(){
+let update = $('.updateqty').val();
+$('.updatenewqty').val(update);
 
-$('.comments-submit').click(function(){ 
-   let check = $('.sussec');
-   if(check.html().trim() !== ''){
-    $('.sussec').css("cssText", "display:initial !important;"); 
-   }
+});
+$('.count-up').click(function(){
+let update = $('.view-main-backet-numbers').val();
+update++
+ $('.view-main-backet-numbers').val(update);
+});
+$('.count-down').click(function(){
+let update = $('.view-main-backet-numbers').val();
+update-- 
+
+if ( $('.view-main-backet-numbers').val() == '0'){
+   this.update = update.val(0);
+}
+$('.view-main-backet-numbers').val(update);
 });
 
-
-
-
+$('.view-main-submit').click(function(){
+    let update = $('.view-main-backet-numbers').val();
+    $('.updatenewqty').val(update);
+});

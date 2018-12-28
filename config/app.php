@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         TCG\Voyager\VoyagerServiceProvider::class,
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         // Barryvdh\Debugbar\ServiceProvider::class, 
         /*
          * Application Service Providers...
@@ -214,6 +215,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         // 'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],

@@ -10,31 +10,57 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//==== Main search site === //
-Route::get('/search', 'SearchPagesController\SearchController@show')->name('search');
-//=== End pages  ==== //
+Route::group(['namespace' => 'Shop\SearchPagesController'] , function(){
+    Route::get('search', 'SearchController@show')->name('search');
+    Route::get('search/{seotitle}', 'SearchdisplayController@show');
+    Route::post('search/{seotitle}', 'ViewPostController@addcomments');
+    // Route::get('{pages}','SearchdisplayController@show');
+});
 
-Route::get('/search/{seotitle}', 'SearchPagesController\SearchdisplayController@show');
-Route::post('/search/{seotitle}', 'ViewPagesController\ViewPostController@addcomments');
+Route::group(['namespace' => 'Shop\ShoppingCartPagesController'] , function(){
+    
+    Route::get('cart', 'ShoppingCartController@show')->name('cart.show');
+    Route::post('carts', 'ShoppingCartController@addcart')->name('cart.addcart');
+    Route::post('/carts/{product}', 'ShoppingCartController@update')->name('cart.update');
+    Route::delete('carts/{product}','ShoppingCartController@destroy')->name('cart.destroy');
+  
+
+    
+});
+Route::group(['namespace' => 'Shop\Mail'] , function(){
+    
+   Route::post('mailcheked', 'MailControllers@index');
+  
+
+    
+});
+Route::group(['namespace' => 'SitemapePagesController'] , function(){
+     
+ Route::get('sitemap.xml', 'MainSitemap@index');
+     
+ });
+ 
 
 
-//==== Main pages site === //
-Route::get('/', 'MainPagesController\MainController@index');
 
-//=== End pages  ==== //
-
-
-Route::get('blog','BlogPagesController\BlogController@index')->name('blog');
-Route::get('blog/category/{Blog_Category}', 'BlogPagesController\BlogCategoryControllers@catagory')->name('blog/category');
-Route::get('blog/{seo_url}','BlogPagesController\BlogsViewController@show');
-Route::post('blog/{seo_url}', 'BlogPagesController\BlogCommentController@addcomments');
-Route::post('blog/{seo_url}/comments', 'BlogPagesController\BlogsViewController@showcomment' );
+Route::get('/', 'CorePagesController\MainController@index')->name('main');
+Route::get('/category/{Category}', 'CorePagesController\CategoryController@Category')->name('shop.category');
+Route::get('/category','CorePagesController\CategoryController@Category')->name('category');
 
 
 
 
+Route::get('blog','Blog\BlogMainPagesController\BlogController@index')->name('blog');
+Route::get('blog/category/{Blog_Category}', 'Blog\BlogMainPagesController\BlogCategoryControllers@catagory')->name('blog/category');
+Route::get('blog/{seo_url}','Blog\BlogViewPagesController\BlogsViewController@show');
+Route::post('blog/{seo_url}', 'Blog\BlogViewPagesController\BlogCommentController@addcomments');
 
-//==== End contact === //
+
+
+
+
+
+
 
 
 Route::group(['prefix' => 'admin'], function () {

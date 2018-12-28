@@ -1,12 +1,14 @@
 {
-    "/js/core.js": "/js/core.js?id=569a7da0cfc21e764ad3",
-    "/css/StyleCore/bootstrap_variables.css": "/css/StyleCore/bootstrap_variables.css?id=4b4b4ceb6fd0082743eb",
-    "/css/StyleCore/core.css": "/css/StyleCore/core.css?id=3658bdea719eab12f60c",
-    "/css/StyleCore/header.css": "/css/StyleCore/header.css?id=284579a9e8b502fa274d",
-    "/css/StyleCore/footers.css": "/css/StyleCore/footers.css?id=4f961a305008711e5e49",
-    "/css/StyleCore/viewprod.css": "/css/StyleCore/viewprod.css?id=2b254340eac72cce7436",
-    "/css/StyleCore/blogview.css": "/css/StyleCore/blogview.css?id=1de6a15f636343bbde2c",
-    "/css/StyleCore/blog.css": "/css/StyleCore/blog.css?id=c7f76624ee0a34c2edb4",
-    "/css/StyleCore/search.css": "/css/StyleCore/search.css?id=178b0aef96f158174737",
-    "/css/styleCore.css": "/css/styleCore.css?id=bba88dc6dc6b544180bb"
+    "/js/core.js": "/js/core.js",
+    "/css/StyleCore/bootstrap_variables.css": "/css/StyleCore/bootstrap_variables.css",
+    "/css/StyleCore/core.css": "/css/StyleCore/core.css",
+    "/css/StyleCore/header.css": "/css/StyleCore/header.css",
+    "/css/StyleCore/footers.css": "/css/StyleCore/footers.css",
+    "/css/StyleCore/viewprod.css": "/css/StyleCore/viewprod.css",
+    "/css/StyleCore/blogview.css": "/css/StyleCore/blogview.css",
+    "/css/StyleCore/blog.css": "/css/StyleCore/blog.css",
+    "/css/StyleCore/search.css": "/css/StyleCore/search.css",
+    "/css/StyleCore/cart.css": "/css/StyleCore/cart.css",
+    "/css/StyleCore/main.css": "/css/StyleCore/main.css",
+    "/css/styleCore.css": "/css/styleCore.css"
 }

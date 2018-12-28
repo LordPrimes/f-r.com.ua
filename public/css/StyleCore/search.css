@@ -15,26 +15,48 @@
   width: 122px;
 }
 
+.reccommend-container {
+  clear: left;
+}
+
 .recommend-blog {
   padding: 5px;
+  margin-top: 60px;
 }
 
 .blog-action {
-  margin-top: 15px;
-  position: relative;
-  left: 40px;
+  margin-top: 30px;
   background: #fff;
-  width: 226px;
+  padding: 30px;
+  margin-bottom: 20px;
   border: 1px solid #cccccc;
 }
 
-.blog-action .action {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 17px;
+.blog-action h4 {
+  display: grid;
+  text-align: -webkit-center;
 }
 
-.blog-action .price-new {
+.blog-action p {
+  margin-bottom: 0px;
+}
+
+.blog-action .action-blog {
+  margin-right: 10px;
+  margin-left: -6px;
+}
+
+.price-new {
   text-decoration: line-through;
+}
+
+.blog-prod {
+  float: left;
+  width: 33%;
+  height: 470px;
+  margin: 0 0 5px 0;
+  z-index: 1;
+  display: grid;
+  text-align: -webkit-center;
 }
 

@@ -27,9 +27,13 @@
              <div class="headers-phone">+3 <i>(095)</i> 096-85-11  
                 </div>
                 <div class="headers-login-sign">
-                    <a href="" class="login">Вход</a>
-                    <a href="" class="sign">Регистрация</a>
+                   <a href="{{ route('cart.show') }}"><i class="fa fa-shopping-cart  fa-3x" aria-hidden="true"></i>
+                        @if (Cart::instance('default')->count() > 0)
+                       <span class="btn-floating btn-sm light-green">{{ Cart::instance('default')->count() }}</span>
+                        @endif
+                        </a>
                 </div>
+                
         </header>
          <nav class="navbar-main">
   <ul class="navbar-main-link">

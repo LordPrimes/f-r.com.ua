@@ -15,7 +15,7 @@
   <nav aria-label="breadcrumb" class="blogview-breadcrumb ">
       <ol class="breadcrumb light-green">
           <li class="breadcrumb-item"><a class="text-primary font-weight-bold" href="{{url('blog')}}">Блог</a></li>
-          <li class="breadcrumb-item"><a class="text-primary font-weight-bold" href="{{url('blog/category/'.$blog->blog_category->name)}}" >{{ $blog->blog_category->name }}</a></li>
+          <li class="breadcrumb-item"><a class="text-primary font-weight-bold" href="{{url('blog/category/'.$blog->blog_category->slug)}}" >{{ $blog->blog_category->name }}</a></li>
           <li class="breadcrumb-item active">{{ $blog->name }}</li>
       </ol>
   </nav>   
@@ -23,19 +23,22 @@
 <h1 class="h1-responsive font-weight-bold text-center my-5">{{ $blog->name }}</h1>
 <section>
 {!! $blog->body !!}
-<h2 class="font-weight-bold my-5">Рекоммендуемые статьи:</h2> 
+@if ($blog->recommendsOne !== null)
+    <h2 class="font-weight-bold my-5">Рекоммендуемые статьи:</h2>  
+@endif
   <section class="blog-view-main-recommend  d-flex flex-row  text-center my-5 animated fadeIn col-xl-3">
-    @foreach ($recommend as $item)
+@forelse ($recommend as $item)
         <div class="blog-popular ">
             <figure  class="view overlay rounded z-depth-2 mb-4">
-                <img  src="/storage/app/public/{{$item->images}}"  alt="{{$item->alt}}" title="{{$item->title }}">
+            <img  src="/storage/app/public/{{$item->blogrecommends->image}}" title="{{$item->blogrecommends->imageTitle}}" alt="{{$item->blogrecommends->imageAlt}}"  >
             </figure >
-                <h4 class="font-weight-bold mb-3"><strong> {{ $item->name }}</strong></h4>
-                <p><time>{{ $item->created_at}}</time></p>
-                <p class="text-justify dark-grey-text blog-popular-text ">{{ str_limit($item->description, 300) }}</p>
-                <a href="{{url('blog/'.$item->url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
+                <h4 class="font-weight-bold mb-3"><strong> {{ $item->blogrecommends->name }}</strong></h4>
+                <p><time></time></p>
+          <p class="text-justify dark-grey-text blog-popular-text ">{{str_limit($item->blogrecommends->mini_body, 300)}}</p>
+                <a  href="{{url('blog/'.$item->blogrecommends->seo_url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
           </div>
-     @endforeach
+          @empty
+@endforelse
   </section> 
 </section> 
 </div>
@@ -66,11 +69,13 @@
       </ul>
         </div>
 @endif
-<div class="sussec d-flex justify-content-center alert light-green example hoverable">
-  @if(session()->has('goods'))
+@if(session()->has('goods'))
+<div class="sussec d-flex alert justify-content-center  light-green example hoverable">
+  
     {{ session()->get('goods')}}
+  </div>
   @endif
-</div>
+
         </form>
     </div>
   </div>
@@ -83,21 +88,18 @@
         <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title w-100" id="myModalLabel">Отзывы: 
-                @if ($blog->commentOne->visable == '1')
-                    {{$blog->comments->count()}}</h4> 
-              @endif
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
               </button>
             </div>
               <div class="d-flex flex-row modal-body">
                  <div class="comments">
-                    @if ($blog->commentOne->visable == '1')
-                    @foreach ($blog->comments as $item) 
+                  
+                    @foreach ($comment as $item) 
                       <span class="font-weight-bold text-center my-5">Имя:{{$item->name}}</span> 
                       <p class="grey-text">Сообщение:{{$item->body}}</p> 
                     @endforeach
-                    @endif
+                  
                   </div>  
               </div>
                 <div class="modal-footer">

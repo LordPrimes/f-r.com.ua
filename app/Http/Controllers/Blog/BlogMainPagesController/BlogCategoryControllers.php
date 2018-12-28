@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\BlogPagesController;
+namespace App\Http\Controllers\Blog\BlogMainPagesController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\blog;
-use App\Model\Blog_Category;
+use App\Model\Blogs\Blog;
+use App\Model\Blogs\Blog_Category;
 use Carbon\Carbon;
 use App\Model\Seo;
 
@@ -15,13 +15,13 @@ class BlogCategoryControllers extends Controller
      
         $date = Carbon::now()->subDays(7);
         
-            $lastarticle = blog::LastArticle($date)->get();
-            $popularblog = blog::StatusPopular()->get();
-            $recommendblog = blog::StatusRecommend()->get();
+            $lastarticle = Blog::LastArticle($date)->get();
+            $popularblog = Blog::StatusPopular()->get();
+            $recommendblog = Blog::StatusRecommend()->get();
 
                 if ($request->session()->exists('viewed')) {
                         $products = session()->get('viewed');
-                        $youviewed = blog::ViewedArticle($products)->get();
+                        $youviewed = Blog::ViewedArticle($products)->get();
           
                                                             }
                  else {

@@ -63,8 +63,10 @@
         </div>
      @endforeach
 </section>
-@endif   
-    <h2 class="font-weight-bold my-5">Популярные статьи:</h2> 
+@endif  
+    @if ($popularblog !== null)
+       <h2 class="font-weight-bold my-5">Популярные статьи:</h2>   
+    @endif
 <section class="d-flex flex-row justify-content-center  text-center my-5 animated fadeIn">
     @foreach ($popularblog as $item)
         <div class="blog-popular col-lg-3 ">
@@ -77,8 +79,10 @@
                 <a href="{{url('blog/'.$item->seo_url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
         </div>
     @endforeach
-</section>  
+</section> 
+    @if ($recommendblog !== null)
     <h2 class="font-weight-bold my-5">Рекоммендуемые статьи:</h2> 
+    @endif
 <section class="d-flex flex-row justify-content-center  text-center my-5 animated fadeIn">
     @foreach ($recommendblog as $item)
         <div class="blog-popular col-lg-3">

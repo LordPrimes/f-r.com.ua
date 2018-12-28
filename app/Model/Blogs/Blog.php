@@ -1,30 +1,35 @@
 <?php
 
-namespace App\Model;
+namespace App\Model\Blogs;
 
 use Illuminate\Database\Eloquent\Model;
 
-class blog extends Model
+class Blog extends Model
 {
     protected $table = 'blog';
 
     public function blog_category()
     {
-        return $this->belongsTo('App\Model\Blog_Category', 'blogcategory_id');
+        return $this->belongsTo('App\Model\Blogs\Blog_Category', 'blogcategory_id');
     }
     
+    public function recommendsOne(){
+
+        return $this->hasOne('App\Model\Blogs\Blog_Recommend', 'recommend_id');
+    }
+
     public function recommends(){
 
-        return $this->belongsTo('App\Model\Blog_Recommend', 'blogrecommend_id');
+        return $this->hasMany('App\Model\Blogs\Blog_Recommend', 'recommend_id');
     }
 
     public function comments(){
 
-        return $this->hasMany('App\Model\Blog_Comment', 'blog_id');
+        return $this->hasMany('App\Model\Blogs\Blog_Comment', 'blog_id');
     }
     public function commentOne(){
 
-        return $this->hasOne('App\Model\Blog_Comment', 'blog_id');
+        return $this->hasOne('App\Model\Blogs\Blog_Comment', 'blog_id');
     }
     public function scopeOrderDesc($query){
 
@@ -55,5 +60,6 @@ class blog extends Model
 
         return $query->whereIn('seo_url', $seo_url)->take(3);
     }
- 
+    
+    
 }

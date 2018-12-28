@@ -1,16 +1,12 @@
-@import '../variables.scss';
+
 body{
     background-color: #f1f1f1;}
 .view-main {
-display: flex;
-flex-direction: row;
 margin-top: 14px;
 background: #fff;
 padding:10px;
 border:1px solid #e1e2e3;
-
 .view-main-images {
-    position: relative;
     z-index:1;
     width: 250px;
     height: 250px;
@@ -28,18 +24,6 @@ border:1px solid #e1e2e3;
         line-height: 1.1;
         color: #000;
     }
-    .view-main-mini-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .view-main-mini-info-star {
-        font-size: 20px;
-        font-weight: lighter;
-        a {
-            color:#797878;
-        }
-    }
     .view-main-mini-info-attr{
         font-size: 20px;
         font-weight: 700;
@@ -51,10 +35,6 @@ border:1px solid #e1e2e3;
 .view-main-backet{
     margin-top: 15px;
     padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
     color: #fff;
     border: 1px solid #cccccc;
     border-radius: 5px;
@@ -68,38 +48,22 @@ border:1px solid #e1e2e3;
 
       
     }
+    .view-main-backet-price {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: inherit;
+    }
     .view-main-backet-new-price {
         font-size: 20px;
         margin-left: 15px;
         margin-right: 15px;
         font-weight: 700;
     }
-    .view-main-backet-card {
-        cursor: pointer;
-        color: #333;
-        text-decoration: none;
-        width: 160px;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 600px;
-        background: #3EC761;
-        text-shadow: 0 1px 0 #3EC761;
-        border-radius: 3px;
-        line-height: 43px;
-        height: 44px;
-     
-        &:hover {
-            background: #3EC761;
-            background: linear-gradient(to bottom,#3EC761
-            0,#52ad3a 100%);
-        }
-    }
+   
 
 }
 .view-main-backet-all-count {
-    input[disabled='disabled']{
-        background: #fff;     
-      }
+   
  .view-main-backet-numbers {
     border: 1px solid #e1e2e3;
     border-left: medium none;
@@ -126,12 +90,10 @@ border:1px solid #e1e2e3;
     outline: none;
     &:hover {
         background: #e6e0e0;
-    }
-   
+    } 
 }
 }
 .view-main-delivery{
-    display: flex;
     margin-top: 10px;
     p {
         font-family:'Roboto', sans-serif;
@@ -144,14 +106,13 @@ border:1px solid #e1e2e3;
     padding: 10px;
     border: 1px solid #e1e2e3;;
     margin-bottom: 30px;
-    p{
-        font-family:'Roboto', sans-serif;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px dotted #d5d5d5;
-        font-weight: normal; 
-        color: #666;
-        font-size: 18px;
-    }
+ 
 }
 
+.comments-view  {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+.view-main-cash {
+    font-size: 20px;
+}

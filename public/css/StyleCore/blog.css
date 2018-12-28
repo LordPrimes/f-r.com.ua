@@ -52,32 +52,6 @@
   color: #52ad3a;
 }
 
-.blog-popular {
-  margin-right: 10px;
-  margin-left: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), to(#eee));
-  background: -webkit-linear-gradient(top, #fff 0, #eee 100%);
-  background: -o-linear-gradient(top, #fff 0, #eee 100%);
-  background: linear-gradient(to bottom, #fff 0, #eee 100%);
-  border-radius: 5px;
-  border: 1px solid #d3d3d3;
-}
-
-.blog-popular:hover {
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-}
-
-.blog-popular .blog-popular-text {
-  padding: 5px 5px 5px 5px;
-}
-
-.blog-popular img {
-  width: 300px;
-  height: 300px;
-}
-
 .category .active a {
   color: #4285f4 !important;
   font-weight: 800;

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\BlogPagesController;
+namespace App\Http\Controllers\Blog\BlogViewPagesController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogsCommentsRequest;
-use App\Model\Blog_Comment as Commments;
+use App\Model\Blogs\Blog_Comment as Commments;
 
 class BlogCommentController extends Controller
 {

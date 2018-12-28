@@ -44,25 +44,7 @@
     }
 }
     } 
-.blog-popular{
-    margin-right: 10px;
-    margin-left: 10px;
-    background: linear-gradient(to bottom, #fff 0, #eee 100%);
-    
-    border-radius: 5px;
-    border: 1px solid #d3d3d3;
-    &:hover {
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
-        border-radius: 10px;
-    }
-    .blog-popular-text {
-        padding: 5px 5px 5px 5px;
-    }
-    img {
-        width: 300px;
-        height: 300px;
-    }
-}
+
 .category{
    
 .active {

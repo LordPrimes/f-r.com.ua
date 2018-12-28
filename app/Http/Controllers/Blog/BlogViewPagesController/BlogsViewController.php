@@ -1,13 +1,13 @@
 <?php
-namespace App\Http\Controllers\BlogPagesController;
+namespace App\Http\Controllers\Blog\BlogViewPagesController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
-use App\Model\blog;
-use App\Model\Blog_Recommend as Recommend;
-use App\Model\Blog_Comment as Comment;
+use App\Model\Blogs\Blog;
+use App\Model\Blogs\Blog_Comment as Comment;
+use App\Model\Blogs\Blog_Recommend as Recommend;
 use Session;
-use DB;
+
 
 
 class BlogsViewController extends Controller
@@ -16,12 +16,18 @@ class BlogsViewController extends Controller
 
         session()->push('viewed', $seo_url); 
        
-        $blog = blog::SeoTitle($seo_url)
+        $blog = Blog::SeoTitle($seo_url)
                         ->firstorFail();
+                
         $recommend = Recommend::Recommend($seo_url)->get();
+        
+        $blogs = $blog->id;
+      
+        $comment = Comment::VisableComments($blogs)->get();
         $data = [
-                'blog' => $blog, 
-                'recommend' => $recommend      
+                'blog' => $blog,
+                'recommend' => $recommend,
+                'comment' => $comment        
                 ];
         return view('site.pages.viewblog')->with($data);
     }

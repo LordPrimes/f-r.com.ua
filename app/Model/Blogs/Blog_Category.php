@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Model\Blogs;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,7 +10,7 @@ class Blog_Category extends Model
 
     public function blogs()
     {
-        return $this->hasMany('App\Model\Blog', 'blogcategory_id');
+        return $this->hasMany('App\Model\Blogs\Blog', 'blogcategory_id');
     }
     
     public function getRouteKeyName(){

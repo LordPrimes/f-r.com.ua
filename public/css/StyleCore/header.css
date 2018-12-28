@@ -114,6 +114,12 @@ a {
   color: #fff;
 }
 
+.headers-login-sign span {
+  border-radius: 40px;
+  position: relative;
+  bottom: 10px;
+}
+
 .headers-cardnumbers {
   display: -webkit-box;
   display: -ms-flexbox;
