@@ -30,6 +30,8 @@ mix
 .sass('resources/assets/sass/StyleCore/search.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/cart.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/main.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/event.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/eventblog.scss', 'public/css/StyleCore')
 .options({
     processCssUrls:true,
       postCss: [

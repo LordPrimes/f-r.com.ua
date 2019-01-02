@@ -92,7 +92,19 @@
   background: -o-linear-gradient(top, #fff 0, #eee 100%);
   background: linear-gradient(to bottom, #fff 0, #eee 100%);
   border-radius: 10px;
+  padding: 10px 20px 0 20px;
   border: 1px solid #d3d3d3;
+  text-align: -webkit-center;
+  display: grid;
+}
+
+.blog-popular .blog-popular-body {
+  display: grid;
+  grid-template-columns: 300px;
+}
+
+.blog-popular h5 {
+  text-align: justify;
 }
 
 .blog-popular:hover {
@@ -105,7 +117,12 @@
   padding: 5px 5px 5px 5px;
 }
 
-.blog-popular img {
+.blog-popular figure {
+  width: 300px;
+  height: 300px;
+}
+
+.blog-popular figure img {
   width: 300px;
   height: 300px;
 }
@@ -115,5 +132,33 @@
   background: #fff;
   padding: 10px 0 10px 0;
   border: 1px solid #e1e2e3;
+}
+
+.seach-autocomplete {
+  position: absolute;
+  background: #fff;
+  width: 600px;
+  z-index: 1;
+  border: 1px solid #cccccc;
+  display: grid;
+  border-bottom: none;
+  margin-top: -2px;
+}
+
+.seach-autocomplete li:hover {
+  background: #e5e5e5;
+}
+
+.erros-404 {
+  height: 600px;
+  margin-bottom: -300px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.paginate {
+  clear: both;
 }
 

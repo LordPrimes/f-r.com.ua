@@ -25,7 +25,7 @@
 {!! $blog->body !!}
 @if ($blog->recommendsOne !== null)
     <h2 class="font-weight-bold my-5">Рекоммендуемые статьи:</h2>  
-@endif
+
   <section class="blog-view-main-recommend  d-flex flex-row  text-center my-5 animated fadeIn col-xl-3">
 @forelse ($recommend as $item)
         <div class="blog-popular ">
@@ -40,6 +40,7 @@
           @empty
 @endforelse
   </section> 
+  @endif
 </section> 
 </div>
 <div class="container view-main-comments">

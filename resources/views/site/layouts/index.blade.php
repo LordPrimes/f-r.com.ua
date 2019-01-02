@@ -4,23 +4,27 @@
           @include('site.includes.head')  
     </head>
     <body>
- <section class='headers-nav'>
-            <li><a href="">Каталог</a></li>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Оплата и доставка</a></li>
-            <li><a href="">Обмен и возрат</a></li>
-            <li><a href="">Контактная информация</a></li>     
-</section>
+<nav class='headers-nav'>
+<li><a href="{{route('catalog')}}">Каталог</a></li>
+<li><a href="{{route('about')}}">О нас</a></li>
+<li><a href="{{route('payment')}}">Оплата и доставка</a></li>
+<li><a href="{{route('exchange')}}">Обмен и возрат</a></li>
+<li><a href="{{route('contact')}}">Контактная информация</a></li>     
+ </nav>
   <header class="headers">
-            <div class="headers-logo"><img src="https://family-room.com.ua/image/data/logo/logo.png"   />
-                <a href="" class="headers-logo-phone">Адрес и телефон</a>
+  <div class="headers-logo"><a href="{{route('main')}}"><img src="https://family-room.com.ua/image/data/logo/logo.png"   /></a>
+                <a href="{{route('contact')}}"class="headers-logo-phone">Адрес и телефон</a>
                 <p>Режим работы: 9:00 — 18:00</p>
             </div>
                 <div  id='headers-search'>
                 <div class='headers-search-input'>
                 <form action="{{route ('search')}}" method="GET">
-                     <input name='query'    class="search-input"  placeholder="Поиск товара" required > </form>
-                 
+                     <input name='query' autocomplete="off"    class="search-input"  placeholder="Поиск товара" required > 
+                <div class="seach-autocomplete">
+           
+                </div>
+                    </form>
+                    
                  
             </div>    
               </div>
@@ -29,26 +33,24 @@
                 <div class="headers-login-sign">
                    <a href="{{ route('cart.show') }}"><i class="fa fa-shopping-cart  fa-3x" aria-hidden="true"></i>
                         @if (Cart::instance('default')->count() > 0)
-                       <span class="btn-floating btn-sm light-green">{{ Cart::instance('default')->count() }}</span>
+                       <span class="btn-floating btn-sm light-green">{{ Cart::content()->count() }}</span>
                         @endif
                         </a>
                 </div>
                 
         </header>
-         <nav class="navbar-main">
-  <ul class="navbar-main-link">
-    <li class="navbar-main-link-list"><a href="#">Home</a></li>
-    <li class="navbar-main-link-list"><a href="#">About</a>
-      <ul class="navbar-main-link-sub-list">
-        <li><a href="">Our team</a></li>
-        <li><a href="">Histor1111111111111111111y</a></li>
-      </ul>
-    </li>
-    <li class="navbar-main-link-list"><a href="#">Clients</a></li>
-    <li class="navbar-main-link-list"><a href="#">Contact Us</a></li>
-  </ul>
-</nav>   
- 
+
+
+
+
+
+
+
+
+
+
+
+  
 
  
   
@@ -59,31 +61,11 @@
     <i class="fa fa-arrow-up fa-2x" ></i>
 </div>
 <main> @yield('content')</main>
-   
-        <footer class="footer">     
-    <div class="footer-info">
-      <div><img src='/img/cartgreen.png' /><span>Доставка по всей Украине</span> </div>
-      <div><img src='/img/cartgreen.png' /><span>Поддержка 7 дней в неделю</span> </div>
-      <div><img src='/img/cartgreen.png' /><span>Оптала наличными при получении</span> </div>
-      <div><img src='/img/cartgreen.png' /><span>Гарантия качества</span> </div>
-</div>
 
-    <div class="footer--style">
-    <div class="footer-link ">
-    <div> <a href="" >Ламинат1</a> </div>
-    <div> <a href="" >Ламинат2</a> </div>
-    <div> <a href="" >Ламинат3</a> </div>
-    <div> <a href="" >Ламинат4</a> </div>
-    <div> <a href="" >Ламинат5</a> </div>
-    <div> <a href="" >Ламинат6</a> </div>
-      </div>
-        <strong class=" footer-f-r">f-r.com.ua</strong>
-      
-      
-    </div>
-  
- 
-         @include('site.includes.footer') 
-          </footer>
+@include('site.includes.footer') 
+
+         @include('site.includes.script') 
+          
+    
     </body>
 </html>

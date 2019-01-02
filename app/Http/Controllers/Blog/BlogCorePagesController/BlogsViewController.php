@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\Blog\BlogViewPagesController;
+namespace App\Http\Controllers\Blog\BlogCorePagesController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;

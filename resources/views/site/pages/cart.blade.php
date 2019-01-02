@@ -4,23 +4,54 @@
 @endsection
 @section('content')
 <div class="container">
-  <div class="d-flex flex-column float-left col-lg-4 ">Информация:
+  <div class="row">
+    @if (Cart::count() > 0 )
+  <div class="cart-order d-flex flex-column  col-lg-4 ">
+    <h2 class="text-center">Информация:</h2>
  
          
           
-              <form method="POST"  >
+  <form method="POST" action="{{route('orders')}}"  >
                 {{ csrf_field() }}
-                  <label>Ваше имя:</label>
+                  <label>Имя:</label>
                   <input class="form-control z-depth-1" type="text" name="name" />
-                  <label>Ваше телефон:</label>
-                  <input class="form-control z-depth-1" type="text" name="name" />
+                  <label>Телефон:</label>
+                  <input class="form-control z-depth-1" type="tel"  name="phone" />
+                  <label>Email:</label>
+                  <input class="form-control z-depth-1" type="text" name="email" />
+                  <label>Город:</label>
+                  <input class="form-control z-depth-1" type="text" name="сity" />
+                  <label>Адресс:</label>
+                  <textarea class="form-control z-depth-1" type="text" name="adres" ></textarea>
 
+                <div class="text-center">
                   <input class=" btn btn-light-green" type="submit" value="Оформить заказ">
-    
+    </div>
+    @if ($errors->any())
+    <div class="errors-form text-left alert red accent-4 font-weight-bold">
+    <ul>
+@foreach ($errors->all() as $error)
+        <li>
+        {{ $error }}
+        </li>
+@endforeach
+        </ul>
+    </div>
+    <div class="errors text-left alert red accent-4 font-weight-bold">
+      <ul>
+@foreach ($errors->all() as $error)
+        <li>
+            {{ $error }}
+        </li>
+@endforeach
+    </ul>
+    </div>
+@endif 
                 </form>
  
 </div>
-<div class="d-flex flex-column col-lg-8 ">
+@endif
+<div class="order-cart d-flex flex-column col-lg-8 ">
 @if (Cart::count() > 0 )
 <h2 class="h1-responsive  my-5">Количество товаров в корзине:{{Cart::count()}}</h2>
 @else 
@@ -35,7 +66,7 @@
     @endif
     
 @foreach (Cart::content() as $item)
-  <div class="d-flex flex-row card align-items-center">
+  <div class="order-cart-body d-flex flex-row card align-items-center">
   <div class="cart-view view overlay">
       <img src="/storage/app/public/{{$item->model->images}}" class="img-fluid"
       alt="{{$item->model->alt_images}}" title="{{$item->model->title_images}}">
@@ -44,7 +75,7 @@
       </a>
     </div>
     
-        <a href="{{url('/search/'.$item->model->seo_title)}}" class="cart-link grey-text">
+        <a href="{{url($item->model->seo_title)}}" class="cart-link grey-text">
         <h5>{{ $item->model->name }}</h5>
       </a>
      
@@ -75,6 +106,7 @@
 <h1>{{Cart::subtotal()}}</h1>
 
 
+</div>
 </div>
 </div>
 

@@ -26,3 +26,35 @@
   text-align: center;
 }
 
+.cart-order {
+  background: #fff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  position: relative;
+  top: 50px;
+  border-radius: 10px;
+}
+
+.cart-order label {
+  margin-top: 10px;
+}
+
+.cart-order textarea {
+  resize: none;
+  height: 120px;
+}
+
+.order-cart {
+  background: #fff;
+  position: relative;
+  top: 50px;
+  left: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+.order-cart .order-cart-body:hover {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
+}
+

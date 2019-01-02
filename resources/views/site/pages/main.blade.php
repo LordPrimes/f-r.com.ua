@@ -12,11 +12,11 @@
         <div class="d-flex flex-row">
           <div class="main-category">
             <div class="main-category-link">
-          <a class="btn btn-rounded btn-light-green" href="{{route('category')}}">Категории:</a>
+          <a class="btn btn-rounded btn-light-green" href="{{route('catalog')}}">Категории:</a>
             </div>
           <div class=" main-category-list text-center">
             @foreach ($categor as $item)
-            <a href="">{{$item->name}}</a>
+          <a href="">{{$item->name}}</a>
             @endforeach
           </div>
           </div>
@@ -59,14 +59,41 @@
  @endforeach
  @endif
 </div>
+@if ($youviewed !== null)
+<h2 class="font-weight-bold my-5">Вы смотрели:</h2> 
+<section class="d-flex animated fadeIn">
+   
+ 
+@foreach ($youviewed as $item)
+<div class="blog-popular col-lg-4">
+<div class="card align-items-center">
+    <div class="view overlay">
+      <img src="/storage/app/public/{{$item->images}}" class="img-fluid"
+      alt="{{$item->alt_images}}" title="{{$item->title_images}}">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <div class="blog-popular-body card-body text-center">
+      <a href="{{url($item->seo_title)}}" class="grey-text">
+      <h5>{{ $item->name }}</h5>
+      </a>
+      <h4 class="font-weight-bold blue-text">
+      <a class="btn btn-rounded btn-light-green" href="{{$item->seo_title}}">Подробние</a>
+      </h4>
+    </div>
+  </div>
+</div>
+@endforeach
+
+</section> 
+@endif
 <h2 class="h1-responsive font-weight-bold text-center my-5">ЛИДЕРЫ ПРОДАЖ</h2>
 <section class="d-flex flex-column">
 @if ($action !== null)
 <div class="blog-action-main">
-    <h2 class="h1-responsive font-weight-bold text-center my-5">Акции:</h2>
    <div class="d-flex  flex-row">
     @foreach ($action as $item)
-    
           <div class="action-blog card align-items-center">
             <div class="view overlay">
               <img src="/storage/app/public/{{$item->actions->images}}" class="img-fluid"
@@ -76,11 +103,11 @@
               </a>
             </div>
             <div class="card-body text-center">
-              <a href="{{url('/search/'.$item->actions->seo_title)}}" class="grey-text">
+              <a href="{{url($item->actions->seo_title)}}" class="grey-text">
               <h5>{{ $item->actions->name }}</h5>
               </a>
               <h4 class="font-weight-bold blue-text">
-              <strong class=""><p>Старая цена:</p>{{$item->actions->price }}</strong>
+              <strong ><p>Старая цена:</p>{{$item->actions->price }}</strong>
               <strong class="text-danger"><p>Новая цена:</p>{{$item->new_price }}</strong>
                 <a class="btn btn-rounded btn-light-green" href="">Купить</a>
               </h4>
@@ -90,13 +117,25 @@
      @endforeach  
     </div>
     <div class="d-flex justify-content-center">
-     <a class="btn btn-rounded btn-light-green" href="">Посмотреть все приложения</a>
+     
+      
+   
+    <a class="btn btn-rounded btn-light-green" href="{{route('leaders')}}" >Посмотреть все приложения</a>
+   
+   
+
+
+   
+           
+      
+       
       </div>
     </div> 
       @endif
-     
+      @if ($recommend !== null)
+      <h2 class="h1-responsive font-weight-bold text-center my-5">Популярные товары:</h2>
       <div class="container-recommend">
-          <h2 class="h1-responsive font-weight-bold text-center my-5">Популярные товары:</h2>
+         
         <div class="d-flex flex-row carousel-recommend">
           @foreach ($recommend as $item) 
           <div class="recommend-blog-main">
@@ -112,7 +151,7 @@
                
               </div>
               <div class="card-body card-body-cascade text-center">
-                <a href="{{url('/search/'.$item->seo_title)}}" class="text-muted">
+                <a href="{{$item->seo_title}}" class="text-muted">
                 <h5>{{$item->name}}</h5>
                 </a>
               <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
@@ -133,7 +172,15 @@
           </div>
                @endforeach   
         </div>
+        <div class="d-flex justify-content-center align-items-center ">
+      
+         
+ 
+        <a class="btn btn-rounded btn-light-green" href="{{route('popular')}}">Посмотреть все приложения</a>
+    
+    </div>
       </div>
+      @endif
       <h2 class="h1-responsive font-weight-bold text-center my-5">НОВОСТИ ИЗ БЛОГА</h2>
        <div class="blog-main d-flex flex-row">
          <div class="carousel-recommend">

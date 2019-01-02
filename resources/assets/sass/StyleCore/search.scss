@@ -54,3 +54,51 @@ width: 122px;
     display: grid;
     text-align: -webkit-center;
 }
+.sort-search{
+margin-top: 20px;
+background: #fff;
+border: 1px solid #cccccc;
+padding: 10px;
+font-size: 18px;
+font-weight: initial; 
+}
+.filter {
+    float: left;
+    background: #fff;
+    border: 1px solid #e1e2e3;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+    height: 900px;
+    padding: 20px;
+    position: relative;
+    left: 30px;
+    width: 200px;
+    .filter-container{
+        margin-left: 25px;
+    .filter-form-control {
+        display: grid;
+        text-align: -webkit-left;
+       
+        label {
+            font-size: 15px;
+            color: #c8cece;
+            &:hover {
+                color:#fff;
+            }
+        input {
+            width: 25px;
+            height: 25px;
+            position: relative;
+    right: 5px;
+   
+          
+        }
+    }
+     
+        a {
+            font-size: 18px;
+        }
+    }
+}
+} 

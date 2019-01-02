@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Shop\SearchPagesController;
+namespace App\Http\Controllers\CorePagesController;
 use App\Http\Requests\AddCommentsRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\shop\Products;
-use App\Model\shop\Comments;
-
+use App\Model\Products;
+use App\Model\Comments;
+use Intervention\Image\Facades\Image as Image;
 
 class ViewPostController extends Controller
 {
@@ -18,9 +18,9 @@ class ViewPostController extends Controller
         'bad_comments' => $request->input('limitations'),
         'good_comments' => $request->input('comment'),
         'visable' => 0,
-        'products_id' => $request->input('prod_id')
+        'products_id' => 1
         ]);
-        session()->flash('goods', 'Ваше отзыв добавлен на обработку');
+        session()->flash('goods', 'Ваше комментарий добавлен на обработку');
         return back()->withInput();
        
     }

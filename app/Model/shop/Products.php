@@ -47,6 +47,22 @@ class Products extends Model
                     ->orderBy('id', 'desc');
 
     }
+    public function scopeSearchSort($query, $search){
+
+        return $query->where('name', 'LIKE', "%$search%")
+                    ->orWhere('mini_description','LIKE', "%$search%")
+                    ->orWhere('price','LIKE', "%$search%");
+                
+
+    }
+
+    public function scopeTypehead($query, $search){
+
+        return $query->where('name', 'LIKE', "%$search%")
+                    ->orderBy('id', 'desc')
+                    ->take(10);
+
+    }
 
     public function scopeViewProduct($query, $seo_title){
 
@@ -65,5 +81,10 @@ class Products extends Model
     public function scopePopular($query){
 
         return $query->where('popular', 1)->orderBy('id', 'DESC');
+    }
+
+    public function scopeViewed($query , $seo_url){
+
+        return $query->whereIn('seo_title', $seo_url)->take(4);
     }
 }

@@ -39,10 +39,21 @@ class Blog extends Model
 
         return $query->where('popular', 1)->inRandomOrder()->take(3);
     }
+    
+    public function scopePopular($query){
+        
+        return $query->where('popular', 1)->orderBy('id','desc');
+    }
+
     public function scopeStatusRecommend($query){
 
         return $query->where('recommend', 1)->inRandomOrder()->take(3);
     }
+    public function scopeRecommend($query){
+
+        return $query->where('recommend', 1)->orderBy('id','desc');
+    }
+    
     public function scopeViewedArticle($query, array $viewed)
     {
         return $query->whereIn('seo_url', $viewed)->inRandomOrder()->take(3);

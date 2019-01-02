@@ -57,12 +57,13 @@
 
 .main-category .main-category-link {
   border-bottom: 1px solid #eaeaea;
-  margin-bottom: 10px;
 }
 
-.main-category .main-category-list {
+.main-category .main-category-list a {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 10px;
+  padding-top: 10px;
+  display: grid;
 }
 
 .blog-action-main {
@@ -101,6 +102,7 @@
 
 .main-category-img .main-category-img-link img {
   height: 140px;
+  width: 200px;
 }
 
 .container-recommend {
@@ -108,10 +110,14 @@
   border: 1px solid #cccccc;
 }
 
+.container-recommend a {
+  margin-bottom: 18px;
+}
+
 .container-recommend .recommend-blog-main {
   border-top: 1px solid #eaeaea;
   margin-top: 15px;
-  padding: 10px;
+  padding: 20px;
   margin-top: 60px;
 }
 

@@ -13,7 +13,7 @@ use App\Model\Blogs\Blog;
 
 class MainController extends Controller
 {
-    public function index (){
+    public function index (Request $request){
 
         $Slider = Slider::all();
         $categor = Category::all();
@@ -21,12 +21,22 @@ class MainController extends Controller
         $Recommend = Products::Recommend()->get();
         $blog = Blog::OrderDesc()->get();
 
+        if ($request->session()->exists('viewed_prod')) {
+            $view = session()->get('viewed_prod');
+            $youviewed = Products::Viewed($view)->get();
+          
+        }
+        else {
+            $youviewed = null;
+        }
+
         $data = [
                 'Slider' => $Slider,
                 'categor' => $categor,
                 'action' => $action,
                 'recommend' => $Recommend,
-                'blog' => $blog
+                'blog' => $blog,
+                'youviewed' => $youviewed
             
 
         ];

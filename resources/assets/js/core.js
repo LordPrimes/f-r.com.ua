@@ -2,6 +2,11 @@ require('bootstrap');
 import 'mdbootstrap/js/mdb.min.js';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+import 'jquery-ui/ui/widgets/autocomplete';
+import 'jquery-ui/themes/base/autocomplete.css';
+import 'jquery-ui/themes/base/theme.css';
+import 'jquery-ui/themes/base/menu.css';
+import 'jquery-ui/themes/base/core.css';
 
 
 $(document).ready(function(){
@@ -84,3 +89,25 @@ $('.view-main-submit').click(function(){
     let update = $('.view-main-backet-numbers').val();
     $('.updatenewqty').val(update);
 });
+
+
+$('.search-input').keyup(function(){ 
+    var query = $(this).val();
+    if(query != '')
+    {
+     var _token = $('input[name="_token"]').val();
+     $.ajax({
+      url:"/typehead",
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      dataType: 'json',
+      method:"POST",
+      data:{query:query, _token:_token},
+      success:function(data){
+                $('.seach-autocomplete').html(data.view);
+      }
+     });
+    }
+});
+

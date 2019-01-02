@@ -3,18 +3,41 @@
 «ФемилиРум» ☛Твой склад стройматериалов Поиск по запросу {{ $search }}
 @endsection
 @section('content')
+
+<div class="d-flex flex-row justify-content-start filter ">
+  <div class="filter-container">
+   
+      <form class="filter-form-control">
+        <a>Цвет:</a>
+
+       <label class="d-flex align-items-center"> <input type="checkbox">Красный</label>
+        <label class="d-flex align-items-center"><input type="checkbox">черный</label>
+        <label class="d-flex align-items-center"><input type="checkbox">белый</label>
+        <label class="d-flex align-items-center"><input type="checkbox">что-то</label>
+       
+        
+      </form>
+   
+   
+    
+     
+   
+
+  </div>
+</div>
 <article class="container">
-  <div class="d-flex flex-row">
-      <a href="{{ route('search', ['query'=> request()->$search ,  'sort' => 'price_asc']) }}">от дорогих</a> 
-      <a href="{{ route('search',  ['sort' => 'proce_desc']) }}">от дешевых</a>
-      <a href="{{ route('search',  ['sort' => 'A_Z']) }}">от (А-Я)</a>
-      <a href="{{ route('search',  ['sort' => 'Z_A']) }}">от (Я-А)</a>
+  <div class="sort-search d-flex flex-row justify-content-around   ">
+    <span>Сортировка:</span>
+      <a href="{{ route('search', ['query'=> $search , 'sort' => 'price_asc']) }}">от дорогих</a> 
+      <a href="{{ route('search', ['query'=> $search , 'sort' => 'price_desc']) }}">от дешевых</a>
+      <a href="{{ route('search', ['query'=> $search , 'sort' => 'A_Z']) }}">от (А-Я)</a>
+      <a href="{{ route('search', ['query'=> $search , 'sort' => 'Z_A']) }}">от (Я-А)</a>
+
 </div>
 @if ($product !== null) 
 <h2 class=" h1-responsive font-weight-bold text-center my-5">По вашему запросу:</h2>
 <p class="grey-text text-center w-responsive mx-auto mb-5"><mark> {{ $search }}</mark> найдено {{ $product->count() }} товара</p>
 
- 
         @forelse ($product as $item) 
         
         <div class="blog-prod col-lg-4">
@@ -25,7 +48,7 @@
                   alt="{{$item->alt_images}}" title="{{$item->title_images}}">
                 </figure>
                 <div class="stripe dark">
-                <a href="{{url('/search/'.$item->seo_title)}}">
+                <a href="{{$item->seo_title}}">
                     <p>
                         {{ $item->name }}
                       <i class="fa fa-angle-right"></i>
@@ -37,7 +60,7 @@
         </div>  
       
       @empty
-    <h2 class="h1-responsive  text-center my-5">По вашему запросу <mark>{{ $search }} </mark> . Ничего не найдено! </h2>
+   
   @endforelse
   
  
@@ -46,10 +69,7 @@
  @if ($search == null)
       <h2 class="h1-responsive font-weight-bold text-center my-5">Поисковое поле пустое.</h2>
   @endif
-     
       @if ($recommend !== null)
-          
-   
     <div  class="reccommend-container">
         <h2 class="d-flex justify-content-start h1-responsive  text-center my-5 font-weight-bold"> Рекоммендуемый товар:</h2>
       <div class="carousel">
@@ -64,10 +84,9 @@
             <div class="mask rgba-white-slight"></div>
           </a>
             </figure>
-         
         </div>
         <div class="card-body card-body-cascade text-center">
-          <a href="{{url('/search/'.$item->seo_title)}}" class="text-muted">
+          <a href="{{$item->seo_title}}" class="text-muted">
           <h5>{{$item->name}}</h5>
           </a>
         <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
@@ -78,6 +97,7 @@
           <input type="hidden" name='id' value="{{$item->id }}">
           <input type="hidden" name='name' value="{{$item->name }}">
           <input type="hidden" name='price' value="{{$item->price }}">
+          <input type="hidden" name='qty' value="{{$item->qty}}">
        
                
              <button class="btn  btn-rounded btn-light-green" type="submit" >Купить</button>
@@ -111,7 +131,7 @@
                 </a>
               </div>
               <div class="card-body text-center">
-                <a href="{{url('/search/'.$item->actions->seo_title)}}" class="grey-text">
+                <a href="{{$item->actions->seo_title}}" class="grey-text">
                 <h5>{{ $item->actions->name }}</h5>
                 </a>
                 <h4 class="font-weight-bold blue-text">
@@ -146,7 +166,7 @@
              
             </div>
             <div class="card-body card-body-cascade text-center">
-              <a href="{{url('/search/'.$item->seo_title)}}" class="text-muted">
+              <a href="{{$item->seo_title}}" class="text-muted">
               <h5>{{$item->name}}</h5>
               </a>
             <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
@@ -177,7 +197,7 @@
               </div>
               <div class="card-body card-body-cascade">
                 <h4 class="card-title">
-                  <a class="font-weight-bold" href="{{url('/search/'.$item->seo_title)}}">{{ $item->name }}</a>
+                  <a class="font-weight-bold" href="{{$item->seo_title}}">{{ $item->name }}</a>
                 </h4>
                 <p class="text-justify card-text">{{ str_limit($item->mini_description,  50)}}
                 </p>

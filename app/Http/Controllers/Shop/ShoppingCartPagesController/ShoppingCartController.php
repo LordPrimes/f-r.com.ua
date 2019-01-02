@@ -18,6 +18,7 @@ class ShoppingCartController extends Controller
         if ($duplicates->isNotEmpty()) {
             return redirect()->route('cart.show')->with('success_message', 'Вы, уже добавляли этот товар в корзину!');
         }
+
         Cart::add($request->id, $request->name, $request->qty, $request->price)
         ->associate('App\Model\shop\Products');
         return redirect()->route('cart.show')->with('success_message', 'Товар успешно добавлен корзину!');

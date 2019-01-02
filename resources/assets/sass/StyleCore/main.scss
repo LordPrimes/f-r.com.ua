@@ -62,11 +62,17 @@ width: 250px;
 text-align: center;
 .main-category-link {
     border-bottom: 1px solid #eaeaea;
-    margin-bottom: 10px;
+  
 }
     .main-category-list {
+       
+        
+        a {
         border-bottom: 1px solid #eaeaea;
         padding-bottom: 10px;
+        padding-top: 10px;
+        display: grid;
+        }
 
 }
 
@@ -102,6 +108,7 @@ text-align: center;
   
     img {
         height: 140px;
+        width: 200px;
     }
 }
 }
@@ -109,17 +116,21 @@ text-align: center;
     
 .container-recommend {  
     background: #fff;
-    border:1px solid #cccccc;
+    border:1px solid #cccccc; 
+    a {
+        margin-bottom: 18px;
+    }
 .recommend-blog-main {
     border-top: 1px solid #eaeaea;
     margin-top: 15px;
-    padding: 10px;
+    padding: 20px;
     margin-top: 60px;
     h5 {
    
     height: 50px;
     margin-bottom: 25px;
     }
+   
    
 }
 }

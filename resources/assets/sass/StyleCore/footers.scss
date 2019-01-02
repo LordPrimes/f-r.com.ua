@@ -1,59 +1,50 @@
 @import '../variables.scss';
 .footer--style { 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    flex-direction: column;
     background: #272727;
     color: #efefef;
     font-size: 12px;   
     border-top: 4px solid #52ad3a;
+    .container-footer{
+        padding-top: 15px;
     .footer-link {
-        display: flex;
-        justify-content: center;
-    div {
+    .footer-div {
         padding: 0 16px;
-        align-items: center;
         border-radius: 28px;
-        display: inline-flex;
-        flex: 0 0 auto;
         font-size: 14px;
         font-weight: 500;
         height: 36px;
-        justify-content: center;
         margin: 6px 8px;
         min-width: 88px;
         outline: 0;
-        position: relative;
         text-decoration: none;
         text-transform: uppercase;
         transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
-        user-select: none;
-        vertical-align: middle;
-     &:hover {
-        border-radius: inherit;
-        transition: .3s cubic-bezier(.25,.8,.5,1);
-        border-radius: 28px;
-        background: #404040;
-     }
+    
+        color:#c8cece;
+  
     }
      a {
         z-index: 1;
-        caret-color: #fff;
-        color: #fff;
+        color:#c8cece;
         text-decoration: none;
+        &:hover {
+            transition: .3s cubic-bezier(.25,.8,.5,1);
+            color:#fff;
+        }
+     }
+     h3 {
+         margin-left: 20px;
      }
     }
+    
+    }
     .footer-f-r {
-        display: flex;
-        justify-content: center;
         color:#52ad3a;
         font-size: 24px;
         font-kerning: none;
         font-weight: unset;
         font-variant: all-petite-caps;
-        padding-top:15px;
-        padding-bottom: 15px;
+        padding-bottom: 5px;
         }
     }
 
@@ -66,6 +57,7 @@
     font-weight: 700;
     letter-spacing: .1rem;
     margin-top: 300px;
+    clear: both;
     padding:$padding-20;
     div {
         text-align: center;
