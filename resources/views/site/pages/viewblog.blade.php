@@ -1,15 +1,5 @@
 @extends('site.layouts.index')
-@section('pageSeo')
-@if ($blog->description !==null)
-<meta name="description" content="{{$blog->description}}" />
-@endif
-@if ($blog->keywords !==null)
-<meta name="keywords" content="{{$blog->keywords}}" />
-@endif
-@endsection
-@section('pageTitle')
-{{ $blog->title }}
-@endsection
+
 @section('content')
 <div class="container blogview-main">
   <nav aria-label="breadcrumb" class="blogview-breadcrumb ">

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\CorePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\Pages;
 
 
-class ThemingController extends Controller
+class ThemingController extends BaseController
 {
     public function index(Request $request){
         

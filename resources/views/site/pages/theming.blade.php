@@ -1,9 +1,5 @@
 @extends('site.layouts.index')
-@section('pageSeo')
-  
-@endsection
-@section('pageTitle')
-@endsection
+
 @section('content')
 
 

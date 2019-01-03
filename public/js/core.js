@@ -12468,6 +12468,11 @@ $('.search-input').keyup(function () {
         });
     }
 });
+$(function () {
+    $('[data-toggle="cart-input"], [data-toggle="cart-basket"] ').tooltip({
+        template: '<div class="tooltip   md-tooltip-main"><div class="tooltip-arrow  md-arrow"></div><div class="tooltip-inner  light-green darken-1 md-inner-main"></div></div>'
+    });
+});
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),

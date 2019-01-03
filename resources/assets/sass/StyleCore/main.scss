@@ -1,19 +1,14 @@
 .carousel-main {
     z-index: 1;
     overflow: hidden;
-   
     margin-left: 30px;
     margin-top: 30px;
-
-    
  .carousel-main-img{
-  
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
     height: 500px;
  }
- 
 
 .slider-left-arrow {
   .nav-btn{
@@ -23,7 +18,6 @@
         cursor: pointer;
         top: 40%;
         left:0;
-      
       }
       .prev-slide{
         background: url('/img/arr1.png') no-repeat scroll 0 0;
@@ -31,9 +25,6 @@
       .prev-slide:hover{
         opacity:0.5;
       }
-   
-   
-
 }
 .slider-right-arrow {
     .nav-btn{
@@ -59,18 +50,14 @@ border:1px solid #e1e2e3;
 border-radius: 10px;
 margin-top: 30px;
 width: 250px;
-text-align: center;
 .main-category-link {
     border-bottom: 1px solid #eaeaea;
   
 }
-    .main-category-list {
-       
-        
+    .main-category-list {   
         a {
         border-bottom: 1px solid #eaeaea;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        padding: 10px 0 10px 0;
         display: grid;
         }
 
@@ -78,10 +65,9 @@ text-align: center;
 
 }
 .blog-action-main {
-    margin-top: 30px;
+    margin: 30px 0 20px 0;
     background: #fff;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #cccccc;
    
     p {
@@ -92,20 +78,16 @@ text-align: center;
         text-align: -webkit-center;
     }
     .action-blog {
-        margin-right: 15px;
-        margin-left: 15px;
+        margin: 0 15px 0 15px;
     }
 }
 .main-category-img {
     padding:10px;
     margin-top: 20px;
-
     background: #fff;
     border: 1px solid #cccccc;
 .main-category-img-link  {
     padding: 10px;
-    text-align: center;
-  
     img {
         height: 140px;
         width: 200px;
@@ -122,7 +104,6 @@ text-align: center;
     }
 .recommend-blog-main {
     border-top: 1px solid #eaeaea;
-    margin-top: 15px;
     padding: 20px;
     margin-top: 60px;
     h5 {
@@ -131,7 +112,11 @@ text-align: center;
     margin-bottom: 25px;
     }
    
-   
+   img {
+       width: 300px;
+       height: 300px;
+       background-size: 100% 100%;
+   }
 }
 }
 

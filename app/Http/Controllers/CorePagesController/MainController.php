@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\CorePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\shop\Category;
 use App\Model\shop\Slider;
 use App\Model\shop\Action;
@@ -11,7 +11,7 @@ use App\Model\shop\Products;
 use App\Model\Blogs\Blog;
 
 
-class MainController extends Controller
+class MainController extends BaseController
 {
     public function index (Request $request){
 
@@ -29,7 +29,7 @@ class MainController extends Controller
         else {
             $youviewed = null;
         }
-
+      
         $data = [
                 'Slider' => $Slider,
                 'categor' => $categor,

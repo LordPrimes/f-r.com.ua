@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Shop\SearchPagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\shop\Products;
 use App\Http\Resources\Autocomplete;
 
 
-class SearchautocompleteController extends Controller
+class SearchautocompleteController extends BaseController
 {
     public function autocomplete(Request $request ){
 

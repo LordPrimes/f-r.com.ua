@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\CorePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\shop\Products;
 use App\Model\shop\Recommend;
 use App\Model\shop\Comments;
 
-class ViewdisplayController extends Controller
+class ViewdisplayController extends BaseController
 {
     public function show($seo_title)
     {

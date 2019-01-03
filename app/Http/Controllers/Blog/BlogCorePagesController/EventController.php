@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Blog\BlogCorePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\Blogs\Blog;
 
-class EventController extends Controller
+class EventController extends BaseController
 {
     public function index (Request $request){
         

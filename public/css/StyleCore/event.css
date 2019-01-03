@@ -3,20 +3,25 @@
   float: left;
   margin-top: 50px;
   border: 1px solid #cccccc;
-  margin-bottom: 30px;
 }
 
 .event-blog .event-prod {
   float: left;
-  margin: 0 0 5px 0;
   z-index: 1;
   display: grid;
   margin-top: 50px;
   text-align: -webkit-center;
 }
 
+.event-blog .event-prod img {
+  min-width: 193px;
+  background-size: 100% 100%;
+  min-height: 193px;
+}
+
 .event-blog .event-prod .event-mini-body {
   display: grid;
+  grid-template-rows: 140px;
 }
 
 .event-blog .action-event-price {
@@ -29,5 +34,9 @@
 
 .event-blog .action-event-price a {
   margin-bottom: 10px;
+}
+
+.event-action {
+  display: contents;
 }
 

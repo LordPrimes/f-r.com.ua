@@ -24,11 +24,10 @@ class OrdersRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|',
+            'name' => 'required',
             'phone' => 'required|regex:/^\+[0-9]\([0-9]{3}\)[0-9]{3}-[0-9]{4}$/',
             'email' => 'required|email',
-            'city' => 'required',
-            'adres' => 'required'
+            'adres' => 'required',
         ];
        
     }
@@ -41,8 +40,7 @@ class OrdersRequest extends FormRequest
         'phone.regex' => 'Телефон должен быть таком формете: +3(000)000-0000',
         'email.required' => 'Поле "Email" должно быть заполненным',
         'email.email' => 'Email должен быть такого формата: f-r@gmail.com',
-        'city.required' => 'Поле "Город" должно быть заполненным',
-        'adres.required' => 'required'
+        'adres.required' => 'Поле "Адресс" должно быть заполненным',
     ];
 }
 }

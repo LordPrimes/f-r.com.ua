@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Blog\BlogCorePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\Blogs\Blog;
 use App\Model\Blogs\Blog_Category;
 use Carbon\Carbon;
 use App\Model\Seo;
 
-class BlogCategoryControllers extends Controller
+class BlogCategoryControllers extends BaseController
 {
     public function catagory (Request $request ,Blog_Category $Blog_Category){
      
@@ -29,16 +29,15 @@ class BlogCategoryControllers extends Controller
                     }
             $blog = $Blog_Category->blogs()->paginate(1);
             $category = $Blog_Category::with('blogs')->get();
-            $pagesname = $request->route()->getName();
-            $seo = Seo::SeoPages($pagesname)->get();
+        
 
                     $data = ['blog' => $blog, 
                              'category' => $category, 
                              'lastarticle' => $lastarticle, 
                              'popularblog' =>$popularblog, 
                              'recommendblog' => $recommendblog, 
-                             'youviewed' => $youviewed, 
-                             'seo' => $seo                
+                             'youviewed' => $youviewed
+                                            
                 ];
                 return view('site.pages.blog')->with($data);
         

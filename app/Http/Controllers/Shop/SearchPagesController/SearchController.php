@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Shop\SearchPagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\shop\Products;
 use App\Model\shop\Action;
 use Carbon\Carbon;
 
 
-class SearchController extends Controller
+class SearchController extends BaseController
 {
    public function show(Request $request ){
        $search = $request->input('query');
@@ -28,8 +28,7 @@ class SearchController extends Controller
        $action = Action::all();
      
 
-       
-          
+    
         if (request()->sort == 'price_asc') {
             $product = Products::SearchSort($search)->orderBy('price', 'asc')->get();
         } 

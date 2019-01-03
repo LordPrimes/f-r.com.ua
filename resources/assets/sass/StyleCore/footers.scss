@@ -49,8 +49,6 @@
     }
 
 .footer-info {
-    display: flex;
-    justify-content: space-evenly;
     background: #fff;
     text-transform: uppercase;
     line-height: 1.7;
@@ -58,13 +56,9 @@
     letter-spacing: .1rem;
     margin-top: 300px;
     clear: both;
-    padding:$padding-20;
+    padding:20px 20px 20px;
     div {
-        text-align: center;
         margin-top: 5px;
-    }
-    img {
-        float: left;
     }
 span {
     position: relative;

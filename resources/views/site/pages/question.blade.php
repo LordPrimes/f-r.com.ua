@@ -1,10 +1,5 @@
 @extends('site.layouts.index')
-@section('pageTitle')
-Оформление заказа - Интернет магазин f-r.com.ua
-@endsection
 @section('content')
-<div class="container">
- <div class="row"></div>
 <div class="blog">
         <h2 class="h1-responsive   my-5">Часто задаваемые вопросы:</h2>
     @foreach ($questeion as $item)
@@ -22,9 +17,7 @@
                 <div class="card-body">
                   <div class="d-flex align-items-center row my-4">
                     <div class="col-md-8">
-                      
                     <p class="text-justify">{{$item->answer}}</p>
-                   
                     </div>
                     <div class="col-md-4 mt-3 pt-2">
                       <div class="view z-depth-1">
@@ -35,12 +28,10 @@
                 </div>
               </div>
             </div>
-            
+    
           </div>
     @endforeach
-    
-          <!--Accordion wrapper-->
 </div>
-</div>
+
 
 @endsection

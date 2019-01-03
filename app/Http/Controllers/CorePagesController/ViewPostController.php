@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\CorePagesController;
 use App\Http\Requests\AddCommentsRequest;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\Products;
 use App\Model\Comments;
-use Intervention\Image\Facades\Image as Image;
 
-class ViewPostController extends Controller
+
+class ViewPostController extends BaseController
 {
     public function addcomments ( AddCommentsRequest $request  ){
         $validated = $request->validated();

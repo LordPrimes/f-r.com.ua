@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Shop\ShoppingCartPagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Model\shop\Products;
 
 
-class ShoppingCartController extends Controller
+class ShoppingCartController extends BaseController
 {
     public function addcart(Request $request){
 

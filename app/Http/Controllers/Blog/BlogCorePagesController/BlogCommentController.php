@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Blog\BlogCorePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Http\Requests\BlogsCommentsRequest;
 use App\Model\Blogs\Blog_Comment as Commments;
 
-class BlogCommentController extends Controller
+class BlogCommentController extends BaseController
 {
     public function addcomments ( BlogsCommentsRequest $request  ){
         $validated = $request->validated();

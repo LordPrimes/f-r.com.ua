@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\CorePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\shop\Category;
 
-class CategoryController extends Controller
+class CategoryController extends BaseController
 {
     public function Category(Category $Category)
     {

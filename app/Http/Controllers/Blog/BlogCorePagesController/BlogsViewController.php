@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Blog\BlogCorePagesController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\Blogs\Blog;
 use App\Model\Blogs\Blog_Comment as Comment;
 use App\Model\Blogs\Blog_Recommend as Recommend;
@@ -10,7 +10,7 @@ use Session;
 
 
 
-class BlogsViewController extends Controller
+class BlogsViewController extends BaseController
 {
     public function show (Request $request, $seo_url  ){
 

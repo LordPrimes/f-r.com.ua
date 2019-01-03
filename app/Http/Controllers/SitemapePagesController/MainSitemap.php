@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\SitemapePagesController;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Model\Sitemap;
 
-class MainSitemap extends Controller
+class MainSitemap extends BaseController
 {
     public function index(){
        

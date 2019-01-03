@@ -1,22 +1,8 @@
 .cart-view {
     margin-right: 25px;
 }
-.cart-link {
-    text-align: left;
-   
-}
 .cart-price {
     margin-right: 50px;
-}
-.cart-button {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-}
-.updateqty {
-    width: 50px;
-    height: 40px;
-    text-align: center;
 }
 .cart-order {
     background: #fff;
@@ -48,4 +34,11 @@
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
         }
     }
+}
+.cart-form {
+    display: grid;
+    grid-template-rows: 40px;
+    margin-right: 5px;
+
+
 }

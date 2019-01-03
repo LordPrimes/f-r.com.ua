@@ -1,7 +1,5 @@
 @extends('site.layouts.index')
-@section('pageTitle')
-{{ $viewprod->title }}
-@endsection
+
 @section('content')
 <article class="container">
 <section class="d-flex flex-row view-main"> 

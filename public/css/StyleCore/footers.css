@@ -52,12 +52,6 @@
 }
 
 .footer-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   background: #fff;
   text-transform: uppercase;
   line-height: 1.7;
@@ -65,16 +59,11 @@
   letter-spacing: .1rem;
   margin-top: 300px;
   clear: both;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 20px;
 }
 
 .footer-info div {
-  text-align: center;
   margin-top: 5px;
-}
-
-.footer-info img {
-  float: left;
 }
 
 .footer-info span {
