@@ -22,7 +22,7 @@
 <div class="carousel-main" >
  @foreach ($Slider as $item)
 <div class="carousel-main-img card card-image mb-3" style="background-image: url('/storage/app/public/{{$item->images}}');">
-  <section class="text-white text-center  d-flex align-items-center justify-content-center img-gradient-overlay py-5 px-4">
+  <section class="text-white text-center  d-flex align-items-center flex-column justify-content-center img-gradient-overlay py-5 px-4">
             <h3 class="card-title pt-2"><strong>{{ $item->title }}</strong></h3>
             <p>{{$item->text }}</p>
             <a href="{{$item->link}}" class="btn btn-light-green waves-effect waves-light">Подробние</a> 
@@ -35,11 +35,13 @@
 @if ($categor !== null)
 <div class="d-flex flex-row align-items-center main-category-img">
     @foreach ($categor as $item)
+    @if($item->subcategory->count() > 0)
 <a class="main-category-img-link text-center ">
   <div class="view overlay zoom"><img class="img-fluid" src="/storage/app/public/{{$item->img}}" alt=""> 
   <a><div class="mask rgba-white-slight"></div></a>
   </div>
 </a>
+@endif
 @endforeach
 @endif
 </div>

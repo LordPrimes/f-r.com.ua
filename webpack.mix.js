@@ -32,8 +32,9 @@ mix
 .sass('resources/assets/sass/StyleCore/main.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/event.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/eventblog.scss', 'public/css/StyleCore')
-.sass('resources/assets/sass/StyleAdmin/admin.scss', 'public/css/StyleAdmin')
+.sass('resources/assets/sass/StyleAdmin/orders.scss', 'public/css/StyleAdmin')
 .sass('resources/assets/sass/StyleAdmin/editsubcategory.scss', 'public/css/StyleAdmin')
+.sass('resources/assets/sass/StyleAdmin/robots.scss', 'public/css/StyleAdmin')
 .options({
     processCssUrls:true,
       postCss: [

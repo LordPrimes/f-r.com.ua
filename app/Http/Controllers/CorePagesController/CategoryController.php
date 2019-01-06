@@ -7,6 +7,7 @@ use App\Http\Controllers\BaseController;
 use App\Model\shop\Category;
 use App\Model\shop\Products;
 
+
 class CategoryController extends BaseController
 {
     public function Category($slug)
@@ -26,13 +27,13 @@ class CategoryController extends BaseController
    
     public function index(){
 
-        
+       
         $category = Category::get();
 
         $data = [
             'category' =>$category
         ];
-        
+
        return view('site.pages.catalog')->with($data);
     }
 }

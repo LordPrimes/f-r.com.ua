@@ -14,6 +14,8 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('categories/{id}/editsubcategory', 'Voyager\DisplaySubCategoryController@index')->name('voyager.categories.editsubcategory');
     Route::post('categories/{id}/creatsubcategory', 'Voyager\CreateSubCategoryController@index')->name('creatsubcategory');
+    Route::get('robots','Voyager\RobotsController@index');
+    Route::post('robots/edit','Voyager\RobotsController@edit')->name('robots');
 
 });
 Route::group(['namespace' => 'Shop\SearchPagesController'] , function(){
