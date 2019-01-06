@@ -32,6 +32,8 @@ mix
 .sass('resources/assets/sass/StyleCore/main.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/event.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/eventblog.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleAdmin/admin.scss', 'public/css/StyleAdmin')
+.sass('resources/assets/sass/StyleAdmin/editsubcategory.scss', 'public/css/StyleAdmin')
 .options({
     processCssUrls:true,
       postCss: [
@@ -50,14 +52,15 @@ mix
 /* Global combine core styles CSS */
 mix.combine(['public/css/StyleCore/*'], 'public/css/styleCore.css');
 
+mix.combine(['public/css/StyleAdmin/*'], 'public/css/admin.css');
+
 
 /*front end bunlde  js */
 mix.js('resources/assets/js/core.js', 'public/js')
 .autoload({
     jquery: ['$', 'window.jQuery', 'jQuery']
 });
-
-
+mix.js('resources/assets/js/admin.js', 'public/js');
    
 mix.webpackConfig({
    

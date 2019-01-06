@@ -1,5 +1,8 @@
 @extends('site.layouts.index')
 @section('content')
+@foreach ($seo as $item)
+   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
+@endforeach
 <div class="blog">
         <h2 class="h1-responsive   my-5">Часто задаваемые вопросы:</h2>
     @foreach ($questeion as $item)

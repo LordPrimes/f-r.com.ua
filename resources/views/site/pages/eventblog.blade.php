@@ -1,5 +1,8 @@
 @extends('site.layouts.index')
 @section('content')
+@foreach ($seo as $item)
+   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
+@endforeach
 @isset($article)
 <dIv class="container">
 <div class="row">      

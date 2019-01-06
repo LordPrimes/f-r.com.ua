@@ -1,5 +1,8 @@
 @extends('site.layouts.index')
 @section('content')
+@foreach ($seo as $item)
+   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
+@endforeach
 <div class="d-flex justify-content-center flex-row">
   <div class="d-flex flex-row">
      <div class="main-category text-center">
@@ -8,7 +11,9 @@
         </div>
           <div class=" main-category-list text-center">
             @foreach ($categor as $item)
+            @if($item->subcategory->count() > 0)
             <a href="">{{$item->name}}</a>
+            @endif
             @endforeach
           </div>
       </div>

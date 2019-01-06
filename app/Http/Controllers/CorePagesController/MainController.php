@@ -29,7 +29,7 @@ class MainController extends BaseController
         else {
             $youviewed = null;
         }
-      
+  
         $data = [
                 'Slider' => $Slider,
                 'categor' => $categor,
@@ -37,6 +37,7 @@ class MainController extends BaseController
                 'recommend' => $Recommend,
                 'blog' => $blog,
                 'youviewed' => $youviewed
+               
             
 
         ];

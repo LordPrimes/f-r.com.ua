@@ -2,11 +2,7 @@ require('bootstrap');
 import 'mdbootstrap/js/mdb.min.js';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
-import 'jquery-ui/ui/widgets/autocomplete';
-import 'jquery-ui/themes/base/autocomplete.css';
-import 'jquery-ui/themes/base/theme.css';
-import 'jquery-ui/themes/base/menu.css';
-import 'jquery-ui/themes/base/core.css';
+
 
 
 $(document).ready(function(){

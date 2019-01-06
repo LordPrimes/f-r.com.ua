@@ -1,6 +1,9 @@
 @extends('site.layouts.index')
 @section('content')
-<div>
+@foreach ($seo as $item)
+   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
+@endforeach
+
 <nav class="category navbar navbar-expand-lg navbar-dark mdb-color light-green mt-3 mb-5">
     <span class="navbar-brand">Категории:</span>
     <div class="d-flex flex-wrap">

@@ -1,3 +1,8 @@
+body {
+  background: red;
+}
+
+
 .blog {
   background: #fff;
   padding: 10px 30px 0 30px;
@@ -22589,6 +22594,45 @@ a {
 }
 
 
+.search-blog {
+  background: #fff;
+  float: left;
+  margin-top: 50px;
+  border: 1px solid #cccccc;
+}
+
+.search-blog .search-prod {
+  float: left;
+  z-index: 1;
+  display: grid;
+  margin-top: 50px;
+  text-align: -webkit-center;
+}
+
+.search-blog .search-prod img {
+  min-width: 270px;
+  background-size: 100% 100%;
+  min-height: 270px;
+}
+
+.search-blog .search-prod .search-mini-body {
+  display: grid;
+  grid-template-rows: 140px;
+}
+
+.search-blog .search-event-price {
+  display: grid;
+  grid-template-rows: 60px;
+}
+
+.search-blog .search-event-price P {
+  margin-bottom: 0px;
+}
+
+.search-blog .search-event-price a {
+  margin-bottom: 10px;
+}
+
 .card {
   margin-bottom: 30px;
 }
@@ -22608,18 +22652,23 @@ a {
 
 .reccommend-container {
   clear: left;
+  display: contents;
 }
 
-.recommend-blog {
+.reccommend-container .recommend-blog {
   padding: 5px;
-  margin-top: 60px;
+  background: #fff;
+  border: 1px solid #cccccc;
+}
+
+.reccommend-container .recommend-blog .recommend-main-blog {
+  margin: 60px 5px 0 5px;
 }
 
 .blog-action {
-  margin-top: 30px;
+  margin: 30px 0 20px 0;
   background: #fff;
   padding: 30px;
-  margin-bottom: 20px;
   border: 1px solid #cccccc;
 }
 
@@ -22658,6 +22707,31 @@ a {
   padding: 10px;
   font-size: 18px;
   font-weight: initial;
+}
+
+.new-blog {
+  display: grid;
+  background: #fff;
+  padding: 10px;
+}
+
+.new-blog .new-blog-body {
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: 220px;
+}
+
+.popular-container {
+  border: 1px solid #cccccc;
+  background: #fff;
+}
+
+.popular-container .popular-blog {
+  padding: 10px;
+}
+
+.popular-container .popular-blog .popular-blog-body {
+  margin-top: 60px;
 }
 
 

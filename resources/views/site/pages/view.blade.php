@@ -1,6 +1,9 @@
 @extends('site.layouts.index')
 
 @section('content')
+@foreach ($seo as $item)
+   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
+@endforeach
 <article class="container">
 <section class="d-flex flex-row view-main"> 
     <div class="view-main-images ">
@@ -74,13 +77,17 @@
 </div>
     @if ($viewprod->productrecommendOne == null)
         <h2 class="font-weight-bold my-5">
-            Рекоммендуемые статьи:
+            Рекоммендуемые товары:
         </h2> 
     @endif
+ 
+      
+@if($viewprod->productrecommendOne == null)
     
-<section class="blog-view-main-recommend  d-flex flex-row  text-center my-5 animated fadeIn">
-    @forelse ($recommend as $item)
-        <div class="blog-popular col-xl-3 ">
+
+<div class="blog-view-main-recommend  d-flex flex-row  text-center my-5 animated fadeIn">
+    @foreach($recommend as $item)
+        <div class="blog-popular col-xl-4 ">
             <figure  class="view overlay rounded z-depth-2 mb-4">
             <img  src="/storage/app/public/{{$item->recommends->images}}" 
                                 title="{{$item->recommends->title_images}}" 
@@ -98,9 +105,10 @@
                 Подробние
             </a>
         </div>
-    @empty
-    @endforelse
-</section>   
+    
+    @endforeach
+    </div>   
+    @endif 
 <div class="container view-main-comments">
     <div class="login-page">
         <div class="form">

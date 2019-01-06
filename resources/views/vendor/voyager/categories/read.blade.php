@@ -13,7 +13,7 @@
             </a>
         @endcan
         @can('delete', $dataTypeContent)
-            <a href="javascript:;" title="{{ __('voyager::generic.delete') }}" class="btn btn-danger delete" data-id="{{ $dataTypeContent->getKey() }}" id="delete-{{ $dataTypeContent->getKey() }}">
+            <a href="javascript:;" title="{{ __('voyager::generic.delete') }}" class="btn btn-danger" data-id="{{ $dataTypeContent->getKey() }}" id="delete-{{ $dataTypeContent->getKey() }}">
                 <i class="voyager-trash"></i> <span class="hidden-xs hidden-sm">{{ __('voyager::generic.delete') }}</span>
             </a>
         @endcan
@@ -22,6 +22,7 @@
             <span class="glyphicon glyphicon-list"></span>&nbsp;
             {{ __('voyager::generic.return_to_list') }}
         </a>
+    <a href="{{route('voyager.'.$dataType->slug.'.editsubcategory', $dataTypeContent->getKey())}}" class="btn btn-dark">Добавить подкатегорию</a>
     </h1>
     @include('voyager::multilingual.language-selector')
 @stop
@@ -32,25 +33,13 @@
             <div class="col-md-12">
 
                 <div class="panel panel-bordered" style="padding-bottom:5px;">
-                    <!-- form start -->
-                   <div class="order-products">
-                       <h2>Список продуктов:</h2>
-                            @foreach ($products as $product)
-                                <div class="order-body">
-                                <li>Номера заказа: {{ $product->id }}</li>
-                                <li>Название товара: {{ $product->name }}</li> 
-                                <li>Количество товара: {{ $product->pivot->qty }}</li>
-                              </div>
-                            @endforeach
-                         </div>
-                         <hr>
+                    
                     @foreach($dataType->readRows as $row)
                         <div class="panel-heading" style="border-bottom:0;">
                             <h3 class="panel-title">{{ $row->display_name }}</h3>
                         </div>
-                    
+
                         <div class="panel-body" style="padding-top:0;">
-                           
                             @if($row->type == "image")
                                 <img class="img-responsive"
                                      src="{{ filter_var($dataTypeContent->{$row->field}, FILTER_VALIDATE_URL) ? $dataTypeContent->{$row->field} : Voyager::image($dataTypeContent->{$row->field}) }}">
@@ -70,17 +59,11 @@
                                     !empty($row->details->options->{$dataTypeContent->{$row->field}})
                             )
                                 <?php echo $row->details->options->{$dataTypeContent->{$row->field}};?>
-                            @elseif($row->type == 'select_dropdown' && $dataTypeContent->{$row->field . '_page_slug'})
-                                <a href="{{ $dataTypeContent->{$row->field . '_page_slug'} }}">{{ $dataTypeContent->{$row->field}  }}</a>
                             @elseif($row->type == 'select_multiple')
                                 @if(property_exists($row->details, 'relationship'))
 
                                     @foreach(json_decode($dataTypeContent->{$row->field}) as $item)
-                                        @if($item->{$row->field . '_page_slug'})
-                                            <a href="{{ $item->{$row->field . '_page_slug'} }}">{{ $item->{$row->field}  }}</a>@if(!$loop->last), @endif
-                                        @else
-                                            {{ $item->{$row->field}  }}
-                                        @endif
+                                        {{ $item->{$row->field}  }}
                                     @endforeach
 
                                 @elseif(property_exists($row->details, 'options'))

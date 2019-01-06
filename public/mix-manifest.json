@@ -12,5 +12,9 @@
     "/css/StyleCore/main.css": "/css/StyleCore/main.css",
     "/css/StyleCore/event.css": "/css/StyleCore/event.css",
     "/css/StyleCore/eventblog.css": "/css/StyleCore/eventblog.css",
-    "/css/styleCore.css": "/css/styleCore.css"
+    "/css/StyleAdmin/admin.css": "/css/StyleAdmin/admin.css",
+    "/css/StyleAdmin/editsubcategory.css": "/css/StyleAdmin/editsubcategory.css",
+    "/js/admin.js": "/js/admin.js",
+    "/css/styleCore.css": "/css/styleCore.css",
+    "/css/admin.css": "/css/admin.css"
 }

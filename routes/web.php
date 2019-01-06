@@ -12,9 +12,8 @@
 */
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
- 
-
-
+    Route::get('categories/{id}/editsubcategory', 'Voyager\DisplaySubCategoryController@index')->name('voyager.categories.editsubcategory');
+    Route::post('categories/{id}/creatsubcategory', 'Voyager\CreateSubCategoryController@index')->name('creatsubcategory');
 
 });
 Route::group(['namespace' => 'Shop\SearchPagesController'] , function(){
@@ -31,10 +30,7 @@ Route::group(['namespace' => 'Shop\ShoppingCartPagesController'] , function(){
     Route::post('orders', 'OrdersController@index')->name('orders'); 
 
 });
-Route::group(['namespace' => 'Shop\Mail'] , function(){
-   Route::post('mailcheked', 'MailControllers@index');   
 
-});
 Route::group(['namespace' => 'SitemapePagesController'] , function(){
     Route::get('sitemap.xml', 'MainSitemap@index');
      
@@ -58,7 +54,7 @@ Route::group(['namespace' => 'CorePagesController'] , function(){
         Route::get('payment', 'ThemingController@index')->name('payment');
         Route::get('exchange', 'ThemingController@index')->name('exchange');
         Route::get('catalog/{Category}', 'CategoryController@Category')->name('shop.category');
-        Route::get('catalog','CategoryController@Category')->name('catalog');
+        Route::get('catalog','CategoryController@index')->name('catalog');
         Route::post('{seotitle}', 'ViewPostController@addcomments');
         Route::get('{seo_title}', 'ViewdisplayController@show')->name('viewproducts');
 

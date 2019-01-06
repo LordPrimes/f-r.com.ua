@@ -27,6 +27,7 @@ class BlogController extends BaseController
             else {
                 $youviewed = null;
             }
+          
             $category = Blog_Category::all();
             $pagesname = $request->route()->getName();
          
@@ -35,8 +36,9 @@ class BlogController extends BaseController
                         'category' => $category, 
                         'lastarticle' => $lastarticle, 
                         'popularblog' =>$popularblog, 
-                        'recommendblog' => $recommendblog, 
+                        'recommendblog' => $recommendblog,
                         'youviewed' => $youviewed,
+                        
                         
                        
                                       

@@ -14,7 +14,7 @@ class OrdersController extends BaseController
     public function index(OrdersRequest $request){
 
         $validated = $request->validated();
-
+    
         $order = Orders::create([
             'name' => $request->input('name'),
             'phone' => $request->input('phone'),

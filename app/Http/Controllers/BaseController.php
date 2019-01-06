@@ -12,6 +12,6 @@ abstract class BaseController extends Controller
     {
         $pagesname = $request->route()->getName(); 
         $Seo = Seo::SeoPages($pagesname)->get();
-        View::share('seo', $Seo);
+            View::share('seo', $Seo);
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\BaseController;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Model\shop\Products;
+use TCG\Voyager\Http\Controllers\VoyagerBaseController;
 
 
 class ShoppingCartController extends BaseController

@@ -1,0 +1,10 @@
+.form-subcategory {
+    background:#fff;
+    border:1px solid #cccccc;
+    padding: 10px;
+    form {
+        display: grid;
+        grid-template-columns: 200px;
+        justify-content: center;
+    }
+}

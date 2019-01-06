@@ -1,6 +1,9 @@
 @extends('site.layouts.index')
 
 @section('content')
+@foreach ($seo as $item)
+   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
+@endforeach
 <div class="container blogview-main">
   <nav aria-label="breadcrumb" class="blogview-breadcrumb ">
       <ol class="breadcrumb light-green">
@@ -17,18 +20,20 @@
     <h2 class="font-weight-bold my-5">Рекоммендуемые статьи:</h2>  
 
   <section class="blog-view-main-recommend  d-flex flex-row  text-center my-5 animated fadeIn col-xl-3">
-@forelse ($recommend as $item)
+@foreach ($recommend as $item)
         <div class="blog-popular ">
+          
             <figure  class="view overlay rounded z-depth-2 mb-4">
             <img  src="/storage/app/public/{{$item->blogrecommends->image}}" title="{{$item->blogrecommends->imageTitle}}" alt="{{$item->blogrecommends->imageAlt}}"  >
             </figure >
+            <div>
                 <h4 class="font-weight-bold mb-3"><strong> {{ $item->blogrecommends->name }}</strong></h4>
                 <p><time></time></p>
           <p class="text-justify dark-grey-text blog-popular-text ">{{str_limit($item->blogrecommends->mini_body, 300)}}</p>
                 <a  href="{{url('blog/'.$item->blogrecommends->seo_url)}}" class="btn btn-light-green btn-rounded btn-md">Подробние</a>
           </div>
-          @empty
-@endforelse
+          </div>
+@endforeach
   </section> 
   @endif
 </section> 

@@ -1,25 +1,19 @@
 <?php
+
 namespace App\Http\Controllers\Voyager;
-use App\Model\shop\Orders;
-use Validator;
+
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Model\shop\Category;
+use Validator;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Events\BreadDataAdded;
 use TCG\Voyager\Events\BreadDataUpdated;
 use TCG\Voyager\Http\Controllers\VoyagerBaseController;
-class OrdersController extends VoyagerBaseController
+
+class CategoriesController extends VoyagerBaseController
 {
-    //***************************************
-    //                _____
-    //               |  __ \
-    //               | |__) |
-    //               |  _  /
-    //               | | \ \
-    //               |_|  \_\
-    //
-    //  Read an item of our Data Type B(R)EAD
-    //
-    //****************************************
+
     public function show(Request $request, $id)
     {
         $slug = $this->getSlug($request);
@@ -45,8 +39,9 @@ class OrdersController extends VoyagerBaseController
         if (view()->exists("voyager::$slug.read")) {
             $view = "voyager::$slug.read";
         }
-        $order = Orders::find($id);
-        $products = $order->ordercart;
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'products'));
+        $Category = Category::find($id);
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable','Category'));
     }
+
+
 }

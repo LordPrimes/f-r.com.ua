@@ -14,6 +14,7 @@
 <meta itemprop="{{$item->itemprop}}" content="{{$item->content}}" />   
 @endif
 <title>{{ $item->Title }}</title>
+
  @endforeach
 <link rel="stylesheet" href="{{ mix('css/styleCore.css') }}">
 <link href="{{asset('img/ico-f-r.png')}}" rel="icon" />

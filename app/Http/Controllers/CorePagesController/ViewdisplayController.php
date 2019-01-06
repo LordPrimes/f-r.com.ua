@@ -12,8 +12,9 @@ class ViewdisplayController extends BaseController
 {
     public function show($seo_title)
     {
+      
         session()->push('viewed_prod', $seo_title); 
-
+        
         $viewprod = Products::ViewProduct($seo_title)->firstorfail();
         $recommend = Recommend::Recommend($seo_title)->get();
         

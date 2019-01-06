@@ -28,7 +28,8 @@ class SearchController extends BaseController
        $action = Action::all();
      
 
-    
+       
+          
         if (request()->sort == 'price_asc') {
             $product = Products::SearchSort($search)->orderBy('price', 'asc')->get();
         } 

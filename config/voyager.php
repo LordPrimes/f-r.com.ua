@@ -29,6 +29,8 @@ return [
 
     'controllers' => [
         'namespace' => 'TCG\\Voyager\\Http\\Controllers',
+     
+        
     ],
 
     /*
@@ -162,8 +164,8 @@ return [
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
             'TCG\\Voyager\\Widgets\\BlogDimmer',
-            'TCG\\Voyager\\Widgets\\PageDimmer',
-            'TCG\\Voyager\\Widgets\\ProductDimmer'
+            'TCG\\Voyager\\Widgets\\ProductDimmer',
+            'TCG\\Voyager\\Widgets\\OrdersDimmer'
         ],
 
     ],
@@ -206,11 +208,11 @@ return [
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
-        //'css/custom.css',
+        'css/admin.css',
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        'js/admin.js',
     ],
 
     'googlemaps' => [
