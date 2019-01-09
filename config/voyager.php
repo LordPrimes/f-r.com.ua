@@ -212,7 +212,7 @@ return [
     ],
 
     'additional_js' => [
-        'js/admin.js',
+        'js/core.js',
     ],
 
     'googlemaps' => [

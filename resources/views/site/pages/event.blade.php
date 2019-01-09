@@ -5,24 +5,6 @@
 @endforeach
 <div class="row">
 <div class="d-flex col-lg-12">
-    <div class="d-flex flex-row align-self-start justify-content-start filter col-lg-2 ">
-          <form class="filter-form-control">
-              <div class="filter-container">
-              <a>Цвет:</a>
-                <label class="d-flex align-items-center"> <input type="checkbox">Красный</label>
-                  <label class="d-flex align-items-center"><input type="checkbox">черный</label>
-                  <label class="d-flex align-items-center"><input type="checkbox">белый</label>
-                  <label class="d-flex align-items-center"><input type="checkbox">что-то</label>
-                </div>
-                <div class="filter-container">
-                  <a>Цвет:</a>
-                <label class="d-flex align-items-center"> <input type="checkbox">Красный</label>
-                  <label class="d-flex align-items-center"><input type="checkbox">черный</label>
-                  <label class="d-flex align-items-center"><input type="checkbox">белый</label>
-                  <label class="d-flex align-items-center"><input type="checkbox">что-то</label>
-                </div>
-            </form> 
-</div>
 <div class="event-blog col-lg-10">
     <nav class="sort-search d-flex flex-row justify-content-around navbar navbar-expand-lg navbar-dark mdb-color light-green mt-3 mb-5   ">
         <span>Сортировка:</span>

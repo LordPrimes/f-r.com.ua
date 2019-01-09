@@ -23,7 +23,6 @@
             <input name='query' autocomplete="off"    class="search-input"  placeholder="Поиск товара" required > 
             <div class="seach-autocomplete"></div>
         </form>   
-           
     </div>    
 </div>
 <div class="align-items-center headers-phone">

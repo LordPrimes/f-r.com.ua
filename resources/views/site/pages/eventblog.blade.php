@@ -3,8 +3,7 @@
 @foreach ($seo as $item)
    <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
 @endforeach
-@isset($article)
-<dIv class="container">
+@if($article !== null)
 <div class="row">      
   <div class="event-blog">
     @foreach ($article as $item) 
@@ -27,8 +26,10 @@
                 </div>
               </div>
  @endforeach
+@else
+<h2 class="font-weight-bold my-5">Статьи отсуствывають</h2>
 @endif
 </div>
 </div>
-</div>
+
 @endsection

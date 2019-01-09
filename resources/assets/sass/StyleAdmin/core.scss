@@ -1,0 +1,30 @@
+.form-subcategory {
+    background:#fff;
+    border:1px solid #cccccc;
+    padding: 10px;
+    form {
+        display: grid;
+        grid-template-columns: 200px;
+        justify-content: center;
+    }
+}
+.errors {
+    position: fixed;
+    bottom: 0;
+    right:12px;
+    z-index:1;
+    color:#fff!important;
+    font-size: 13px;
+    opacity: 0.9;
+    &:hover {
+        background: #de0101!important;
+    }
+}
+.errors-form {
+    color:#fff!important;
+    font-size: 13px;
+    opacity: 0.9;
+    &:hover {
+        background: #de0101!important;
+    }
+}

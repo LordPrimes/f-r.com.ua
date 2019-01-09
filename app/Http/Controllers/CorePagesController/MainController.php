@@ -10,15 +10,20 @@ use App\Model\shop\Action;
 use App\Model\shop\Products;
 use App\Model\Blogs\Blog;
 
-
 class MainController extends BaseController
 {
     public function index (Request $request){
 
         $Slider = Slider::all();
+
         $categor = Category::all();
+
+        $catagorybar = Category::take(5)->get();
+
         $action = Action::Action()->get();
+
         $Recommend = Products::Recommend()->get();
+
         $blog = Blog::OrderDesc()->get();
 
         if ($request->session()->exists('viewed_prod')) {
@@ -36,9 +41,8 @@ class MainController extends BaseController
                 'action' => $action,
                 'recommend' => $Recommend,
                 'blog' => $blog,
-                'youviewed' => $youviewed
-               
-            
+                'youviewed' => $youviewed,
+                'categorybar' => $catagorybar
 
         ];
 

@@ -7,7 +7,7 @@ use App\Http\Controllers\BaseController;
 use App\Model\Blogs\Blog;
 use App\Model\Blogs\Blog_Category;
 use Carbon\Carbon;
-use App\Model\Seo;
+
 
 class BlogCategoryControllers extends BaseController
 {
@@ -27,7 +27,7 @@ class BlogCategoryControllers extends BaseController
                  else {
                         $youviewed = null;
                     }
-            $blog = $Blog_Category->blogs()->paginate(1);
+            $blog = $Blog_Category->blogs()->paginate(14);
             $category = $Blog_Category::with('blogs')->get();
         
 

@@ -1,0 +1,9 @@
+.container-catalog .container-catalog-body .container-catalog-img {
+  margin: 0 -10px 0 -10px;
+}
+
+.container-catalog .container-catalog-body .container-catalog-img img {
+  width: 400px;
+  height: 300px;
+}
+

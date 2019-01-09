@@ -16,6 +16,6 @@ class Recommend extends Model
     
     public function scopeRecommend($query, $seo_url){
 
-        return $query->where('seo_url', $seo_url)->inRandomOrder()->take(4);
+        return $query->where('seo_url', $seo_url)->inRandomOrder()->take(3);
     }
 }

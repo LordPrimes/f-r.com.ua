@@ -31,10 +31,13 @@ mix
 .sass('resources/assets/sass/StyleCore/cart.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/main.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/event.scss', 'public/css/StyleCore')
+.sass('resources/assets/sass/StyleCore/catalog.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/eventblog.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleAdmin/orders.scss', 'public/css/StyleAdmin')
-.sass('resources/assets/sass/StyleAdmin/editsubcategory.scss', 'public/css/StyleAdmin')
+.sass('resources/assets/sass/StyleAdmin/core.scss', 'public/css/StyleAdmin')
 .sass('resources/assets/sass/StyleAdmin/robots.scss', 'public/css/StyleAdmin')
+.sass('resources/assets/sass/StyleAdmin/cache.scss', 'public/css/StyleAdmin')
+
 .options({
     processCssUrls:true,
       postCss: [
@@ -61,7 +64,7 @@ mix.js('resources/assets/js/core.js', 'public/js')
 .autoload({
     jquery: ['$', 'window.jQuery', 'jQuery']
 });
-mix.js('resources/assets/js/admin.js', 'public/js');
+
    
 mix.webpackConfig({
    

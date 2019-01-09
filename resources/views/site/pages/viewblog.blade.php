@@ -1,5 +1,4 @@
 @extends('site.layouts.index')
-
 @section('content')
 @foreach ($seo as $item)
    <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
@@ -90,12 +89,10 @@
             </div>
               <div class="d-flex flex-row modal-body">
                  <div class="comments">
-                  
                     @foreach ($comment as $item) 
                       <span class="font-weight-bold text-center my-5">Имя:{{$item->name}}</span> 
                       <p class="grey-text">Сообщение:{{$item->body}}</p> 
                     @endforeach
-                  
                   </div>  
               </div>
                 <div class="modal-footer">

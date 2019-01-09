@@ -72,7 +72,10 @@ return [
             'driver' => 'redis',
             'connection' => 'default',
         ],
-
+        'img' => [
+            'driver' => 'file',
+            'path' => storage_path('framework/app/public'),
+        ]
     ],
 
     /*

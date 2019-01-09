@@ -29,6 +29,26 @@
 </div>
 @endif
     </form>
+    @if ($errors->any())
+    <div class="errors-form text-left alert alert-danger  font-weight-bold">
+    <ul>
+@foreach ($errors->all() as $error)
+        <li>
+        {{ $error }}
+        </li>
+@endforeach
+        </ul>
+    </div>
+    <div class="errors text-left alert alert-danger  font-weight-bold">
+      <ul>
+@foreach ($errors->all() as $error)
+        <li>
+            {{ $error }}
+        </li>
+@endforeach
+    </ul>
+    </div>
+@endif 
         </div>
     </div>
 </div>

@@ -33,7 +33,12 @@
             <div class="col-md-12">
 
                 <div class="panel panel-bordered" style="padding-bottom:5px;">
-                    
+                    <div class="panel-body">
+                        <h3 class="panel-title">Подкатегории:</h3>
+                    @foreach ($Category as $item)
+                        <p >{{$item->name }}</p>
+                    @endforeach
+                </div>
                     @foreach($dataType->readRows as $row)
                         <div class="panel-heading" style="border-bottom:0;">
                             <h3 class="panel-title">{{ $row->display_name }}</h3>

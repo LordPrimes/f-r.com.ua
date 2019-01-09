@@ -5,7 +5,15 @@
    <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
 @endforeach
 <article class="container">
+        <nav aria-label="breadcrumb" class="blogview-breadcrumb ">
+                <ol class="breadcrumb light-green">
+                    <li class="breadcrumb-item"><a class="text-primary font-weight-bold" href="{{route('main')}}">Главная</a></li>
+                <li class="breadcrumb-item"><a class="text-primary font-weight-bold" href="{{route('shop.category',  $viewprod->category->slug)}}" >{{$viewprod->category->name}}</a></li>
+                <li class="breadcrumb-item active">{{$viewprod->name}}</li>
+                </ol>
+            </nav>
 <section class="d-flex flex-row view-main"> 
+         
     <div class="view-main-images ">
         <div class="mdb-lightbox-ui"></div>
         <figure class="view overlay mdb-lightbox no-margin ">

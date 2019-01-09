@@ -9,6 +9,11 @@ class Products extends Model
 
 {   
     protected $table = 'products'; 
+
+    public function filters(){
+
+        return $this->belongsToMany('App\Model\shop\Filter', 'filter_products','products_id','filter_id');
+    }
     
     public function comments()
     {
@@ -85,6 +90,11 @@ class Products extends Model
 
     public function scopeViewed($query , $seo_url){
 
-        return $query->whereIn('seo_title', $seo_url)->take(4);
+        return $query->whereIn('seo_title', $seo_url)->inRandomOrder()->take(3);
     }
+
+    public function scopeCatelogId($query, $id){
+
+        return $query->where('category_id', $id)->orderby('id', 'asc');
+   }
 }

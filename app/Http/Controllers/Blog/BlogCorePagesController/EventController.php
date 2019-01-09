@@ -24,7 +24,6 @@ class EventController extends BaseController
         $data = [
             'article' => $article
             
-
         ];
 
         return view('site.pages.eventblog')->with($data);

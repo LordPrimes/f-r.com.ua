@@ -16,8 +16,9 @@
 @endforeach
     </div>
 </nav>
-@foreach ( $blog as $blogs)
 <div class="blog">
+@foreach ( $blog as $blogs)
+
 <div class="blog-main text-justify d-flex">
     <figure class="d-flex flex-column justify-content-center">
         <img class="blog-main-images" src="/storage/app/public/{{$blogs->image}}" />
@@ -26,7 +27,7 @@
     <section class="blog-main-info text-center">
     <a class="d-flex justify-content-center blog-main-link text-success font-weight-bold  " href="{{url('blog/'.$blogs->seo_url)}}">{{ $blogs->name }}</a>
         <p class="text-justify">{{str_limit( $blogs->mini_body,300 )}}</p>
-    <a class="float-right btn btn-light-green btn-rounded btn-md"  href="{{url('blog/'.$blogs->seo_url)}}">Подробние</a>
+    <a class="btn btn-light-green btn-rounded btn-md"  href="{{url('blog/'.$blogs->seo_url)}}">Подробние</a>
     </section>
 </div>
 @endforeach

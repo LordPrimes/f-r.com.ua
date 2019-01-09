@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Voyager;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use App\Http\Requests\RobotsRequest;
 
 class RobotsController extends Controller
 {
-    public function index (){
+    public function index ( ){
 
 
 
@@ -22,9 +23,11 @@ class RobotsController extends Controller
         
     }
 
-    public function edit(Request $request){
+    public function edit(RobotsRequest $request){
+        $validated = $request->validated();
       
         $robotsedit = $request->input('edit');
+        
         File::append('robots.txt', $robotsedit);
 
         session()->flash('goods', 'Изменения прошли успешно!');

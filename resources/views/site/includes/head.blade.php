@@ -18,4 +18,4 @@
  @endforeach
 <link rel="stylesheet" href="{{ mix('css/styleCore.css') }}">
 <link href="{{asset('img/ico-f-r.png')}}" rel="icon" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+

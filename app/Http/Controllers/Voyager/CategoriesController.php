@@ -39,7 +39,7 @@ class CategoriesController extends VoyagerBaseController
         if (view()->exists("voyager::$slug.read")) {
             $view = "voyager::$slug.read";
         }
-        $Category = Category::find($id);
+        $Category = Category::where('parent_id', $id)->get();
         return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable','Category'));
     }
 

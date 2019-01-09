@@ -1,8 +1,9 @@
-require('bootstrap');
+
 import 'mdbootstrap/js/mdb.min.js';
 import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import 'owl.carousel';
-
+import $ from "jquery";
 
 
 $(document).ready(function(){

@@ -12,7 +12,7 @@
           <div class=" main-category-list text-center">
             @foreach ($categor as $item)
             @if($item->subcategory->count() > 0)
-            <a href="">{{$item->name}}</a>
+          <a href="{{route('shop.category',$item->slug)}}">{{$item->name}}</a>
             @endif
             @endforeach
           </div>
@@ -34,20 +34,21 @@
 </div>
 @if ($categor !== null)
 <div class="d-flex flex-row align-items-center main-category-img">
-    @foreach ($categor as $item)
+    @foreach ($categorybar as $item)
     @if($item->subcategory->count() > 0)
-<a class="main-category-img-link text-center ">
-  <div class="view overlay zoom"><img class="img-fluid" src="/storage/app/public/{{$item->img}}" alt=""> 
-  <a><div class="mask rgba-white-slight"></div></a>
+<a href="{{route('shop.category',$item->slug)}}"   class="main-category-img-link text-center ">
+  <div class="view overlay zoom">
+    <img class="img-fluid" src="/storage/app/public/{{$item->img}}" > 
+  <a href="{{route('shop.category',$item->slug)}}" ><div class="mask rgba-white-slight"></div></a>
   </div>
 </a>
 @endif
 @endforeach
 @endif
 </div>
-@if ($youviewed !== null)
+@isset ($youviewed)
 <h2 class="font-weight-bold my-5">Вы смотрели:</h2> 
-<div class="d-flex animated fadeIn">
+<div class="d-flex justify-content-center animated fadeIn">
 @foreach ($youviewed as $item)
 <div class="blog-popular col-lg-4">
 <div class="card align-items-center">
@@ -70,7 +71,7 @@
 </div>
 @endforeach
 </div> 
-@endif
+@endisset
 <h2 class="h1-responsive font-weight-bold text-center my-5">ЛИДЕРЫ ПРОДАЖ</h2>
 @if ($action !== null)
 <div class="blog-action-main">
@@ -155,7 +156,7 @@
               <img  src="/storage/app/public/{{$item->image}}"  alt="Sample image">
           </figure >
               <h4 class="font-weight-bold mb-3"><strong> {{ $item->name }}</strong></h4>
-              <p><time>{{ $item->created_at}}</time></p>
+              <p>{{ $item->created_at}}</p>
               <p class=" dark-grey-text blog-popular-text ">{{ str_limit($item->mini_body, 70) }}</p>
               <a href="{{url('blog/'.$item->seo_url)}}" class="d-flex justify-content-center align-items-center btn btn-light-green btn-rounded btn-md">Подробние</a>
       </div>

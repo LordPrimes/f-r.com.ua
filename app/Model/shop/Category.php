@@ -16,8 +16,18 @@ class Category extends Model
         return $this->hasMany('App\Model\shop\Products', 'category_id');
     }
 
-   public function subcategory(){
+   public function subcategory()
+   {
 
     return $this->hasMany('App\Model\shop\Category', 'parent_id');
+
    }
+
+   public function scopeCatalog($query, $slug){
+
+    return $query->where('slug', $slug);
+
+   }
+   
+ 
 }

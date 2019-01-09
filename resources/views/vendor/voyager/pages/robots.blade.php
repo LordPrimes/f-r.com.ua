@@ -1,7 +1,5 @@
 @extends('voyager::master')
-
 @section('page_title', __('voyager::generic.view'))
-
 @section('page_header')
 <div class="container">
     <h1 class="text-center">Robots</h1>
@@ -29,6 +27,26 @@
 </div>
 @endif
 </form>
+@if ($errors->any())
+<div class="errors-form text-left alert alert-danger  font-weight-bold">
+<ul>
+@foreach ($errors->all() as $error)
+    <li>
+    {{ $error }}
+    </li>
+@endforeach
+    </ul>
+</div>
+<div class="errors text-left alert alert-danger  font-weight-bold">
+  <ul>
+@foreach ($errors->all() as $error)
+    <li>
+        {{ $error }}
+    </li>
+@endforeach
+</ul>
+</div>
+@endif 
 </div>
 </div>
 </div>

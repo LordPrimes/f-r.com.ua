@@ -13,21 +13,26 @@
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('categories/{id}/editsubcategory', 'Voyager\DisplaySubCategoryController@index')->name('voyager.categories.editsubcategory');
+    Route::get('filter/{id}/editatribut', 'Voyager\FiltersAtributControllers@index')->name('voyager.filter.editatribut');
+    Route::post('filter/{id}/creatatribut', 'Voyager\FiltersCreatAtributControllers@creat');
     Route::post('categories/{id}/creatsubcategory', 'Voyager\CreateSubCategoryController@index')->name('creatsubcategory');
     Route::get('robots','Voyager\RobotsController@index');
     Route::post('robots/edit','Voyager\RobotsController@edit')->name('robots');
+    Route::get('cache','Voyager\CacheController@index');
+    Route::post('cache/edit','Voyager\CacheController@cache')->name('cache');
+    Route::post('cache/clear','Voyager\CacheController@cacheclear')->name('cacheclear');
+    
 
 });
 Route::group(['namespace' => 'Shop\SearchPagesController'] , function(){
     Route::get('search', 'SearchController@show')->name('search');
     Route::post('typehead', 'SearchautocompleteController@autocomplete' )->name('autocomplete');
-
 });
 
 Route::group(['namespace' => 'Shop\ShoppingCartPagesController'] , function(){
     Route::get('cart', 'ShoppingCartController@show')->name('cart.show');
     Route::post('carts', 'ShoppingCartController@addcart')->name('cart.addcart');
-    Route::post('/carts/{product}', 'ShoppingCartController@update')->name('cart.update');
+    Route::post('carts/{product}', 'ShoppingCartController@update')->name('cart.update');
     Route::delete('carts/{product}','ShoppingCartController@destroy')->name('cart.destroy');
     Route::post('orders', 'OrdersController@index')->name('orders'); 
 
@@ -48,6 +53,7 @@ Route::group(['namespace' => 'Blog\BlogCorePagesController'] , function(){
 });
 Route::group(['namespace' => 'CorePagesController'] , function(){
         Route::get('/', 'MainController@index')->name('main');
+        
         Route::get('leaders', 'EventController@index')->name('leaders');
         Route::get('popular', 'EventController@index')->name('popular');
         Route::get('contact', 'ThemingController@index')->name('contact');

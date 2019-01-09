@@ -22,7 +22,6 @@ class ViewdisplayController extends BaseController
      
         $comments = Comments::VisableComments($blog_id)->get();
        
-
         $data = [
                 'viewprod' => $viewprod,
                 'recommend' => $recommend,
