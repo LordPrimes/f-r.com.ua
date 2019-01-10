@@ -22,7 +22,8 @@ class SearchController extends BaseController
             $search = null;
         }
         if($search !== null){
-            $product = Products::Search($search)->get();
+            $product = Products::Search($search)->paginate(9);
+            $product->appends(['query' => $search]);
                             }
         else {
         $product = null; 
@@ -35,16 +36,20 @@ class SearchController extends BaseController
        $action = Action::all();
      
         if (request()->sort == 'price_asc') {
-            $product = Products::SearchSort($search)->orderBy('price', 'asc')->get();
+            $product = Products::SearchSort($search)->orderBy('price', 'asc')->paginate(9);
+            $product->appends(['sort' => 'price_asc']);
         } 
         elseif (request()->sort == 'price_desc') {
-            $product = Products::SearchSort($search)->orderBy('price', 'desc')->get();
+            $product = Products::SearchSort($search)->orderBy('price', 'desc')->paginate(9);
+            $product->appends(['sort' => 'price_desc']);
         } 
         elseif (request()->sort == 'A_Z') {
-            $product = Products::SearchSort($search)->orderBy('name', 'ASC')->get();
+            $product = Products::SearchSort($search)->orderBy('name', 'ASC')->paginate(9);
+            $product->appends(['sort' => 'A_Z']);
         }
         elseif  (request()->sort == 'Z_A') {
-            $product = Products::SearchSort($search)->orderBy('name', 'DESC')->get();          
+            $product = Products::SearchSort($search)->orderBy('name', 'DESC')->paginate(9);  
+            $product->appends(['sort' => 'Z_A']);        
         }
         
         $filter = Filter::get();
@@ -71,7 +76,8 @@ class SearchController extends BaseController
         
        if($request->has('check')){
 
-            $filterproducts = Filter_Products::whereIn('filter_id',$ResultParametr)->get();
+            $filterproducts = Filter_Products::whereIn('filter_id',$ResultParametr)->paginate(9);
+            $filterproducts->appends($check);
       
        }
        else {

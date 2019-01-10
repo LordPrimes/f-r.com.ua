@@ -49,6 +49,11 @@
 </div>
 </div>
 @endforeach
+<div class="paginate d-flex justify-content-center">
+    @isset($product)
+        {{ $product->links() }}
+    @endisset 
+  </div>
 </div>
 @endisset 
 @isset($action)
@@ -93,9 +98,6 @@
   @isset($action)
       {{ $action->links() }}
   @endisset 
-  @isset($product)
-      {{ $product->links() }}
-  @endisset
 </div>
 </div>     
 </div>

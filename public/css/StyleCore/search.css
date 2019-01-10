@@ -1,3 +1,7 @@
+.paginate-search {
+  margin-top: 30px;
+}
+
 .search-blog {
   background: #fff;
   float: left;
@@ -67,6 +71,18 @@
 
 .reccommend-container .recommend-blog .recommend-main-blog {
   margin: 60px 5px 0 5px;
+  display: grid;
+}
+
+.reccommend-container .recommend-blog .recommend-main-blog img {
+  background-size: 100% 100%;
+  width: 350px;
+  height: 330px;
+}
+
+.reccommend-container .recommend-blog .recommend-main-blog .card-body {
+  display: grid;
+  grid-template-rows: 60px;
 }
 
 .blog-action {
@@ -136,5 +152,18 @@
 
 .popular-container .popular-blog .popular-blog-body {
   margin-top: 60px;
+  display: grid;
+  grid-template-rows: 330px;
+}
+
+.popular-container .popular-blog .popular-blog-body img {
+  background-size: 100% 100%;
+  width: 350px;
+  height: 330px;
+}
+
+.popular-container .popular-blog .popular-blog-body .card-body {
+  display: grid;
+  grid-template-rows: 60px;
 }
 

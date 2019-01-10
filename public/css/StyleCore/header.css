@@ -35,10 +35,10 @@ a {
 }
 
 .headers .headers-phone {
-  margin-left: 25px;
+  position: relative;
+  left: 90px;
   font-size: 25px;
   color: #fff;
-  display: grid;
 }
 
 .headers .headers-phone i {

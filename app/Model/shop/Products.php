@@ -81,7 +81,7 @@ class Products extends Model
 
     public function scopeNewWeeks($query, $new){
 
-        return $query->where('created_at', '>', $new )->inRandomOrder()->take(4);
+        return $query->where('created_at', '>', $new )->inRandomOrder()->take(3);
     }
     public function scopePopular($query){
 

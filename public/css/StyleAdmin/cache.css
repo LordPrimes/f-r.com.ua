@@ -1,0 +1,22 @@
+.cache-container {
+  background: #fff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+.cache-container form {
+  display: grid;
+}
+
+.alert-cache {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+

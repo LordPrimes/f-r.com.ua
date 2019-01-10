@@ -17,12 +17,15 @@ class SearchautocompleteController extends BaseController
         $products = Products::Typehead($query)->get();   
 
         $output = null;
-        
+        if(isset($query)){
              foreach( $products as $row)
                 {
         $output .= '<li><a href='.$row->seo_title.'>'.$row->name.'</a></li>';
                 }
-        
+            }
+            else {
+                $output = null;
+            }
         return response()->json([
             'view' => $output
         ]);

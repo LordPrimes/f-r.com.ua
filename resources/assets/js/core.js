@@ -29,7 +29,7 @@ $(document).ready(function(){
         autoplayHoverPause:true,
         navClass:['slider-left-arrow', 'slider-right-arrow'],
         navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-      
+   
       
     });
 
@@ -92,6 +92,13 @@ $('.search-input').keyup(function(){
     var query = $(this).val();
     if(query != '')
     {
+        typehead(query);
+    }
+    else
+    {
+        typehead()
+    }
+    function typehead(query){
      var _token = $('input[name="_token"]').val();
      $.ajax({
       url:"/typehead",

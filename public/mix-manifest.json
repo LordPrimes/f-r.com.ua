@@ -1,5 +1,6 @@
 {
     "/js/core.js": "/js/core.js",
+    "/css/StyleCore/widthMedia.css": "/css/StyleCore/widthMedia.css",
     "/css/StyleCore/bootstrap_variables.css": "/css/StyleCore/bootstrap_variables.css",
     "/css/StyleCore/core.css": "/css/StyleCore/core.css",
     "/css/StyleCore/header.css": "/css/StyleCore/header.css",

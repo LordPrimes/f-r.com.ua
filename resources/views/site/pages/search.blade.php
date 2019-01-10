@@ -12,6 +12,7 @@
     <p class="grey-text text-center w-responsive mx-auto mb-5"><mark> {{ $search }}</mark> найдено {{ $product->count() }} товара</p>
   </div>
       @endisset
+      @if ($product->count() !== 0)
     <div class="d-flex col-lg-12">
       <div class="d-flex flex-row align-self-start justify-content-center filter col-lg-2 ">
         <form class="filter-form-control">
@@ -23,26 +24,23 @@
           <label class="d-flex align-items-center"><input name='{{$item->slug}}' value="{{$item->slug}}" type="checkbox">{{$item->name}}</label>
             
               @endforeach
-              <div class="d-flex align-items-center"><button type="submit" name="check" value="check">редактировать</button></div>
-              
+              <div class="d-flex align-items-center">
+                <button class="btn  btn-rounded btn-light-green" type="submit" name="check" value="check">редактировать</button>
+              </div>
             </div>
-         
           </form> 
         </div>
 <div class="search-blog col-lg-10">
-  @if ($search !== null)
+
     <nav class="sort-search d-flex flex-row justify-content-around navbar navbar-expand-lg navbar-dark mdb-color light-green mt-3 mb-5   ">
         <span>Сортировка:</span>
-        
         <a href="{{ route('search', ['query'=> $search , 'sort' => 'price_asc']) }}">от дорогих</a> 
         <a href="{{ route('search', ['query'=> $search , 'sort' => 'price_desc']) }}">от дешевых</a>
         <a href="{{ route('search', ['query'=> $search , 'sort' => 'A_Z']) }}">от (А-Я)</a>
-        <a href="{{ route('search', ['query'=> $search , 'sort' => 'Z_A']) }}">от (Я-А)</a>    
-         
+        <a href="{{ route('search', ['query'=> $search , 'sort' => 'Z_A']) }}">от (Я-А)</a>       
       </nav>
       @endif 
   <div class="search-blog event-action  col-lg-10">
-  
 @foreach ($product as $item)  
   <div class="search-prod col-lg-4">
     <div class="card card-cascade narrower card-ecommerce">
@@ -75,7 +73,15 @@
   </div>
 @endforeach
   </div>
-@else
+</div>
+</div>
+<div class="d-flex justify-content-center col-lg-12 paginate-search">
+    @if ($product !== null)
+    {{ $product->links() }}
+    @endif
+</div>
+@else 
+@if ($filterproducts !== null)
 <div class="d-flex col-lg-12">
     <div class="d-flex flex-row align-self-start justify-content-start filter col-lg-2 ">
       <form class="filter-form-control">
@@ -92,18 +98,10 @@
        
         </form> 
       </div>
+
 <div class="search-blog col-lg-10">
-@if ($search !== null)
-  <nav class="sort-search d-flex flex-row justify-content-around navbar navbar-expand-lg navbar-dark mdb-color light-green mt-3 mb-5   ">
-      <span>Сортировка:</span>
-      
-      <a href="{{ route('search', ['query'=> $search , 'sort' => 'price_asc']) }}">от дорогих</a> 
-      <a href="{{ route('search', ['query'=> $search , 'sort' => 'price_desc']) }}">от дешевых</a>
-      <a href="{{ route('search', ['query'=> $search , 'sort' => 'A_Z']) }}">от (А-Я)</a>
-      <a href="{{ route('search', ['query'=> $search , 'sort' => 'Z_A']) }}">от (Я-А)</a>    
-       
-    </nav>
-    @endif 
+ 
+
 <div class="search-blog event-action  col-lg-10">
 
 @foreach ($filterproducts as $item)  
@@ -137,15 +135,19 @@
   </div>      
 </div>
 @endforeach
+
 </div>
-  @isset($search)
-  <div class="d-flex justify-content-center flex-column col-lg-12">
-  <h2 class=" h1-responsive font-weight-bold text-center my-5">По вашему запросу:{{ $search }}</h2>
-  <p class="grey-text text-center w-responsive mx-auto mb-5"><mark> {{ $search }}</mark> найдено {{ $product->count() }} товаров</p>
-  @endisset
+
+
 @endif
 
-</div>     
+    </div>  
+    @endif      
+</div>
+  <div class="d-flex justify-content-center col-lg-12 paginate-search">
+      @if ($filterproducts !== null)
+      {{ $filterproducts->links() }}
+      @endif
 </div>
 @if ($recommend !== null)
 <div  class="reccommend-container">

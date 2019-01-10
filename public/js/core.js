@@ -10482,7 +10482,8 @@ __webpack_require__(30);
 __webpack_require__(31);
 __webpack_require__(32);
 __webpack_require__(33);
-module.exports = __webpack_require__(34);
+__webpack_require__(34);
+module.exports = __webpack_require__(35);
 
 
 /***/ }),
@@ -10601,6 +10602,11 @@ __WEBPACK_IMPORTED_MODULE_5_jquery___default()('.view-main-submit').click(functi
 __WEBPACK_IMPORTED_MODULE_5_jquery___default()('.search-input').keyup(function () {
     var query = __WEBPACK_IMPORTED_MODULE_5_jquery___default()(this).val();
     if (query != '') {
+        typehead(query);
+    } else {
+        typehead();
+    }
+    function typehead(query) {
         var _token = __WEBPACK_IMPORTED_MODULE_5_jquery___default()('input[name="_token"]').val();
         __WEBPACK_IMPORTED_MODULE_5_jquery___default.a.ajax({
             url: "/typehead",
@@ -22069,6 +22075,12 @@ Popper.Defaults = Defaults;
 
 /***/ }),
 /* 34 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 35 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

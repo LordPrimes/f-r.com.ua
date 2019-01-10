@@ -1,0 +1,274 @@
+@media screen and (min-width: 375px) and (max-width: 768px) { 
+.headers-nav {
+    font-size: 10px;
+    font-weight: bold;
+    display: -webkit-box;
+    padding-bottom: 15px;
+    justify-content: center;
+    li {
+        margin-left: -25px;
+        padding-left: 15px;
+    }
+   
+ 
+    
+}
+
+.headers {
+    .headers-logo {
+         a {
+        font-size: 12px;
+    }
+        margin-left: 5px;
+        .headers-logo-phone {
+    left: 25px;
+    display: grid;
+    position: relative;
+    grid-template-rows: 27px;
+    grid-template-columns: 130px;
+   
+    p {
+        font-size: 10px;
+    }
+        }
+    }
+.headers-search-input {
+    .search-input {
+        width: 250px;
+        position: relative;
+        top: 40px;
+    
+    }
+}
+}
+.seach-autocomplete {
+    width: 250px;
+    position: relative;
+    top: 40px;
+    }
+.main-category  {
+    display: none;
+}
+.footer-info {
+    padding: 5px 0px 20px 0px;
+    div {
+        padding-left: 2px;
+        
+    }
+    img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 5px;
+
+    }
+    span {
+        font-size: 7px;
+        text-align: left;
+    }
+}
+.footer--style {
+    .container-footer {
+    .footer-link {
+        position: relative;
+        right: 20px;
+        h3 {
+            font-size: 18px;
+           
+           
+        }
+        .footer-div {
+        margin-top: 5px;
+        padding: inherit;
+        height: auto;
+        font-size: 12px;
+
+    }
+    a {
+        font-size: 10px;
+    }
+    } 
+   
+}
+}
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+.footer--style {
+    height: 500px;
+}
+    .footer-link {
+        text-align: left!important;
+    h3 {
+        font-size: 15px;
+        
+    
+    }
+    
+   
+        a{
+        font-size: 12px;
+        }
+    
+}
+    .footer-info {
+    span {
+        font-size: 10px;
+    }
+}    
+.blog-main {
+        .carousel-recommend{
+        .blog-popular-main {
+            display: grid;
+            grid-template-rows: 240px;
+            img {
+                width: 210px;
+                height: 215px;
+                background: 100% 100%;
+            }
+        }
+    }
+    }
+    .container-recommend {
+.recommend-blog-main {
+    padding: 10px;
+    img {
+        width: 210px;
+        height: 220px;
+        background: 100% 100%;
+        
+    }
+    .recommend-body {
+        display: grid;
+    grid-template-columns: 170px;
+    grid-template-rows: 155px;
+    a {
+        text-align: justify;
+    }
+    }
+}
+    }
+    
+    .headers{
+        .headers-login-sign{
+            position: relative;
+        right: 10px;
+        top: 12px;
+        font-size: 15px;
+        }
+        .headers-phone {
+            position: relative;
+            bottom: 38px;
+            left: -100px;
+            i {
+                font-size: 18px;
+            }
+            span {
+                font-size: 17px;
+            
+        }
+        }
+        }
+
+    .headers-logo {
+    .headers-logo-phone{
+        font-size: 15px;
+p{
+    font-size: 15px;
+}
+    
+}
+}
+    #headers-search{
+        .headers-search-input {
+            .seach-autocomplete{
+                bottom: -45px;
+                left: -20px;
+                border-top: none;
+                width: 400px;
+               a {
+                font-size: 14px;
+               }
+                }
+        .search-input {
+            width: 400px;
+            position: relative;
+            right: 35px;
+            top:15px;
+            
+        }
+        }
+        }
+
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) { 
+.action-body {    
+display: grid;
+grid-template-rows: 120px; 
+}
+#headers-search{
+.headers-search-input {
+    .seach-autocomplete{
+        bottom: -60px;
+        left: -20px;
+        border-top: none;
+        width: 400px;
+       a {
+        font-size: 14px;
+       }
+        }
+.search-input {
+    width: 400px;
+    position: relative;
+    right: 35px;
+    top:15px;
+    
+}
+}
+}
+.headers{
+.headers-phone {
+    position: relative;
+    bottom: 38px;
+    left: -100px;
+    i {
+        font-size: 18px;
+    }
+    span {
+        font-size: 17px;
+    
+}
+}
+}
+}
+
+ 
+    @media screen and (min-width: 1025px) and (max-width: 1366px) { 
+        .seach-autocomplete {
+            width: 500px;
+            z-index: 2;
+        }
+        #headers-search {
+            position: relative;
+            right: 40px;
+            .search-input {
+                width: 500px;
+            }
+        }
+        .headers-login-sign {
+            position: relative;
+            right: 2px;
+        }
+        .headers-phone {
+               
+            bottom: 38px;
+            position: relative;
+            right: 82px;
+          
+       }
+      }
+    
+ 
+     

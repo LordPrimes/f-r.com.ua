@@ -1,9 +1,12 @@
 @extends('site.layouts.index')
+@section('seo')
+<title>{{$blog->title}}</title>
+<meta name="description" content="{{$blog->description}}" />
+<meta name="keywords" content="{{$blog->keywords}}" />
+@endsection
 @section('content')
-@foreach ($seo as $item)
-   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
-@endforeach
 <div class="container blogview-main">
+    <div class="d-none d-print-block"> <h1>{{$blog->h1}}</h1></div>
   <nav aria-label="breadcrumb" class="blogview-breadcrumb ">
       <ol class="breadcrumb light-green">
           <li class="breadcrumb-item"><a class="text-primary font-weight-bold" href="{{url('blog')}}">Блог</a></li>
@@ -13,12 +16,12 @@
   </nav>   
 <article>
 <h1 class="h1-responsive font-weight-bold text-center my-5">{{ $blog->name }}</h1>
-<section>
+<div>
 {!! $blog->body !!}
-@if ($blog->recommendsOne !== null)
-    <h2 class="font-weight-bold my-5">Рекоммендуемые статьи:</h2>  
 
-  <section class="blog-view-main-recommend  d-flex flex-row  text-center my-5 animated fadeIn col-xl-3">
+   
+
+  <div class="blog-view-main-recommend  d-flex   text-center my-5 animated fadeIn col-xl-3">
 @foreach ($recommend as $item)
         <div class="blog-popular ">
           
@@ -33,9 +36,9 @@
           </div>
           </div>
 @endforeach
-  </section> 
-  @endif
-</section> 
+        </div> 
+      <div class="d-flex justify-content-center"><a class="btn btn-light-green btn-rounded " href="{{route('blog.recommend')}}"> Рекоммендуемые статьи: </a> </div>
+      </div> 
 </div>
 <div class="container view-main-comments">
   <div class="login-page">

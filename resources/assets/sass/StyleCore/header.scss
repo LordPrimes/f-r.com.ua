@@ -6,6 +6,8 @@ margin: 0;
 
 }
 
+
+
   li {
   list-style-type:none
   }
@@ -31,10 +33,11 @@ padding: 10px 0 10px 0;
       }
     }
   .headers-phone {
-  margin-left:25px;
+    position: relative;
+    left: 90px;
   font-size:25px; 
   color: #fff;
-  display: grid;
+
     i {
     color:#52ad3a;;
     font-size:25px;
@@ -88,5 +91,4 @@ color: #f8f8f8;
     }
     }
 }
-
 

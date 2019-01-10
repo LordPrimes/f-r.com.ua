@@ -1,10 +1,11 @@
 @extends('site.layouts.index')
-
 @section('content')
-@foreach ($seo as $item)
-   <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
-@endforeach
-<article class="container">
+@section('seo')
+<title>{{$viewprod->title}}</title>
+<meta name="description" content="{{$viewprod->descriptions}}" />
+<meta name="keywords" content="{{$viewprod->keywords}}" />
+@endsection
+    <div class="d-none d-print-block"> <h1>{{$viewprod->h1}}</h1></div>
         <nav aria-label="breadcrumb" class="blogview-breadcrumb ">
                 <ol class="breadcrumb light-green">
                     <li class="breadcrumb-item"><a class="text-primary font-weight-bold" href="{{route('main')}}">Главная</a></li>
@@ -83,17 +84,7 @@
 <div class="d-flex view-main-description-info">
     {!! $viewprod->description !!}
 </div>
-    @if ($viewprod->productrecommendOne == null)
-        <h2 class="font-weight-bold my-5">
-            Рекоммендуемые товары:
-        </h2> 
-    @endif
- 
-      
-@if($viewprod->productrecommendOne == null)
-    
-
-<div class="blog-view-main-recommend  d-flex flex-row  text-center my-5 animated fadeIn">
+<div class="blog-view-main-recommend   text-center my-5 animated fadeIn">
     @foreach($recommend as $item)
         <div class="blog-popular col-xl-4 ">
             <figure  class="view overlay rounded z-depth-2 mb-4">
@@ -115,8 +106,9 @@
         </div>
     
     @endforeach
+   <div class="d-flex justify-content-center  "> <a class="text-white btn btn-light-green" href="{{route('popular')}}"> Рекоммендуемые товары</a></div>
     </div>   
-    @endif 
+ 
 <div class="container view-main-comments">
     <div class="login-page">
         <div class="form">
@@ -195,5 +187,4 @@
             </div>
         </div>
     </div>
-</article>
 @endsection

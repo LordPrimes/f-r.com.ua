@@ -20,6 +20,7 @@ if (mix.inProduction()) {
 }
 /* Sass componet/vue page Processing */
 mix
+.sass('resources/assets/sass/StyleCore/widthMedia.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/bootstrap_variables.scss', 'public/css/StyleCore' )
 .sass('resources/assets/sass/StyleCore/core.scss', 'public/css/StyleCore')
 .sass('resources/assets/sass/StyleCore/header.scss', 'public/css/StyleCore')

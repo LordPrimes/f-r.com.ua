@@ -2,6 +2,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 5;
 }
 .errors {
     position: fixed;
@@ -120,7 +121,6 @@
     margin: 20px 0 20px 0;
     background: #fff;
     padding: 10px 0 10px 0;
-    border: 1px solid #e1e2e3;
 }
 .seach-autocomplete{
 position: absolute;
@@ -152,20 +152,28 @@ li {
     background: #fff;
     border: 1px solid #cccccc;
     margin-top: 50px;
-    max-width: 200px;
+    min-width: 240px;
     padding: 20px;
     margin-right: 5px;
-    
+ 
+   
      
     .filter-form-control {
         display: grid;
         text-align: -webkit-left;
-       
+       .filter-container {
+            display: grid;
+    grid-template-rows: 50px;
+ 
         label {
             font-size: 15px;
-            color: #c8cece;
+  
+            font-weight: initial;
+
+            padding-bottom: 2px;
+            border-bottom: 1px solid #eaeaea;
             &:hover {
-                color:#fff;
+                color:#52ad3a;
             }
         input {
             width: 25px;
@@ -180,6 +188,7 @@ li {
         a {
             font-size: 18px;
         }
+    }
     }
 
 } 

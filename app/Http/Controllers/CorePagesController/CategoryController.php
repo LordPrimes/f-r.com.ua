@@ -11,37 +11,43 @@ class CategoryController extends BaseController
 {
     public function Category(Request $request, $slug)
     {
-        
+       
         $category= Category::Catalog($slug)->firstorFail();
 
         $id = $category->id;
-
+ 
         if (request()->sort == 'price_asc') {
             $product = Products::where('category_id', $id)
                                 ->orderBy('price', 'asc')
                                 ->paginate(12);
+            $product->appends(['sort' => 'price_asc']);
                                 
         }
         elseif (request()->sort == 'price_desc') {
             $product = Products::where('category_id', $id)
                                 ->orderBy('price', 'desc')
                                 ->paginate(12);
+            $product->appends(['sort' => 'price_desc']);
         } 
         elseif (request()->sort == 'A_Z') {
             $product = Products::where('category_id', $id)
                                 ->orderBy('name', 'asc')
                                 ->paginate(12);
+            $product->appends(['sort' => 'A_Z']);
         }
         elseif  (request()->sort == 'Z_A') {
             $product = Products::where('category_id', $id)
                                 ->orderBy('name', 'desc')
-                                ->paginate(12);       
+                                ->paginate(12);
+            $product->appends(['sort' => 'Z_A']);         
         }
-        else {    
+           
             
             $product = Products::CatelogId($id)->paginate(12);
-        }
-        
+            
+           
+    
+    
         $data = [
             'product' => $product
           

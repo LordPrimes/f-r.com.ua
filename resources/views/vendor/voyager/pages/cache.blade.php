@@ -12,16 +12,16 @@
         <div class="cache-container">
 <form method="POST" action="{{route('cache')}}">
     {{ csrf_field() }}
-    <button type="submit">кешировать</button>
+    <button class="btn  btn-rounded btn-success" type="submit">кешировать базу данных</button>
 </form>
 
 <form method="POST" action="{{route('cacheclear')}}">
         {{ csrf_field() }}
-        <button type="submit">удалить кеш</button>
+        <button class="btn  btn-rounded btn-success" type="submit">Удалить кеш из базы данных</button>
     </form>
     </div>
     @if(session()->has('goods'))
-    <div class="alert-success">
+    <div class="alert-cache alert-success">
         {{ session()->get('goods')}}
     </div>
     @endif

@@ -7,7 +7,7 @@
   <div class="d-flex flex-row">
      <div class="main-category text-center">
         <div class="main-category-link">
-          <a class="btn btn-rounded btn-light-green" href="{{route('catalog')}}">Категории:</a>
+          <a class="btn btn-rounded btn-light-green" href="{{route('catalog')}}">Каталог</a>
         </div>
           <div class=" main-category-list text-center">
             @foreach ($categor as $item)
@@ -37,7 +37,7 @@
     @foreach ($categorybar as $item)
     @if($item->subcategory->count() > 0)
 <a href="{{route('shop.category',$item->slug)}}"   class="main-category-img-link text-center ">
-  <div class="view overlay zoom">
+  <div class="col-md-3 view overlay zoom">
     <img class="img-fluid" src="/storage/app/public/{{$item->img}}" > 
   <a href="{{route('shop.category',$item->slug)}}" ><div class="mask rgba-white-slight"></div></a>
   </div>
@@ -50,7 +50,7 @@
 <h2 class="font-weight-bold my-5">Вы смотрели:</h2> 
 <div class="d-flex justify-content-center animated fadeIn">
 @foreach ($youviewed as $item)
-<div class="blog-popular col-lg-4">
+<div class="blog-popular col-xl-4">
 <div class="card align-items-center">
     <div class="view overlay">
       <img src="/storage/app/public/{{$item->images}}" class="img-fluid"
@@ -74,10 +74,10 @@
 @endisset
 <h2 class="h1-responsive font-weight-bold text-center my-5">ЛИДЕРЫ ПРОДАЖ</h2>
 @if ($action !== null)
-<div class="blog-action-main">
+<div class="col-md-12 blog-action-main">
    <div class="d-flex  flex-row">
     @foreach ($action as $item)
-          <div class="action-blog card align-items-center">
+          <div class="col-md-3 col-xl-3 action-blog card align-items-center">
             <div class="view overlay">
               <img src="/storage/app/public/{{$item->actions->images}}" class="img-fluid"
               alt="{{$item->actions->alt_images}}" title="{{$item->actions->title_images}}">
@@ -85,7 +85,7 @@
                 <div class="mask rgba-white-slight"></div>
               </a>
             </div>
-            <section class="card-body text-center">
+            <section class="action-body card-body text-center">
               <a href="{{url($item->actions->seo_title)}}" class="grey-text">
               <h5>{{ $item->actions->name }}</h5>
               </a>
@@ -123,7 +123,7 @@
         <a><div class="mask rgba-white-slight"></div></a>
         </figure>
       </div>
-          <section class="card-body card-body-cascade text-center">
+          <section class="recommend-body card-body card-body-cascade text-center">
             <a href="{{$item->seo_title}}" class="text-muted"><h5>{{$item->name}}</h5></a>
             <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
           <div class="d-flex justify-content-between align-items-center ">
@@ -156,7 +156,7 @@
               <img  src="/storage/app/public/{{$item->image}}"  alt="Sample image">
           </figure >
               <h4 class="font-weight-bold mb-3"><strong> {{ $item->name }}</strong></h4>
-              <p>{{ $item->created_at}}</p>
+              <p><time>{{ $item->created_at->format('d/m/Y')}}</time></p>
               <p class=" dark-grey-text blog-popular-text ">{{ str_limit($item->mini_body, 70) }}</p>
               <a href="{{url('blog/'.$item->seo_url)}}" class="d-flex justify-content-center align-items-center btn btn-light-green btn-rounded btn-md">Подробние</a>
       </div>

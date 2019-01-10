@@ -5,18 +5,14 @@
     <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
 @endforeach
 <div class="d-flex col-lg-12">
-
 <div class="event-blog col-lg-10">
         <nav class="sort-search d-flex flex-row justify-content-around navbar navbar-expand-lg navbar-dark mdb-color light-green mt-3 mb-5   ">
             <span>Сортировка:</span>
             <a href="{{route('shop.category', ['category'=> request()->Category, 'sort' => 'price_asc'])}}">от дорогих</a>
             <a href="{{route('shop.category', ['category'=> request()->Category, 'sort' => 'price_desc'])}}">от дешевых</a>
-      @isset($product)
             <a href="{{route('shop.category', ['category'=> request()->Category, 'sort' => 'A_Z'])}}">от (А-Я)</a>
             <a href="{{route('shop.category', ['category'=> request()->Category, 'sort' => 'Z_A'])}}">от (Я-А)</a>
-      @endisset 
           </nav>
-    @isset($product)
     @foreach ($product as $item) 
       <div class="event-prod col-lg-3">
         <div class="card card-cascade narrower card-ecommerce">
@@ -50,8 +46,12 @@
     </div>
     </div>
     @endforeach
+    <div class="d-flex justify-content-center col-lg-12 paginate-search">
+            @if ($product !== null)
+            {{ $product->links() }}
+            @endif
+      </div>
     </div>
-    @endisset 
 </div>
 </div>
 

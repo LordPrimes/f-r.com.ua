@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 5;
 }
 
 .errors {
@@ -131,7 +132,6 @@
   margin: 20px 0 20px 0;
   background: #fff;
   padding: 10px 0 10px 0;
-  border: 1px solid #e1e2e3;
 }
 
 .seach-autocomplete {
@@ -166,7 +166,7 @@
   background: #fff;
   border: 1px solid #cccccc;
   margin-top: 50px;
-  max-width: 200px;
+  min-width: 240px;
   padding: 20px;
   margin-right: 5px;
 }
@@ -176,23 +176,30 @@
   text-align: -webkit-left;
 }
 
-.filter .filter-form-control label {
+.filter .filter-form-control .filter-container {
+  display: grid;
+  grid-template-rows: 50px;
+}
+
+.filter .filter-form-control .filter-container label {
   font-size: 15px;
-  color: #c8cece;
+  font-weight: initial;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eaeaea;
 }
 
-.filter .filter-form-control label:hover {
-  color: #fff;
+.filter .filter-form-control .filter-container label:hover {
+  color: #52ad3a;
 }
 
-.filter .filter-form-control label input {
+.filter .filter-form-control .filter-container label input {
   width: 25px;
   height: 25px;
   position: relative;
   right: 5px;
 }
 
-.filter .filter-form-control a {
+.filter .filter-form-control .filter-container a {
   font-size: 18px;
 }
 
