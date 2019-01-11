@@ -16,6 +16,7 @@
         "laravel/framework": "5.6.39",
         "laravel/tinker": "^1.0",
         "nesbot/carbon": "1.25.*",
+        "renatomarinho/laravel-page-speed": "^1.8",
         "tcg/voyager": "^1.1",
         "test-hook": "^1.0"
     },

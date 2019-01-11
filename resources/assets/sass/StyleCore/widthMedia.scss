@@ -1,5 +1,99 @@
 
+@media screen and (max-width: 736px)  { 
+    .footer--style { 
+        .container-footer{ 
+            .footer-link {
+                .footer-div {
+                    padding: initial;
+                    font-size: 12px;
+                    height:auto;
+                }
+            }
+            h3 {
+                    margin-left:0!important;
+                }
+}
+
+    }
+    .action-body {
+        display: grid;
+        grid-template-rows: 125px;
+    }
+    .carousel-main {
+        display: none!important;
+    }
+    .main-category-img {
+        display: none!important;
+    }
+    .blog-action-main {
+        overflow: hidden;
+    }
+    .headers {
+        .headers-phone {
+            position: relative;
+          left: 0px;
+          font-size: 18px;
+          span {
+            width: 166px;
+            position: relative;
+            bottom: 50px;
+            right: 50px;
+        
+          }
+         i {
+            font-size: 20px;
+         }
+        }
+        .headers-login-sign {
+             margin-left: 0px; 
+
+        }
+        .seach-autocomplete{
+                width: 400px;
+            }
+         .headers-search-input input{
+            width: 400px;
+            
+         }
+    .headers-logo {
+        margin-left: 5px;
+        margin-right: 0px;
+        a{
+        display: grid;
+        
+        font-size: 18px;
+        grid-template-columns: 165px;
+        }
+    }
+    }
+}
 @media screen and (max-width: 375px)  { 
+    .blog-main  {
+        .blog-popular-main{ 
+            padding: inherit;  
+             display: grid;
+             grid-template-rows: 136px;
+             grid-template-columns: 100px;
+            img {
+            width: 120px;
+        height: 120px;
+        background-size: 100% 100%;
+            }
+           
+             
+        div {
+            flex-direction: column;
+        margin-top: 50px;
+        }
+          
+            h4 {
+                font-size: 14px;
+                text-align: left;
+            }
+           
+        
+    }
+    }
     .container-recommend {
     .recommend-blog-main { 
         padding: inherit;
