@@ -25953,15 +25953,159 @@ body {
 }
 
 
-@media screen and (min-width: 375px) and (max-width: 768px) {
-  .headers-nav {
+@media screen and (max-width: 375px) {
+  .container-recommend .recommend-blog-main {
+    padding: inherit;
+  }
+
+  .container-recommend .recommend-blog-main img {
+    width: 120px;
+    height: 120px;
+    background-size: 100% 100%;
+  }
+
+  .container-recommend .recommend-blog-main .recommend-body {
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 80px;
+  }
+
+  .container-recommend .recommend-blog-main .recommend-body div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .container-recommend .recommend-blog-main .recommend-body h5 {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .blog-action-main {
+    overflow: hidden;
+  }
+
+  .blog-action-main .action-blog {
+    margin-right: 5px;
+  }
+
+  .footer--style .container-footer {
+    padding: inherit;
+  }
+
+  .footer--style .container-footer .footer-link h3 {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .footer--style .container-footer .footer-link .footer-div {
+    font-size: 12px;
+    margin: 6px 8px;
+    padding: inherit;
+    height: auto;
+  }
+
+  .footer-info div {
+    margin-right: 5px;
+    position: relative;
+    right: 26px;
+  }
+
+  .footer-info img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-info span {
+    font-size: 7px;
+    position: relative;
+    top: 5px;
+  }
+
+  .main-category-img {
+    display: none !important;
+  }
+
+  .carousel-main {
+    display: none !important;
+  }
+
+  .headers-nav li {
+    display: grid;
+    grid-template-columns: 65px;
+  }
+
+  .headers .headers-login-sign {
+    font-size: 15px;
+    position: relative;
+    top: 5px;
+    right: 20px;
+  }
+
+  .headers .headers-search-input {
+    margin-top: 95px;
+    margin-left: -66px;
+  }
+
+  .headers .headers-search-input .search-input {
+    width: 250px;
+  }
+
+  .headers .headers-search-input .seach-autocomplete {
+    width: 250px;
+  }
+
+  .headers .headers-search-input .seach-autocomplete a {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .headers .headers-phone {
+    left: 222px;
+    bottom: 88px;
+    position: absolute;
+    font-size: 15px;
+  }
+
+  .headers .headers-phone span {
+    width: 140px;
+  }
+
+  .headers .headers-phone i {
+    font-size: 16px;
+  }
+
+  .headers .headers-logo {
+    margin-right: 5px;
+  }
+
+  .headers .headers-logo a {
+    display: grid;
+    grid-template-columns: 132px;
     font-size: 10px;
+  }
+
+  .headers .headers-logo p {
+    font-size: 10px;
+  }
+
+  .headers .headers-logo img {
+    width: 150px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 812px) and (max-width: 375px) {
+  .headers-nav {
+    font-size: 12px;
     font-weight: bold;
     display: -webkit-box;
     padding-bottom: 15px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   .headers-nav li {
@@ -25973,32 +26117,21 @@ body {
     margin-left: 5px;
   }
 
-  .headers .headers-logo a {
-    font-size: 12px;
-  }
-
-  .headers .headers-logo .headers-logo-phone {
-    left: 25px;
-    display: grid;
-    position: relative;
-    grid-template-rows: 27px;
-    grid-template-columns: 130px;
-  }
-
-  .headers .headers-logo .headers-logo-phone p {
-    font-size: 10px;
+  .headers .headers-logo img {
+    width: 150px;
+    height: 50px;
   }
 
   .headers .headers-search-input .search-input {
     width: 250px;
     position: relative;
-    top: 40px;
+    right: 38px;
   }
 
   .seach-autocomplete {
     width: 250px;
     position: relative;
-    top: 40px;
+    right: 38px;
   }
 
   .main-category {
@@ -26047,10 +26180,6 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .footer--style {
-    height: 500px;
-  }
-
   .footer-link {
     text-align: left !important;
   }
@@ -26068,8 +26197,13 @@ body {
   }
 
   .blog-main .carousel-recommend .blog-popular-main {
-    display: grid;
-    grid-template-rows: 240px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .blog-main .carousel-recommend .blog-popular-main img {
@@ -26089,12 +26223,20 @@ body {
   }
 
   .container-recommend .recommend-blog-main .recommend-body {
-    display: grid;
-    grid-template-columns: 170px;
-    grid-template-rows: 155px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .container-recommend .recommend-blog-main .recommend-body a {
+    text-align: justify;
+  }
+
+  .container-recommend .recommend-blog-main .recommend-body p {
     text-align: justify;
   }
 
@@ -26107,7 +26249,7 @@ body {
 
   .headers .headers-phone {
     position: relative;
-    bottom: 38px;
+    bottom: 30px;
     left: -100px;
   }
 
@@ -26146,7 +26288,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
+@media screen and (min-width: 1366px) {
   .action-body {
     display: grid;
     grid-template-rows: 120px;
@@ -26170,12 +26312,6 @@ body {
     top: 15px;
   }
 
-  .headers .headers-phone {
-    position: relative;
-    bottom: 38px;
-    left: -100px;
-  }
-
   .headers .headers-phone i {
     font-size: 18px;
   }
@@ -26185,7 +26321,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
+@media screen and (min-width: 1024px) {
   .seach-autocomplete {
     width: 500px;
     z-index: 2;
@@ -26209,6 +26345,12 @@ body {
     bottom: 38px;
     position: relative;
     right: 82px;
+  }
+
+  .action-body {
+    display: grid;
+    grid-template-columns: 170px;
+    grid-template-rows: 145px;
   }
 }
 

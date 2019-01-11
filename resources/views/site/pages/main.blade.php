@@ -77,7 +77,7 @@
 <div class="col-md-12 blog-action-main">
    <div class="d-flex  flex-row">
     @foreach ($action as $item)
-          <div class="col-md-3 col-xl-3 action-blog card align-items-center">
+          <div class="col-6 col-md-3 col-xl-3 action-blog card align-items-center">
             <div class="view overlay">
               <img src="/storage/app/public/{{$item->actions->images}}" class="img-fluid"
               alt="{{$item->actions->alt_images}}" title="{{$item->actions->title_images}}">
@@ -115,7 +115,7 @@
 <div class="container-recommend">
   <div class="d-flex flex-row carousel-recommend">
   @foreach ($recommend as $item) 
-  <div class="recommend-blog-main">
+  <div class="col-md-12 recommend-blog-main">
     <div class="card card-cascade wider card-ecommerce">
       <div class="view view-cascade overlay">
         <figure>
@@ -148,10 +148,10 @@
 </div>
 @endif
       <h2 class="h1-responsive font-weight-bold text-center my-5">НОВОСТИ ИЗ БЛОГА</h2>
-       <div class="blog-main d-flex flex-row">
+       <div class="col-12 blog-main d-flex flex-row">
          <div class="carousel-recommend">
          @foreach ($blog as $item)
-      <div class="blog-popular-main">
+      <div class="col-12 blog-popular-main">
           <figure  class="view overlay rounded z-depth-2 mb-4">
               <img  src="/storage/app/public/{{$item->image}}"  alt="Sample image">
           </figure >

@@ -13,7 +13,8 @@ $(document).ready(function(){
         mouseDrag:false,
         navText:['<div class="btn  btn-rounded btn-light-green slide-action"><i class="fa fa-angle-left"></i></div>',
         '<div class="btn btn-rounded btn-light-green slide-action"><i class="fa fa-angle-right"></i></div>'],
-        navContainerClass:['nav-action-container']
+        navContainerClass:['nav-action-container'],
+       
       
     });
  

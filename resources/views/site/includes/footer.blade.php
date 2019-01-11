@@ -1,10 +1,10 @@
 
 <footer class="footer">     
-    <div class=" d-flex justify-content-between align-items-center footer-info">
-      <div class="col-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Доставка по всей Украине</span> </div>
-      <div class="col-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Поддержка 7 дней в неделю</span> </div>
-      <div class="col-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Оптала наличными при получении</span> </div>
-      <div class="col-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Гарантия качества</span> </div>
+    <div class=" d-flex    align-items-center footer-info">
+      <div class="col-3 col-xl-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Доставка по всей Украине</span> </div>
+      <div class="col-3 col-xl-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Поддержка 7 дней в неделю</span> </div>
+      <div class="col-3 col-xl-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Оптала наличными при получении</span> </div>
+      <div class="col-3 col-xl-3 col-md-3 d-flex"><img class="d-flex align-self-center" src='/img/cartgreen.png' /><span>Гарантия качества</span> </div>
 </div>
     <div class="  footer--style">
         <div class="d-flex container container-footer">
