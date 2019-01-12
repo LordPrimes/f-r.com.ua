@@ -25954,6 +25954,21 @@ body {
 
 
 @media screen and (min-width: 320px) {
+  .order-cart {
+    left: 0px;
+  }
+
+  .order-cart .order-cart-body {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  .order-cart .order-cart-body .cart-view {
+    margin-right: 0px;
+  }
+
   .footer--style .container-footer {
     padding: inherit;
   }
@@ -26140,6 +26155,21 @@ body {
 }
 
 @media screen and (min-width: 375px) {
+  .order-cart {
+    left: 0px;
+  }
+
+  .order-cart .order-cart-body {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  .order-cart .order-cart-body .cart-view {
+    margin-right: 0px;
+  }
+
   .blog-main .blog-popular-main {
     height: 270px;
     padding: inherit;
@@ -26364,6 +26394,17 @@ body {
 }
 
 @media screen and (min-width: 414px) {
+  .order-cart .order-cart-body {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  .order-cart .order-cart-body h5 {
+    text-align: center;
+  }
+
   .headers-nav li {
     display: grid;
     grid-template-columns: 65px;
@@ -26545,6 +26586,11 @@ body {
 }
 
 @media screen and (min-width: 568px) {
+  .order-cart .order-cart-body img {
+    width: 350px;
+    height: 350px;
+  }
+
   .headers .headers-phone {
     left: 222px;
     bottom: 68px;
@@ -26583,6 +26629,18 @@ body {
 }
 
 @media screen and (min-width: 667px) {
+  .order-cart .order-cart-body {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  .order-cart .order-cart-body img {
+    width: 350px;
+    height: 350px;
+  }
+
   .footer-info img {
     width: 50px;
     height: 50px;
@@ -26676,6 +26734,13 @@ body {
 }
 
 @media screen and (min-width: 736px) {
+  .order-cart .order-cart-body {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+
   .blog-main .blog-popular-main {
     display: grid;
     grid-template-rows: 192px;
@@ -26814,6 +26879,22 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .order-cart .order-cart-body {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+
+  .order-cart .order-cart-body img {
+    width: auto;
+    height: auto;
+  }
+
+  .order-cart {
+    left: 0px;
+  }
+
   .blog-action-main {
     padding: 5px;
   }
@@ -26912,6 +26993,11 @@ body {
 }
 
 @media screen and (min-width: 812px) and (max-width: 375px) {
+  .order-cart .order-cart-body img {
+    width: auto;
+    height: auto;
+  }
+
   .headers-nav {
     font-size: 12px;
     font-weight: bold;
@@ -26993,6 +27079,18 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+  .order-cart .order-cart-body {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+
+  .order-cart .order-cart-body img {
+    width: auto;
+    height: auto;
+  }
+
   .blog-action-main .action-blog {
     margin-right: 0px;
   }
@@ -27132,6 +27230,18 @@ body {
 }
 
 @media screen and (min-width: 1366px) {
+  .order-cart .order-cart-body {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+
+  .order-cart .order-cart-body img {
+    width: auto;
+    height: auto;
+  }
+
   .headers .headers-login-sign {
     font-size: 21px;
   }

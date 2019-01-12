@@ -4,10 +4,8 @@
    <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
 @endforeach
 @if ($questeion !== null)
-    
-
 <div class="blog">
-        <h2 class="h1-responsive   my-5">Часто задаваемые вопросы:</h2>
+        <h2 class="h1-responsive  my-5">Часто задаваемые вопросы:</h2>
     @foreach ($questeion as $item)
     <div class="accordion md-accordion accordion-1" id="accordionEx23" role="tablist">
             <div class="card">

@@ -7,7 +7,7 @@
 
 <dIv class="container">
     <div class="row">
-    <div class="d-flex blog">
+    <div class="d-flex blog col-12 col-md-12 col-lg-12 col-xl-12 text-justify">
         {!!$pages->body!!}
    
         <div>
