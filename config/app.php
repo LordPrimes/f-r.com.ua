@@ -151,6 +151,7 @@ return [
          */
         TCG\Voyager\VoyagerServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        RenatoMarinho\LaravelPageSpeed\ServiceProvider::class,
         // Barryvdh\Debugbar\ServiceProvider::class, 
         /*
          * Application Service Providers...

@@ -37,4 +37,5 @@ RewriteRule ^ index.php [L]
     AddOutputFilterByType DEFLATE font/opentype
 
 
+
 </IfModule>

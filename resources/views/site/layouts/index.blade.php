@@ -17,7 +17,7 @@
         <p>Режим работы: 9:00 — 18:00</p>
     </a>
 </div>    
-<div class="col-3 col-xl-3 col-md-3 col-lg-2 d-flex  align-items-center"  id='headers-search'>
+<div class="col-3 col-xl-4 col-md-3 col-lg-2 d-flex  align-items-center"  id='headers-search'>
     <div class='headers-search-input'>
         <form action="{{route ('search')}}" method="GET">
             <input name='query' autocomplete="off"    class="search-input"  placeholder="Поиск товара" required > 
@@ -25,7 +25,7 @@
         </form>   
     </div>    
 </div>
-<div class="col-3 col-xl-3 col-md-3 col-lg-3 d-flex flex-column align-self-center align-items-center headers-phone">
+<div class="col-3 col-xl-2 col-md-3 col-lg-3 d-flex flex-column align-self-center align-items-center headers-phone">
     <span>+3 <i>(095)</i> 096-85-11</span>
     <span>+3 <i>(095)</i> 096-85-11</span>
 </div>     
