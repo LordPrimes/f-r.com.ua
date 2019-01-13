@@ -36,6 +36,18 @@ RewriteRule ^ index.php [L]
     AddOutputFilterByType DEFLATE font/woff2
     AddOutputFilterByType DEFLATE font/opentype
 
-
+ExpiresActive On
+ExpiresByType image/x-icon "access plus 2592000 seconds"
+ExpiresByType image/jpg "access plus 2592000 seconds"
+ExpiresByType image/jpeg "access plus 2592000 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access plus 2592000 seconds"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
 
 </IfModule>

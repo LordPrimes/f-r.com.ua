@@ -32,6 +32,7 @@
         "mdbootstrap": "^4.5.15",
         "normalize.css": "^8.0.1",
         "owl.carousel": "^2.3.4",
-        "postcss-minify-font-values": "^4.0.2"
+        "postcss-minify-font-values": "^4.0.2",
+        "webpack-notifier": "^1.7.0"
     }
 }

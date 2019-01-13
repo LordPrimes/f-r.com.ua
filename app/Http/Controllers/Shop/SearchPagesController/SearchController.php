@@ -29,7 +29,7 @@ class SearchController extends BaseController
         $product = null; 
             }
        $data = Carbon::now()->subDays(7);
-       $new = Products::NewWeeks($data)->get();
+      
        $recommend = Products::Recommend()->get();
        $popular = Products::Popular()->get();
 
@@ -89,7 +89,6 @@ class SearchController extends BaseController
                 'product' => $product,
                 'search' => $search,
                 'recommend' => $recommend,
-                'new' => $new,
                 'popular' => $popular,
                 'action' => $action,
                 'filter' => $filter,

@@ -9,12 +9,12 @@
     <div class="d-none d-print-block"> <h1>{{$item->h1}}</h1></div>
 @endforeach
 <h2 class="h1-responsive text-center my-5">Каталог</h2>
-        <div class="blog d-flex col-lg-12 ">
-          <div class=" container-catalog col-lg-12">
+        <div class="blog catalog-blog d-flex col-lg-12 ">
+          <div class="container-catalog col-lg-12 ">
 @foreach($category as $item)
     @if($item->subcategory->count() > 0)
-    <div class="float-left container-catalog-body col-lg-4">
-        <div class=" card card-cascade wider card-ecommerce">
+    <div class="float-left container-catalog-body  col-lg-4">
+        <div class="card card-cascade wider card-ecommerce">
             <figure class=" container-catalog-img view view-cascade overlay">
                 <img src="/storage/app/public/{{$item->img}}"  class="card-img-top">
                 <a>

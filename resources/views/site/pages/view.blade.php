@@ -25,7 +25,7 @@
     </div> 
 <div class="view-main-info">
     <h1 class="view-main-title ">{{ $viewprod->title }}</h1>
-    <div class="d-flex flex-row justify-content-between">
+    <div class="d-flex flex-row justify-content-between view-info">
         <div class="view-main-mini-info-brand">
             Модель: {{ $viewprod->brand }}
         </div>
@@ -81,7 +81,7 @@
     </div>
 </div>
 </section>
-<div class="d-flex view-main-description-info">
+<div class="d-flex view-main-description-info col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
     {!! $viewprod->description !!}
 </div>
 <div class="blog-view-main-recommend   text-center my-5 animated fadeIn">

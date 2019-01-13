@@ -19,7 +19,7 @@
 <div class="blog">
 @foreach ( $blog as $blogs)
 
-<div class="blog-main text-justify d-flex">
+<div class="col-12 blog-main text-justify d-flex">
     <figure class="d-flex flex-column justify-content-center">
         <img class="blog-main-images" src="/storage/app/public/{{$blogs->image}}" />
             <p class="blog-main-date text-center"><time>{{ $blogs->created_at->format('d/m/Y')}}</time></p>
@@ -56,7 +56,7 @@
 <div class="blog  animated fadeIn">
 <div class="d-flex flex-row justify-content-center  text-center my-5">
 @foreach ($popularblog as $item)
-    <section class="blog-popular col-lg-4 ">
+    <section class="blog-popular col-sm-4  col-lg-4 ">
         <figure  class="view overlay rounded z-depth-2 mb-4">
             <img  src="/storage/app/public/{{$item->image}}"  alt="Sample image">
         </figure >

@@ -13,7 +13,7 @@
   </div>
       @endisset
       @if ($product->count() !== 0)
-    <div class="d-flex col-lg-12">
+    <div class="search-blogs d-flex col-lg-12">
       <div class="d-flex flex-row align-self-start justify-content-center filter col-lg-2 ">
         <form class="filter-form-control">
           <div class="filter-container">
@@ -82,7 +82,7 @@
 </div>
 @else 
 @if ($filterproducts !== null)
-<div class="d-flex col-lg-12">
+<div class="search-blogs d-flex col-lg-12">
     <div class="d-flex flex-row align-self-start justify-content-start filter col-lg-2 ">
       <form class="filter-form-control">
         <div class="filter-container">
@@ -137,6 +137,8 @@
 @endforeach
 
 </div>
+</div>
+</div>
 
 
 @endif
@@ -150,49 +152,50 @@
       @endif
 </div>
 @if ($recommend !== null)
-<div  class="reccommend-container">
+<div  class="container-recommend">
   <h2 class="h1-responsive  text-center my-5 font-weight-bold"> Рекоммендуемый товар:</h2>
   <div class="carousel recommend-blog">
 @foreach ($recommend as $item) 
-      <div class="recommend-main-blog">
-        <div class="card card-cascade wider card-ecommerce">
-          <div class="view view-cascade overlay">
-          <figure><img src="/storage/app/public/{{$item->images}}" class="img-fluid" alt="{{$item->alt_images}}" title="{{$item->title_images}}"> 
-          <a><div class="mask rgba-white-slight"></div></a>
-          </figure>
-          </div>
-        <div class="card-body card-body-cascade text-center">
+<div class="col-md-12 recommend-blog-main">
+  <div class="card card-cascade wider card-ecommerce">
+    <div class="view view-cascade overlay">
+      <figure>
+      <img src="/storage/app/public/{{$item->images}}" class="img-fluid" alt="{{$item->alt_images}}" title="{{$item->title_images}}"> 
+      <a><div class="mask rgba-white-slight"></div></a>
+      </figure>
+    </div>
+        <section class="recommend-body card-body card-body-cascade text-center">
           <a href="{{$item->seo_title}}" class="text-muted"><h5>{{$item->name}}</h5></a>
           <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
-          <div class="d-flex justify-content-between align-items-center ">
-            <strong>{{ $item->price }} ГРН </strong> 
-            <form action="{{route('cart.addcart')}}" method="POST"> 
-            {{ csrf_field() }}
-            <input type="hidden" name='id' value="{{$item->id }}">
-            <input type="hidden" name='name' value="{{$item->name }}">
-            <input type="hidden" name='price' value="{{$item->price }}">
-            <input type="hidden" name='qty' value="{{$item->qty}}">
-            <button class="btn  btn-rounded btn-light-green" type="submit" >Купить</button>
-            </form>
+        <div class="d-flex justify-content-between align-items-center ">
+          <strong>{{ $item->price }} ГРН </strong> 
+          <form action="{{route('cart.addcart')}}" method="POST"> 
+          {{ csrf_field() }}
+          <input type="hidden" name='id' value="{{$item->id }}">
+          <input type="hidden" name='name' value="{{$item->name }}">
+          <input type="hidden" name='price' value="{{$item->price }}">
+          <input type="hidden" name='qty' value="{{$item->qty}}">  
+          <button class="btn  btn-rounded btn-light-green" type="submit" >Купить</button>
+          </form>
+        </div>
+         </section>
           </div>
         </div>
-      </div>
-    </div>
 @endforeach   
   </div>
 </div>
 @endif
 @if($action !== null)
-<div class="blog-action ">
+<div class="blog-action-main ">
   <h2 class="h1-responsive font-weight-bold text-center my-5">Акции:</h2>
     <div class="d-flex  flex-row">
 @foreach ($action as $item)
-      <div class="action-blog card align-items-center col-lg-3">
+      <div class="col-6 col-md-3 col-xl-3 action-blog  card align-items-center col-lg-3">
         <div class="view overlay">
           <img src="/storage/app/public/{{$item->actions->images}}" class="img-fluid" alt="{{$item->actions->alt_images}}" title="{{$item->actions->title_images}}">
           <a><div class="mask rgba-white-slight"></div></a>
         </div>
-            <div class="card-body text-center">
+            <div class="action-body card-body text-center">
               <a href="{{$item->actions->seo_title}}" class="grey-text"><h5>{{ $item->actions->name }}</h5></a>
                 <h4 class="font-weight-bold blue-text">
                 <strong class=""><p>Старая цена:</p>{{$item->actions->price }}</strong>
@@ -214,65 +217,38 @@
 @endif
 @if($popular !== null)
 <h2 class="d-flex justify-content-start h1-responsive  text-center my-5 font-weight-bold"> Популярный товар:</h2>
-  <div class="carousel popular-container">
+  <div class="container-recommend">
+<div class="carousel popular-container">
 @foreach ($popular as $item) 
-    <div class="popular-blog">
-      <div class="popular-blog-body card card-cascade wider card-ecommerce">
-        <div class="view view-cascade overlay">
-          <figure><img src="/storage/app/public/{{$item->images}}" class="img-fluid" alt="{{$item->alt_images}}" title="{{$item->title_images}}"> 
-          <a><div class="mask rgba-white-slight"></div></a>
-          </figure>  
+<div class="col-md-12 recommend-blog-main">
+  <div class="card card-cascade wider card-ecommerce">
+    <div class="view view-cascade overlay">
+      <figure>
+      <img src="/storage/app/public/{{$item->images}}" class="img-fluid" alt="{{$item->alt_images}}" title="{{$item->title_images}}"> 
+      <a><div class="mask rgba-white-slight"></div></a>
+      </figure>
+    </div>
+        <section class="recommend-body card-body card-body-cascade text-center">
+          <a href="{{$item->seo_title}}" class="text-muted"><h5>{{$item->name}}</h5></a>
+          <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
+        <div class="d-flex justify-content-between align-items-center ">
+          <strong>{{ $item->price }} ГРН </strong> 
+          <form action="{{route('cart.addcart')}}" method="POST"> 
+          {{ csrf_field() }}
+          <input type="hidden" name='id' value="{{$item->id }}">
+          <input type="hidden" name='name' value="{{$item->name }}">
+          <input type="hidden" name='price' value="{{$item->price }}">
+          <input type="hidden" name='qty' value="{{$item->qty}}">  
+          <button class="btn  btn-rounded btn-light-green" type="submit" >Купить</button>
+          </form>
         </div>
-          <div class="card-body card-body-cascade text-center">
-            <a href="{{$item->seo_title}}" class="text-muted"><h5>{{$item->name}}</h5></a>
-            <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
-            <div class="d-flex justify-content-between align-items-center ">
-              <strong>{{ $item->price }} ГРН </strong> 
-              <form action="{{route('cart.addcart')}}" method="POST"> 
-              {{ csrf_field() }}
-              <input type="hidden" name='id' value="{{$item->id }}">
-              <input type="hidden" name='name' value="{{$item->name }}">
-              <input type="hidden" name='price' value="{{$item->price }}">
-              <input type="hidden" name='qty' value="{{$item->qty}}">
-              <button class="btn  btn-rounded btn-light-green" type="submit" >Купить</button>
-              </form>
-            </div>
+         </section>
           </div>
         </div>
-      </div>
 @endforeach   
   </div>
+</div>
 @endif
-@if ($new->count() >= 4)
-  <h2 class="h1-responsive font-weight-bold  my-5">Новинки недели:</h2>
-    <div class="d-flex flex-row justify-content-center">
-@foreach ($new as $item)       
-      <div class="new-blog">
-          <div class="card card-cascade wider card-ecommerce">
-            <div class="view view-cascade overlay">
-              <figure><img src="/storage/app/public/{{$item->images}}" class="img-fluid" alt="{{$item->alt_images}}" title="{{$item->title_images}}"> 
-              <a><div class="mask rgba-white-slight"></div></a>
-              </figure>  
-            </div>
-              <div class=" new-blog-body  card-body card-body-cascade text-center">
-                <a href="{{$item->seo_title}}" class="text-muted"><h5>{{$item->name}}</h5></a>
-                <p class="card-text">{{ str_limit($item->mini_description,  50)}}</p>
-                <div class="d-flex justify-content-between align-items-center ">
-                  <strong>{{ $item->price }} ГРН </strong> 
-                  <form action="{{route('cart.addcart')}}" method="POST"> 
-                  {{ csrf_field() }}
-                  <input type="hidden" name='id' value="{{$item->id }}">
-                  <input type="hidden" name='name' value="{{$item->name }}">
-                  <input type="hidden" name='price' value="{{$item->price }}">
-                  <input type="hidden" name='qty' value="{{$item->qty}}">
-                  <button class="btn  btn-rounded btn-light-green" type="submit" >Купить</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-        </div>
-@endforeach
-      </div>
-     @endif
+
 </div>
 @endsection

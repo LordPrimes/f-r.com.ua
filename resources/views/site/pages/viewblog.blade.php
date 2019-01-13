@@ -16,12 +16,12 @@
   </nav>   
 <article>
 <h1 class="h1-responsive font-weight-bold text-center my-5">{{ $blog->name }}</h1>
-<div>
+<div class="blog-view col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 {!! $blog->body !!}
 
    
 
-  <div class="blog-view-main-recommend  d-flex   text-center my-5 animated fadeIn col-xl-3">
+  <div class="blogs-view-main-recommend  d-flex   text-center my-5 animated fadeIn col-xl-3">
 @foreach ($recommend as $item)
         <div class="blog-popular ">
           
